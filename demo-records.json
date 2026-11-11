@@ -1,0 +1,3544 @@
+[
+  {
+    "id": "fictional-garden-0",
+    "kind": "provided",
+    "displayName": "엔딩 크레딧 뒤에도 상영 중",
+    "reviewAuthor": null,
+    "reviewSource": "synthetic",
+    "movies": [
+      {
+        "id": "tmdb:559907",
+        "title": "그린나이트",
+        "year": "2021",
+        "poster": "https://image.tmdb.org/t/p/w342/7myc6oVR4oXu5Rd5twllyFu85E2.jpg",
+        "source": "https://www.themoviedb.org/movie/559907",
+        "canonicalTitle": "그린 나이트",
+        "review": "설명을 따라가기보다 화면 속 낯선 풍경을 한참 바라보고 싶었다. 인물의 마음을 내 일처럼 받아들이지는 않았지만, 무엇을 선택할지 알 수 없는 순간에는 긴장했다. 답이 정리되지 않은 채 남아서 서로 다른 해석을 이야기해 보고 싶다.",
+        "originalProvidedYear": "2021",
+        "genres": [
+          {
+            "id": 12,
+            "name": "모험"
+          },
+          {
+            "id": 18,
+            "name": "드라마"
+          },
+          {
+            "id": 14,
+            "name": "판타지"
+          }
+        ]
+      },
+      {
+        "id": "tmdb:965150",
+        "title": "애프터썬",
+        "year": "2022",
+        "poster": "https://image.tmdb.org/t/p/w342/8xDGgGqpemdgtKlCVM5E1KkLJb3.jpg",
+        "source": "https://www.themoviedb.org/movie/965150",
+        "canonicalTitle": "애프터썬",
+        "review": "사진첩을 넘기다 한 장에서 손이 멈추는 것처럼 보았다. 처음에는 평범해 보인 몸짓이 뒤늦게 마음에 걸렸다. 큰 울음보다 조용한 먹먹함이 오래 남는 경험을 좋아한다.",
+        "originalProvidedYear": "2022",
+        "genres": [
+          {
+            "id": 18,
+            "name": "드라마"
+          }
+        ]
+      },
+      {
+        "id": "tmdb:804095",
+        "title": "파벨만스",
+        "year": "2022",
+        "poster": "https://image.tmdb.org/t/p/w342/zcpxI4YYFXd2aS1wffa5usKFFbq.jpg",
+        "source": "https://www.themoviedb.org/movie/804095",
+        "canonicalTitle": "파벨만스",
+        "review": "누군가를 찍는 일이 그 사람을 이해하는 일과 얼마나 다를 수 있는지 생각했다. 감정에 빠지기보다는 장면이 어떤 순서로 놓이는지 살피며 봤다. 결론을 대신 내려주지 않는 부분이 편안했다.",
+        "originalProvidedYear": "2022",
+        "genres": [
+          {
+            "id": 18,
+            "name": "드라마"
+          }
+        ]
+      }
+    ],
+    "model": "gpt-5-2025-08-07",
+    "seed": 1248,
+    "generator": {
+      "version": "gamdo-lab-43-mix-six",
+      "settings": {
+        "repeat": 6
+      }
+    },
+    "createdAt": "2026-11-02T10:13:06.291Z",
+    "sourceNote": "정원 시연을 위해 새로 작성한 가상 감상입니다. 실제 관람객의 후기나 작성자의 경험을 인용한 기록이 아닙니다.",
+    "profile": {
+      "title": "엔딩 크레딧 뒤에도 상영 중",
+      "description": "장면의 배열과 남는 여백을 살피며, 크게 요동치기보다 오래 스미는 먹먹함을 좋아하고 인물과는 살짝 거리를 두는 편이에요.",
+      "tags": [
+        "여백",
+        "잔향",
+        "관찰"
+      ],
+      "axes": [
+        {
+          "name": "감각",
+          "value": 50,
+          "level": "부족",
+          "assessment": {
+            "direction": "unknown",
+            "strength": 0,
+            "fit": "화면을 오래 바라본다는 표현은 관람 태도에 가깝고, 색·소리의 강도나 편집 밀도 선호와 직접 연결되지 않아요. 감각 강도에 대한 분명한 언급이 없어 방향을 보류해요."
+          },
+          "evidence": [],
+          "explanation": "이 영역의 선호 방향을 판단할 근거가 아직 부족해요. 화면을 오래 바라본다는 표현은 관람 태도에 가깝고, 색·소리의 강도나 편집 밀도 선호와 직접 연결되지 않아요. 감각 강도에 대한 분명한 언급이 없어 방향을 보류해요.",
+          "status": "unknown",
+          "direction": "근거가 부족해 기본값으로 지정합니다."
+        },
+        {
+          "name": "정서",
+          "value": 20,
+          "level": "부분적",
+          "assessment": {
+            "direction": "low",
+            "strength": 2,
+            "fit": "‘큰 울음보다 조용한 먹먹함’을 선호한다고 명시해, 감정의 폭발보다는 잔잔하고 미세한 결을 더 좋아함이 드러나요. 다른 영화들에서 반대 방향의 단서는 보이지 않았어요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "큰 울음보다 조용한 먹먹함이 오래 남는 경험을 좋아한다."
+            }
+          ],
+          "explanation": "잔잔 방향의 뚜렷한 선호가 드러나요. ‘큰 울음보다 조용한 먹먹함’을 선호한다고 명시해, 감정의 폭발보다는 잔잔하고 미세한 결을 더 좋아함이 드러나요. 다른 영화들에서 반대 방향의 단서는 보이지 않았어요.",
+          "status": "supported",
+          "direction": "잔잔에 가까움"
+        },
+        {
+          "name": "인물",
+          "value": 20,
+          "level": "부분적",
+          "assessment": {
+            "direction": "low",
+            "strength": 2,
+            "fit": "인물의 마음을 ‘내 일처럼’ 받아들이지 않았다는 말은 동일시를 자제하고 관찰하는 태도를 분명히 보여줘요. 선택의 순간에 긴장했다는 표현은 사건의 향방에 대한 관심이지 동일시의 근거는 아니에요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "인물의 마음을 내 일처럼 받아들이지는 않았지만, 무엇을 선택할지 알 수 없는 순간에는 긴장했다."
+            }
+          ],
+          "explanation": "관찰 방향의 뚜렷한 선호가 드러나요. 인물의 마음을 ‘내 일처럼’ 받아들이지 않았다는 말은 동일시를 자제하고 관찰하는 태도를 분명히 보여줘요. 선택의 순간에 긴장했다는 표현은 사건의 향방에 대한 관심이지 동일시의 근거는 아니에요.",
+          "status": "supported",
+          "direction": "관찰에 가까움"
+        },
+        {
+          "name": "관계",
+          "value": 50,
+          "level": "부족",
+          "assessment": {
+            "direction": "unknown",
+            "strength": 0,
+            "fit": "인물들 사이의 유대/자율 중 어느 쪽에 마음이 더 가는지 드러난 문장이 없어요."
+          },
+          "evidence": [],
+          "explanation": "이 영역의 선호 방향을 판단할 근거가 아직 부족해요. 인물들 사이의 유대/자율 중 어느 쪽에 마음이 더 가는지 드러난 문장이 없어요.",
+          "status": "unknown",
+          "direction": "근거가 부족해 기본값으로 지정합니다."
+        },
+        {
+          "name": "몰입",
+          "value": 20,
+          "level": "부분적",
+          "assessment": {
+            "direction": "low",
+            "strength": 2,
+            "fit": "감정에 빠지기보다 장면 배열을 ‘살피며’ 봤다는 표현은 형식과 구성에 주의를 기울인 관람이어서 한 걸음 떨어진 몰입을 가리켜요. 반대되는 깊은 몰입의 단서는 보이지 않았어요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "감정에 빠지기보다는 장면이 어떤 순서로 놓이는지 살피며 봤다."
+            }
+          ],
+          "explanation": "거리 방향의 뚜렷한 선호가 드러나요. 감정에 빠지기보다 장면 배열을 ‘살피며’ 봤다는 표현은 형식과 구성에 주의를 기울인 관람이어서 한 걸음 떨어진 몰입을 가리켜요. 반대되는 깊은 몰입의 단서는 보이지 않았어요.",
+          "status": "supported",
+          "direction": "거리에 가까움"
+        },
+        {
+          "name": "서사",
+          "value": 80,
+          "level": "충분",
+          "assessment": {
+            "direction": "high",
+            "strength": 2,
+            "fit": "‘답이 정리되지 않은 채 남’고, ‘결론을 대신 내려주지 않는’ 방식을 편안하게 여겨 해석의 여백과 모호함을 반기는 선호가 두 편에서 반복돼요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "답이 정리되지 않은 채 남아서 서로 다른 해석을 이야기해 보고 싶다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "결론을 대신 내려주지 않는 부분이 편안했다."
+            }
+          ],
+          "explanation": "해석 여백 방향의 뚜렷한 선호가 드러나요. ‘답이 정리되지 않은 채 남’고, ‘결론을 대신 내려주지 않는’ 방식을 편안하게 여겨 해석의 여백과 모호함을 반기는 선호가 두 편에서 반복돼요.",
+          "status": "supported",
+          "direction": "해석 여백에 가까움"
+        }
+      ],
+      "sections": {
+        "sensory": "설명보다 화면의 낯선 풍경을 오래 바라보게 되는 쪽이네요. 다만 색·소리의 강도 선호는 아직 판단할 단서가 부족해요.",
+        "emotional": "큰 울음 대신 조용한 먹먹함이 오래 남는 감정을 좋아해요. 격정보다 잔향에 머무는 편이에요.",
+        "character": "인물의 마음을 바로 자기 일처럼 끌어안기보다 거리를 두고 보네요. 그래도 선택의 순간에는 적당한 긴장을 함께 느껴요.",
+        "relationship": "인물들 사이의 유대나 독립 중 어느 쪽이 더 끌리는지는 아직 드러나지 않았어요.",
+        "narrative": "정답을 못 박지 않는 서사가 편안하고, 서로 다른 해석을 두고 이야기 나누길 좋아해요. 장면이 어떤 순서로 놓이는지 살피며 보는 태도도 눈에 띄어요.",
+        "values": "한 문장으로 규정하기보다 여백을 남기고 스스로 의미를 찾아가는 과정을 소중히 여기는 편이에요. 각자의 해석을 존중하며 대화를 여는 태도가 보여요.",
+        "avoidance": "과하게 뜻을 못 박는 설명이나 결론 위주의 마무리는 덜 끌리는 편이에요. 이외의 회피 요소는 아직 근거가 부족해요.",
+        "recommendation": "해석의 여백과 조용한 잔향을 남기는 작품들을 더 탐색해 보세요. 장면 전환의 리듬과 배열이 도드라지는 영화, 감정의 크기보다 결을 섬세하게 다루는 연출이 잘 맞겠어요."
+      },
+      "mood": "blue",
+      "palette": [
+        {
+          "mood": "blue",
+          "weight": 48
+        },
+        {
+          "mood": "purple",
+          "weight": 30
+        },
+        {
+          "mood": "yellow",
+          "weight": 22
+        }
+      ],
+      "colorReason": "세 편의 영화가 가진 장르와 전체적인 분위기, 남겨주신 감상을 함께 살펴 블루를 메인 컬러로 골랐어요. 그중 인물의 내면이나 넓은 세계를 바라보는 차분한 거리감과 감상에 남은 조용한 생각과 쓸쓸함을 이 색에 담았고요. 함께 느껴지는 분위기는 퍼플(낯섦과 호기심), 옐로(따뜻함과 반가운 활기)로 더해, 세 편의 서로 다른 결도 남겨두었어요.",
+      "uncertainty": "감각 강도(강렬함/절제)와 관계 축(유대/자율)은 판단할 근거가 적어 보류했어요. 다른 감상에서 색·소리의 세기나 캐릭터 사이 거리감에 대한 언급이 더해지면 보완될 수 있어요.",
+      "questions": [],
+      "analysisVersion": "gamdo-evidence-v2.0",
+      "reviewPalette": [
+        {
+          "mood": "blue",
+          "weight": 60,
+          "reason": "조용한 먹먹함, 여운, 관찰적 태도와 해석의 여백이 반복적으로 드러남.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "큰 울음보다 조용한 먹먹함이 오래 남는 경험을 좋아한다."
+            },
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "답이 정리되지 않은 채 남아서 서로 다른 해석을 이야기해 보고 싶다."
+            }
+          ]
+        },
+        {
+          "mood": "purple",
+          "weight": 25,
+          "reason": "낯선 풍경, 해석의 다양성, 장면의 여운 등 몽환적이고 신비로운 분위기가 일부 드러남.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "설명을 따라가기보다 화면 속 낯선 풍경을 한참 바라보고 싶었다."
+            }
+          ]
+        },
+        {
+          "mood": "yellow",
+          "weight": 15,
+          "reason": "사진첩의 한 장면, 순간의 포착 등에서 따뜻한 시선과 경이의 감각이 일부 느껴짐.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "사진첩을 넘기다 한 장에서 손이 멈추는 것처럼 보았다."
+            }
+          ]
+        }
+      ],
+      "colorMethod": {
+        "version": "genre65-review35-v2",
+        "genreShare": 0.21666666666666667,
+        "reviewShare": 0.7833333333333333,
+        "sources": [
+          {
+            "index": 0,
+            "genres": [
+              {
+                "id": 12,
+                "name": "모험",
+                "color": "yellow"
+              },
+              {
+                "id": 14,
+                "name": "판타지",
+                "color": "purple"
+              }
+            ]
+          }
+        ]
+      },
+      "validation": {
+        "order": [
+          "evidence-fit",
+          "direction",
+          "strength",
+          "explanation-score"
+        ],
+        "semanticReview": true,
+        "scoring": "50±15×strength",
+        "version": "gamdo-evidence-v2.0",
+        "finalCriterionReview": true
+      }
+    },
+    "paletteSelection": "genre65-review35",
+    "reassessedAt": "2026-11-08T14:28:24.798Z"
+  },
+  {
+    "id": "fictional-garden-1",
+    "kind": "provided",
+    "displayName": "오늘을 조금 더 살아보고 싶어서",
+    "reviewAuthor": null,
+    "reviewSource": "synthetic",
+    "movies": [
+      {
+        "id": "tmdb:3782",
+        "title": "이키루",
+        "year": "1952",
+        "poster": "https://image.tmdb.org/t/p/w342/8aja0bziXOA0ZgspOLyt4PVZ9kF.jpg",
+        "source": "https://www.themoviedb.org/movie/3782",
+        "canonicalTitle": "이키루",
+        "review": "오늘 당장 할 수 있는 작은 일이 무엇인지 생각하게 됐다. 인물의 시간을 내 하루와 겹쳐 보니 담담하게 보던 마음이 조금씩 따뜻해졌다. 마지막에는 삶의 방향이 분명해져서 안도했다.",
+        "originalProvidedYear": "",
+        "genres": [
+          {
+            "id": 18,
+            "name": "드라마"
+          }
+        ]
+      },
+      {
+        "id": "tmdb:361743",
+        "title": "탑건:매버릭",
+        "year": "2022",
+        "poster": "https://image.tmdb.org/t/p/w342/jeqXUwNilvNqNXqAHsdwm5pEfae.jpg",
+        "source": "https://www.themoviedb.org/movie/361743",
+        "canonicalTitle": "탑건: 매버릭",
+        "review": "비행 장면에서 음악과 속도가 맞물릴 때 몸에 힘이 들어갔다. 누가 먼저 손을 내밀지 기다리는 순간에도 마음이 뛰었다. 마지막까지 함께 해내는 이야기를 보고 나니 기운이 났다.",
+        "originalProvidedYear": "",
+        "genres": [
+          {
+            "id": 28,
+            "name": "액션"
+          },
+          {
+            "id": 18,
+            "name": "드라마"
+          }
+        ]
+      },
+      {
+        "id": "tmdb:20722",
+        "title": "작은 벽돌로 쌓은 집",
+        "year": "2008",
+        "poster": "https://image.tmdb.org/t/p/w342/mTPfQUrmYmYEFWHZTQx7dw7QL9J.jpg",
+        "source": "https://www.themoviedb.org/movie/20722",
+        "canonicalTitle": "작은 벽돌로 쌓은 집",
+        "review": "작은 공간을 채우는 물건들을 보면서 내 방에 남겨 둔 오래된 물건이 떠올랐다. 혼자 보내는 시간도 누군가와 지낸 날들로 이루어진다는 느낌이었다. 소란스러운 연출 없이 마음을 건드려서 좋았다.",
+        "originalProvidedYear": "2008",
+        "genres": [
+          {
+            "id": 16,
+            "name": "애니메이션"
+          },
+          {
+            "id": 18,
+            "name": "드라마"
+          }
+        ]
+      }
+    ],
+    "model": "gpt-5-2025-08-07",
+    "seed": 1248,
+    "generator": {
+      "version": "gamdo-lab-43-mix-six",
+      "settings": {
+        "repeat": 6
+      }
+    },
+    "createdAt": "2026-11-02T10:13:06.323Z",
+    "sourceNote": "정원 시연을 위해 새로 작성한 가상 감상입니다. 실제 관람객의 후기나 작성자의 경험을 인용한 기록이 아닙니다.",
+    "profile": {
+      "title": "오늘을 조금 더 살아보고 싶어서",
+      "description": "소란을 줄인 화면에서 차분히 마음을 데우고, 인물과 보폭을 맞추며 끝내 함께 해내는 이야기에서 안심과 힘을 얻는 취향이에요.",
+      "tags": [
+        "절제된연출",
+        "유대감",
+        "명료한마무리"
+      ],
+      "axes": [
+        {
+          "name": "감각",
+          "value": 20,
+          "level": "충분",
+          "assessment": {
+            "direction": "low",
+            "strength": 2,
+            "fit": "직접적으로 '소란스러운 연출 없이'가 좋았다고 밝혀 절제된 청각·시각 톤을 선호하는 근거가 분명해요. 비행 장면의 강도 높은 감각을 강하게 '좋아했다'고 말하지는 않아 반대 근거의 힘은 약해요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "소란스러운 연출 없이 마음을 건드려서 좋았다."
+            },
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "비행 장면에서 음악과 속도가 맞물릴 때 몸에 힘이 들어갔다."
+            }
+          ],
+          "explanation": "절제 방향의 뚜렷한 선호가 드러나요. 직접적으로 '소란스러운 연출 없이'가 좋았다고 밝혀 절제된 청각·시각 톤을 선호하는 근거가 분명해요. 비행 장면의 강도 높은 감각을 강하게 '좋아했다'고 말하지는 않아 반대 근거의 힘은 약해요.",
+          "status": "supported",
+          "direction": "절제에 가까움"
+        },
+        {
+          "name": "정서",
+          "value": 35,
+          "level": "충분",
+          "assessment": {
+            "direction": "low",
+            "strength": 1,
+            "fit": "담담함 속에서 천천히 따뜻해지는 흐름을 긍정적으로 받아들였고, 큰 감정 폭발을 선호한다는 직접 표현은 없어요. 긴장으로 심장이 뛰는 순간이 있었지만 선호 진술이라기보다 관람 중 반응에 가까워요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "인물의 시간을 내 하루와 겹쳐 보니 담담하게 보던 마음이 조금씩 따뜻해졌다."
+            },
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "누가 먼저 손을 내밀지 기다리는 순간에도 마음이 뛰었다."
+            }
+          ],
+          "explanation": "잔잔 방향의 약한 선호가 드러나요. 담담함 속에서 천천히 따뜻해지는 흐름을 긍정적으로 받아들였고, 큰 감정 폭발을 선호한다는 직접 표현은 없어요. 긴장으로 심장이 뛰는 순간이 있었지만 선호 진술이라기보다 관람 중 반응에 가까워요.",
+          "status": "supported",
+          "direction": "잔잔에 가까움"
+        },
+        {
+          "name": "인물",
+          "value": 80,
+          "level": "부분적",
+          "assessment": {
+            "direction": "high",
+            "strength": 2,
+            "fit": "인물의 시간을 자신의 하루와 겹쳐 보며 감정을 변화시킨 점이 뚜렷한 동일시의 표시예요. 단순한 공감 표현을 넘어 자신과 맞물려 본 구체적 진술이라 강도가 높아요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "인물의 시간을 내 하루와 겹쳐 보니 담담하게 보던 마음이 조금씩 따뜻해졌다."
+            }
+          ],
+          "explanation": "동일시 방향의 뚜렷한 선호가 드러나요. 인물의 시간을 자신의 하루와 겹쳐 보며 감정을 변화시킨 점이 뚜렷한 동일시의 표시예요. 단순한 공감 표현을 넘어 자신과 맞물려 본 구체적 진술이라 강도가 높아요.",
+          "status": "supported",
+          "direction": "동일시에 가까움"
+        },
+        {
+          "name": "관계",
+          "value": 65,
+          "level": "충분",
+          "assessment": {
+            "direction": "high",
+            "strength": 1,
+            "fit": "끝까지 '함께 해내는' 이야기에서 힘을 얻었고, 혼자 있는 시간조차 타인과의 날들로 이뤄졌다고 느낀 점이 유대의 의미에 마음이 가는 근거예요. 선호를 직접 선언하진 않아 강도는 중간으로 보았어요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "마지막까지 함께 해내는 이야기를 보고 나니 기운이 났다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "혼자 보내는 시간도 누군가와 지낸 날들로 이루어진다는 느낌이었다."
+            }
+          ],
+          "explanation": "연결 방향의 약한 선호가 드러나요. 끝까지 '함께 해내는' 이야기에서 힘을 얻었고, 혼자 있는 시간조차 타인과의 날들로 이뤄졌다고 느낀 점이 유대의 의미에 마음이 가는 근거예요. 선호를 직접 선언하진 않아 강도는 중간으로 보았어요.",
+          "status": "supported",
+          "direction": "연결에 가까움"
+        },
+        {
+          "name": "몰입",
+          "value": 65,
+          "level": "부분적",
+          "assessment": {
+            "direction": "high",
+            "strength": 1,
+            "fit": "비행 장면에서 신체가 긴장될 만큼 반응했고, 손 내밈을 기다리는 순간에도 심장이 뛰었어요. '담담하게' 봤다는 표현은 정서 톤에 가까워 거리두기 근거로 보기에는 부족해요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "비행 장면에서 음악과 속도가 맞물릴 때 몸에 힘이 들어갔다."
+            },
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "누가 먼저 손을 내밀지 기다리는 순간에도 마음이 뛰었다."
+            }
+          ],
+          "explanation": "몰입 방향의 약한 선호가 드러나요. 비행 장면에서 신체가 긴장될 만큼 반응했고, 손 내밈을 기다리는 순간에도 심장이 뛰었어요. '담담하게' 봤다는 표현은 정서 톤에 가까워 거리두기 근거로 보기에는 부족해요.",
+          "status": "supported",
+          "direction": "몰입에 가까움"
+        },
+        {
+          "name": "서사",
+          "value": 35,
+          "level": "부분적",
+          "assessment": {
+            "direction": "low",
+            "strength": 1,
+            "fit": "결말에서 삶의 방향이 분명해져 안도했다는 말은 이야기의 명료함을 선호하는 신호예요. 난해함이나 열린 해석에 대한 선호는 드러나지 않았어요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "마지막에는 삶의 방향이 분명해져서 안도했다."
+            }
+          ],
+          "explanation": "명료함 방향의 약한 선호가 드러나요. 결말에서 삶의 방향이 분명해져 안도했다는 말은 이야기의 명료함을 선호하는 신호예요. 난해함이나 열린 해석에 대한 선호는 드러나지 않았어요.",
+          "status": "supported",
+          "direction": "명료함에 가까움"
+        }
+      ],
+      "sections": {
+        "sensory": "크게 소란스럽지 않은 연출이 오래 남는 편이에요. 강렬한 순간이 있어도 기본 톤은 절제된 질감이 어울려요.",
+        "emotional": "잔잔하게 스며드는 온기를 좋아하고, 필요할 때만 짧게 고조되는 감정을 받아들이네요.",
+        "character": "인물의 시간과 보폭을 내 일상에 포개 보며 따라가는 관람이 자연스러워요.",
+        "relationship": "끝까지 함께 버티고 해내는 관계에서 큰 힘을 얻는 편이에요. 혼자일 때도 타인의 흔적을 떠올리네요.",
+        "narrative": "의미와 방향이 분명히 드러나는 이야기에서 안심해요. 여백은 있되 해석을 과하게 요구하진 않으면 좋아요.",
+        "values": "오늘 당장 할 수 있는 작은 실천과 서로 기대어 끝까지 해내는 마음에 가치를 두는 편이에요.",
+        "avoidance": "과도하게 소란스럽고 과시적인 연출은 집중을 흐리게 해 덜 맞을 수 있어요.",
+        "recommendation": "절제된 톤 속에서 관계의 온기를 천천히 키우고, 끝에서 의미가 또렷해지는 작품을 탐색해보세요. 중간중간 짧게 긴장이 번쩍이는 리듬이 섞이면 더 잘 맞겠어요."
+      },
+      "mood": "yellow",
+      "palette": [
+        {
+          "mood": "yellow",
+          "weight": 44
+        },
+        {
+          "mood": "blue",
+          "weight": 29
+        },
+        {
+          "mood": "red",
+          "weight": 27
+        }
+      ],
+      "colorReason": "세 편의 영화가 가진 장르와 전체적인 분위기, 남겨주신 감상을 함께 살펴 옐로를 메인 컬러로 골랐어요. 그중 경쾌한 리듬과 새로운 곳으로 향하는 활기과 감상에 남은 따뜻함과 반가운 활기을 이 색에 담았고요. 함께 느껴지는 분위기는 블루(조용한 생각과 쓸쓸함), 레드(벅찬 쾌감과 긴장)로 더해, 세 편의 서로 다른 결도 남겨두었어요.",
+      "uncertainty": "감각 저강도와 서사 명료함 선호는 한두 문장의 진술에 기대고 있어요. 이후 답변에 따라 조정될 수 있어요.",
+      "questions": [],
+      "analysisVersion": "gamdo-evidence-v2.0",
+      "reviewPalette": [
+        {
+          "mood": "yellow",
+          "weight": 60,
+          "reason": "따뜻함, 기운, 안도 등 긍정적 정서와 함께하는 힘이 반복적으로 언급됨.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "인물의 시간을 내 하루와 겹쳐 보니 담담하게 보던 마음이 조금씩 따뜻해졌다."
+            },
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "마지막까지 함께 해내는 이야기를 보고 나니 기운이 났다."
+            }
+          ]
+        },
+        {
+          "mood": "blue",
+          "weight": 40,
+          "reason": "혼자 보내는 시간, 담담함, 조용한 연출 등 고요와 고독의 정서가 함께 드러남.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "혼자 보내는 시간도 누군가와 지낸 날들로 이루어진다는 느낌이었다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "소란스러운 연출 없이 마음을 건드려서 좋았다."
+            }
+          ]
+        }
+      ],
+      "colorMethod": {
+        "version": "genre65-review35-v2",
+        "genreShare": 0.43333333333333335,
+        "reviewShare": 0.5666666666666667,
+        "sources": [
+          {
+            "index": 1,
+            "genres": [
+              {
+                "id": 28,
+                "name": "액션",
+                "color": "red"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "genres": [
+              {
+                "id": 16,
+                "name": "애니메이션",
+                "color": "green"
+              }
+            ]
+          }
+        ]
+      },
+      "validation": {
+        "order": [
+          "evidence-fit",
+          "direction",
+          "strength",
+          "explanation-score"
+        ],
+        "semanticReview": true,
+        "scoring": "50±15×strength",
+        "version": "gamdo-evidence-v2.0",
+        "finalCriterionReview": true
+      }
+    },
+    "paletteSelection": "genre65-review35",
+    "reassessedAt": "2026-11-08T14:28:33.342Z"
+  },
+  {
+    "id": "fictional-garden-2",
+    "kind": "provided",
+    "displayName": "인물보다 공간에 먼저 눈길이",
+    "reviewAuthor": null,
+    "reviewSource": "synthetic",
+    "movies": [
+      {
+        "id": "tmdb:10515",
+        "title": "천공의 성 라퓨타",
+        "year": "1986",
+        "poster": "https://image.tmdb.org/t/p/w342/lObRXt53izxDbdlkGpNAHkDACmy.jpg",
+        "source": "https://www.themoviedb.org/movie/10515",
+        "canonicalTitle": "천공의 성 라퓨타",
+        "review": "높이가 다른 공간마다 사람들의 생활이 어떻게 달라지는지 눈여겨봤다. 주인공이 되고 싶다기보다 그 세계의 설계를 관찰하는 재미가 컸다. 서로 손을 잡는 선택이 거대한 장치보다 중요해지는 대목에서 희망을 느꼈다.",
+        "originalProvidedYear": "",
+        "genres": [
+          {
+            "id": 12,
+            "name": "모험"
+          },
+          {
+            "id": 14,
+            "name": "판타지"
+          },
+          {
+            "id": 16,
+            "name": "애니메이션"
+          },
+          {
+            "id": 28,
+            "name": "액션"
+          },
+          {
+            "id": 10751,
+            "name": "가족"
+          }
+        ]
+      },
+      {
+        "id": "tmdb:62",
+        "title": "2001 스페이스 오디세이",
+        "year": "1968",
+        "poster": "https://image.tmdb.org/t/p/w342/2qJjH5mYNlGPdVrPqfEq1J6Mgb4.jpg",
+        "source": "https://www.themoviedb.org/movie/62",
+        "canonicalTitle": "2001 스페이스 오디세이",
+        "review": "화면에 작은 움직임만 있어도 공간의 크기를 느낄 수 있다는 게 신기했다. 음악이 시작되면 장면을 따져 보던 생각도 잠시 멈췄다. 설명할 수 없는 것을 그대로 바라보게 하는 영화가 좋다.",
+        "originalProvidedYear": "",
+        "genres": [
+          {
+            "id": 878,
+            "name": "SF"
+          },
+          {
+            "id": 9648,
+            "name": "미스터리"
+          },
+          {
+            "id": 12,
+            "name": "모험"
+          }
+        ]
+      },
+      {
+        "id": "tmdb:42987",
+        "title": "하인",
+        "year": "1963",
+        "poster": "https://image.tmdb.org/t/p/w342/pRa4og93BeOoMCt6oWuPCwu5Coo.jpg",
+        "source": "https://www.themoviedb.org/movie/42987",
+        "canonicalTitle": "하인",
+        "review": "둘이 같은 방에 있을 때 누가 더 편안하게 자리를 차지하는지 보게 됐다. 말투와 동선의 차이를 찾아보느라 감정적으로는 거리를 두고 관찰했다. 관계의 힘이 바뀌어도 단순한 승패로 끝나지 않아 흥미로웠다.",
+        "originalProvidedYear": "1963",
+        "genres": [
+          {
+            "id": 18,
+            "name": "드라마"
+          }
+        ]
+      }
+    ],
+    "model": "gpt-5-2025-08-07",
+    "seed": 1248,
+    "generator": {
+      "version": "gamdo-lab-43-mix-six",
+      "settings": {
+        "repeat": 6
+      }
+    },
+    "createdAt": "2026-11-02T10:13:06.331Z",
+    "sourceNote": "정원 시연을 위해 새로 작성한 가상 감상입니다. 실제 관람객의 후기나 작성자의 경험을 인용한 기록이 아닙니다.",
+    "profile": {
+      "title": "인물보다 공간에 먼저 눈길이",
+      "description": "미세한 움직임과 공간의 설계를 따라가며 인물엔 거리를 두되, 손을 맞잡는 순간과 설명되지 않는 여백에서 즐거움을 찾는 편이에요.",
+      "tags": [
+        "관찰",
+        "공간감",
+        "해석의여지"
+      ],
+      "axes": [
+        {
+          "name": "감각",
+          "value": 35,
+          "level": "충분",
+          "assessment": {
+            "direction": "low",
+            "strength": 1,
+            "fit": "미세한 움직임과 공간의 차이를 눈여겨보는 태도에서 과장된 자극보다 절제된 표현에 반응하는 경향이 보여요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "높이가 다른 공간마다 사람들의 생활이 어떻게 달라지는지 눈여겨봤다."
+            },
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "화면에 작은 움직임만 있어도 공간의 크기를 느낄 수 있다는 게 신기했다."
+            }
+          ],
+          "explanation": "절제 방향의 약한 선호가 드러나요. 미세한 움직임과 공간의 차이를 눈여겨보는 태도에서 과장된 자극보다 절제된 표현에 반응하는 경향이 보여요.",
+          "status": "supported",
+          "direction": "절제에 가까움"
+        },
+        {
+          "name": "정서",
+          "value": 50,
+          "level": "부족",
+          "assessment": {
+            "direction": "unknown",
+            "strength": 0,
+            "fit": "감정의 진폭 자체에 대한 선호가 드러난 직접 근거가 없어요."
+          },
+          "evidence": [],
+          "explanation": "이 영역의 선호 방향을 판단할 근거가 아직 부족해요. 감정의 진폭 자체에 대한 선호가 드러난 직접 근거가 없어요.",
+          "status": "unknown",
+          "direction": "근거가 부족해 기본값으로 지정합니다."
+        },
+        {
+          "name": "인물",
+          "value": 20,
+          "level": "충분",
+          "assessment": {
+            "direction": "low",
+            "strength": 2,
+            "fit": "인물에 자신을 대입하기보다 선택과 태도를 바깥에서 관찰하려는 의지가 분명하게 표현됐어요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "주인공이 되고 싶다기보다 그 세계의 설계를 관찰하는 재미가 컸다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "말투와 동선의 차이를 찾아보느라 감정적으로는 거리를 두고 관찰했다."
+            }
+          ],
+          "explanation": "관찰 방향의 뚜렷한 선호가 드러나요. 인물에 자신을 대입하기보다 선택과 태도를 바깥에서 관찰하려는 의지가 분명하게 표현됐어요.",
+          "status": "supported",
+          "direction": "관찰에 가까움"
+        },
+        {
+          "name": "관계",
+          "value": 80,
+          "level": "충분",
+          "assessment": {
+            "direction": "high",
+            "strength": 2,
+            "fit": "거대한 장치보다 서로 손을 잡는 선택에 가치를 두며, 관계의 힘 변화 자체에 꾸준히 주목해요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "서로 손을 잡는 선택이 거대한 장치보다 중요해지는 대목에서 희망을 느꼈다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "관계의 힘이 바뀌어도 단순한 승패로 끝나지 않아 흥미로웠다."
+            }
+          ],
+          "explanation": "연결 방향의 뚜렷한 선호가 드러나요. 거대한 장치보다 서로 손을 잡는 선택에 가치를 두며, 관계의 힘 변화 자체에 꾸준히 주목해요.",
+          "status": "supported",
+          "direction": "연결에 가까움"
+        },
+        {
+          "name": "몰입",
+          "value": 35,
+          "level": "충분",
+          "assessment": {
+            "direction": "low",
+            "strength": 1,
+            "fit": "장면을 따져보는 습관과 감정적 거리를 유지하는 태도에서 한 걸음 떨어진 관람이 드러나요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "음악이 시작되면 장면을 따져 보던 생각도 잠시 멈췄다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "말투와 동선의 차이를 찾아보느라 감정적으로는 거리를 두고 관찰했다."
+            }
+          ],
+          "explanation": "거리 방향의 약한 선호가 드러나요. 장면을 따져보는 습관과 감정적 거리를 유지하는 태도에서 한 걸음 떨어진 관람이 드러나요.",
+          "status": "supported",
+          "direction": "거리에 가까움"
+        },
+        {
+          "name": "서사",
+          "value": 80,
+          "level": "충분",
+          "assessment": {
+            "direction": "high",
+            "strength": 2,
+            "fit": "설명하지 않는 여백을 반가워하고, 결과를 단순한 승패로 닫지 않는 전개에 끌려요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "설명할 수 없는 것을 그대로 바라보게 하는 영화가 좋다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "관계의 힘이 바뀌어도 단순한 승패로 끝나지 않아 흥미로웠다."
+            }
+          ],
+          "explanation": "해석 여백 방향의 뚜렷한 선호가 드러나요. 설명하지 않는 여백을 반가워하고, 결과를 단순한 승패로 닫지 않는 전개에 끌려요.",
+          "status": "supported",
+          "direction": "해석 여백에 가까움"
+        }
+      ],
+      "sections": {
+        "sensory": "작은 움직임만으로도 공간의 크기를 전달하는 장면에 반응하는 편이에요. 과장된 자극보다 설계와 배치에서 오는 감각을 따라가요.",
+        "emotional": "감정의 크고 작은 진폭에 대한 분명한 취향은 아직 드러나지 않았어요. 상황을 관찰하는 데 마음이 더 갔다는 점만 확인돼요.",
+        "character": "주인공에 자신을 대입하기보다 선택과 태도를 바깥에서 살피는 관람을 즐겨요. 말투와 동선 같은 단서로 인물을 파악하는 편이에요.",
+        "relationship": "거대한 장치보다 서로 손을 잡는 순간에 마음이 움직였어요. 힘의 균형이 바뀌어도 승패로 단정하지 않고 흐름을 지켜봐요.",
+        "narrative": "설명되지 않는 것들을 그대로 바라보게 하는 서사를 반가워해요. 명확한 결론보다 해석의 여백을 품은 전개에 끌려요.",
+        "values": "연대가 필요한 순간에 내미는 손의 의미를 소중히 여기네요. 세계의 구조와 질서를 궁금해하며 차분히 들여다보는 태도도 보여요.",
+        "avoidance": "모든 것을 말로 정리해 주는 과도한 해설과 단정적인 결말은 덜 끌릴 수 있어요. 다만 감정의 강도 취향은 아직 근거가 부족해요.",
+        "recommendation": "공간 설계와 거리감이 살아 있는 연출, 관계의 역학을 세심하게 보여주고 설명의 여백을 남기는 작품을 더 탐색해 보면 잘 맞아요. 음악과 정적의 배치를 의식하며 보면 취향의 결이 또렷해져요."
+      },
+      "mood": "blue",
+      "palette": [
+        {
+          "mood": "blue",
+          "weight": 48
+        },
+        {
+          "mood": "yellow",
+          "weight": 30
+        },
+        {
+          "mood": "purple",
+          "weight": 22
+        }
+      ],
+      "colorReason": "세 편의 영화가 가진 장르와 전체적인 분위기, 남겨주신 감상을 함께 살펴 블루를 메인 컬러로 골랐어요. 그중 인물의 내면이나 넓은 세계를 바라보는 차분한 거리감과 감상에 남은 조용한 생각과 쓸쓸함을 이 색에 담았고요. 함께 느껴지는 분위기는 옐로(따뜻함과 반가운 활기), 퍼플(낯섦과 호기심)로 더해, 세 편의 서로 다른 결도 남겨두었어요.",
+      "uncertainty": "정서 축의 선호 방향은 아직 단서가 부족해요. 감정의 진폭을 어떻게 받아들이는지 추가 표현이 필요해요.",
+      "questions": [],
+      "analysisVersion": "gamdo-evidence-v2.0",
+      "reviewPalette": [
+        {
+          "mood": "blue",
+          "weight": 60,
+          "reason": "공간의 크기, 감정적 거리두기, 관찰 중심의 태도에서 고요하고 사색적인 분위기가 주를 이룬다.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "화면에 작은 움직임만 있어도 공간의 크기를 느낄 수 있다는 게 신기했다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "말투와 동선의 차이를 찾아보느라 감정적으로는 거리를 두고 관찰했다."
+            }
+          ]
+        },
+        {
+          "mood": "yellow",
+          "weight": 25,
+          "reason": "작은 선택에서 희망을 느끼는 등 따뜻한 감정의 순간이 부분적으로 드러난다.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "서로 손을 잡는 선택이 거대한 장치보다 중요해지는 대목에서 희망을 느꼈다."
+            }
+          ]
+        },
+        {
+          "mood": "purple",
+          "weight": 15,
+          "reason": "설명할 수 없는 것을 바라보는 태도와 신비로운 감각에 대한 선호가 일부 나타난다.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "설명할 수 없는 것을 그대로 바라보게 하는 영화가 좋다."
+            }
+          ]
+        }
+      ],
+      "colorMethod": {
+        "version": "genre65-review35-v2",
+        "genreShare": 0.43333333333333335,
+        "reviewShare": 0.5666666666666667,
+        "sources": [
+          {
+            "index": 0,
+            "genres": [
+              {
+                "id": 12,
+                "name": "모험",
+                "color": "yellow"
+              },
+              {
+                "id": 14,
+                "name": "판타지",
+                "color": "purple"
+              },
+              {
+                "id": 16,
+                "name": "애니메이션",
+                "color": "green"
+              },
+              {
+                "id": 28,
+                "name": "액션",
+                "color": "red"
+              },
+              {
+                "id": 10751,
+                "name": "가족",
+                "color": "green"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "genres": [
+              {
+                "id": 878,
+                "name": "SF",
+                "color": "blue"
+              },
+              {
+                "id": 9648,
+                "name": "미스터리",
+                "color": "purple"
+              },
+              {
+                "id": 12,
+                "name": "모험",
+                "color": "yellow"
+              }
+            ]
+          }
+        ]
+      },
+      "validation": {
+        "order": [
+          "evidence-fit",
+          "direction",
+          "strength",
+          "explanation-score"
+        ],
+        "semanticReview": true,
+        "scoring": "50±15×strength",
+        "version": "gamdo-evidence-v2.0",
+        "finalCriterionReview": true
+      }
+    },
+    "paletteSelection": "genre65-review35",
+    "reassessedAt": "2026-11-08T14:29:51.196Z"
+  },
+  {
+    "id": "fictional-garden-3",
+    "kind": "provided",
+    "displayName": "별일 없는 하루가 제일 특별해서",
+    "reviewAuthor": null,
+    "reviewSource": "synthetic",
+    "movies": [
+      {
+        "id": "tmdb:16664",
+        "title": "릴리슈슈의 모든 것",
+        "year": "2001",
+        "poster": "https://image.tmdb.org/t/p/w342/gnKTXX5SmQlu0iS9bGbvds3bcOa.jpg",
+        "source": "https://www.themoviedb.org/movie/16664",
+        "canonicalTitle": "릴리 슈슈의 모든 것",
+        "review": "풍경은 아름다운데 사람들 사이의 공기는 차갑게 느껴졌다. 누구 한 사람에게 나를 겹치기보다는 서로 가까워지지 못하는 모습을 지켜봤다. 음악이 지나간 자리에 남는 적막이 마음에 들었다.",
+        "originalProvidedYear": "",
+        "genres": [
+          {
+            "id": 18,
+            "name": "드라마"
+          },
+          {
+            "id": 80,
+            "name": "범죄"
+          }
+        ]
+      },
+      {
+        "id": "tmdb:586500",
+        "title": "태풍이 지나가고",
+        "year": "2016",
+        "poster": "https://image.tmdb.org/t/p/w342/zJkHPKl8BE9sf3hL7EBXtFdQwdq.jpg",
+        "source": "https://www.themoviedb.org/movie/586500",
+        "canonicalTitle": "Silence After the Storm",
+        "review": "대단한 사건보다 한집에 잠시 모여 있는 사람들의 말과 침묵이 좋았다. 다 이해하지 못해도 같은 공간에 머무를 수 있다는 게 다정하게 느껴졌다. 느린 대화 속에서 조금 쉬어 가는 기분이었다.",
+        "originalProvidedYear": "",
+        "genres": [
+          {
+            "id": 99,
+            "name": "다큐멘터리"
+          },
+          {
+            "id": 10752,
+            "name": "전쟁"
+          }
+        ]
+      },
+      {
+        "id": "tmdb:370755",
+        "title": "패터슨",
+        "year": "2016",
+        "poster": "https://image.tmdb.org/t/p/w342/tyug3ju4zaqglbndc8T6ZdUxl2j.jpg",
+        "source": "https://www.themoviedb.org/movie/370755",
+        "canonicalTitle": "패터슨",
+        "review": "반복되는 하루가 조금씩 다르게 보이는 경험이 좋았다. 사소한 관찰을 챙기는 인물의 태도를 나도 따라 해 보고 싶었다. 큰 변화나 강한 음악 없이도 충분히 충만했다.",
+        "originalProvidedYear": "",
+        "genres": [
+          {
+            "id": 18,
+            "name": "드라마"
+          }
+        ]
+      }
+    ],
+    "model": "gpt-5-2025-08-07",
+    "seed": 1248,
+    "generator": {
+      "version": "gamdo-lab-43-mix-six",
+      "settings": {
+        "repeat": 6
+      }
+    },
+    "createdAt": "2026-11-02T10:13:06.343Z",
+    "sourceNote": "정원 시연을 위해 새로 작성한 가상 감상입니다. 실제 관람객의 후기나 작성자의 경험을 인용한 기록이 아닙니다.",
+    "profile": {
+      "title": "별일 없는 하루가 제일 특별해서",
+      "description": "큰 사건과 강한 음악보다 말과 침묵의 호흡, 일상 속 작은 변주와 다정한 동거를 좋아하네요.",
+      "tags": [
+        "차분한호흡",
+        "관찰의즐거움",
+        "조용한유대"
+      ],
+      "axes": [
+        {
+          "name": "감각",
+          "value": 20,
+          "level": "충분",
+          "assessment": {
+            "direction": "low",
+            "strength": 2,
+            "fit": "강한 음악 없이 남는 적막을 좋아하고, 큰 변화나 강한 음악이 없어도 충만했다는 표현이 소리와 리듬의 절제를 분명히 선호함을 보여줘요. 화면의 강렬함 자체를 말하진 않았지만, 사운드 선택과 전체 감각 톤에서 일관된 절제를 지지해요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "음악이 지나간 자리에 남는 적막이 마음에 들었다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "큰 변화나 강한 음악 없이도 충분히 충만했다."
+            }
+          ],
+          "explanation": "절제 방향의 뚜렷한 선호가 드러나요. 강한 음악 없이 남는 적막을 좋아하고, 큰 변화나 강한 음악이 없어도 충만했다는 표현이 소리와 리듬의 절제를 분명히 선호함을 보여줘요. 화면의 강렬함 자체를 말하진 않았지만, 사운드 선택과 전체 감각 톤에서 일관된 절제를 지지해요.",
+          "status": "supported",
+          "direction": "절제에 가까움"
+        },
+        {
+          "name": "정서",
+          "value": 20,
+          "level": "부분적",
+          "assessment": {
+            "direction": "low",
+            "strength": 2,
+            "fit": "대단한 사건보다 말과 침묵을 좋아했고, 느린 대화 속에서 쉬어 간다고 했어요. 큰 정서 폭발보다 잔잔하고 스며드는 감정 흐름을 선호한다는 직접적인 표현이에요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "대단한 사건보다 한집에 잠시 모여 있는 사람들의 말과 침묵이 좋았다."
+            },
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "느린 대화 속에서 조금 쉬어 가는 기분이었다."
+            }
+          ],
+          "explanation": "잔잔 방향의 뚜렷한 선호가 드러나요. 대단한 사건보다 말과 침묵을 좋아했고, 느린 대화 속에서 쉬어 간다고 했어요. 큰 정서 폭발보다 잔잔하고 스며드는 감정 흐름을 선호한다는 직접적인 표현이에요.",
+          "status": "supported",
+          "direction": "잔잔에 가까움"
+        },
+        {
+          "name": "인물",
+          "value": 50,
+          "level": "충분",
+          "assessment": {
+            "direction": "mixed",
+            "strength": 0,
+            "fit": "한 편에선 특정 인물에 자신을 겹치지 않고 거리를 두어 관찰했고, 다른 편에선 인물의 태도를 따라 해 보고 싶다고 했어요. 관찰과 동일시가 상황에 따라 함께 나타난 셈이라 방향을 한쪽으로 단정하기 어려워요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "누구 한 사람에게 나를 겹치기보다는 서로 가까워지지 못하는 모습을 지켜봤다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "사소한 관찰을 챙기는 인물의 태도를 나도 따라 해 보고 싶었다."
+            }
+          ],
+          "explanation": "두 방향의 선호가 함께 드러나요. 한 편에선 특정 인물에 자신을 겹치지 않고 거리를 두어 관찰했고, 다른 편에선 인물의 태도를 따라 해 보고 싶다고 했어요. 관찰과 동일시가 상황에 따라 함께 나타난 셈이라 방향을 한쪽으로 단정하기 어려워요.",
+          "status": "mixed",
+          "direction": "두 방향의 선호가 함께 드러남"
+        },
+        {
+          "name": "관계",
+          "value": 80,
+          "level": "부분적",
+          "assessment": {
+            "direction": "high",
+            "strength": 2,
+            "fit": "모든 걸 이해하지 못해도 한 공간에 함께 머무를 수 있는 상태를 다정하다고 느꼈다고 했어요. 완전한 합일보다도 함께 있음과 돌봄의 공기를 긍정하는 태도로, 유대 지향의 선호가 분명해요. 거리감 자체를 선호한다는 근거는 제시되지 않았어요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "다 이해하지 못해도 같은 공간에 머무를 수 있다는 게 다정하게 느껴졌다."
+            },
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "대단한 사건보다 한집에 잠시 모여 있는 사람들의 말과 침묵이 좋았다."
+            }
+          ],
+          "explanation": "연결 방향의 뚜렷한 선호가 드러나요. 모든 걸 이해하지 못해도 한 공간에 함께 머무를 수 있는 상태를 다정하다고 느꼈다고 했어요. 완전한 합일보다도 함께 있음과 돌봄의 공기를 긍정하는 태도로, 유대 지향의 선호가 분명해요. 거리감 자체를 선호한다는 근거는 제시되지 않았어요.",
+          "status": "supported",
+          "direction": "연결에 가까움"
+        },
+        {
+          "name": "몰입",
+          "value": 50,
+          "level": "부족",
+          "assessment": {
+            "direction": "unknown",
+            "strength": 0,
+            "fit": "형식 의식과 거리두기, 혹은 시간 감각을 잊는 몰입을 직접 드러내는 표현이 부족해요. 인물 관찰이나 호감 표현만으로 몰입의 정도를 단정하긴 어려워요."
+          },
+          "evidence": [],
+          "explanation": "이 영역의 선호 방향을 판단할 근거가 아직 부족해요. 형식 의식과 거리두기, 혹은 시간 감각을 잊는 몰입을 직접 드러내는 표현이 부족해요. 인물 관찰이나 호감 표현만으로 몰입의 정도를 단정하긴 어려워요.",
+          "status": "unknown",
+          "direction": "근거가 부족해 기본값으로 지정합니다."
+        },
+        {
+          "name": "서사",
+          "value": 50,
+          "level": "부족",
+          "assessment": {
+            "direction": "unknown",
+            "strength": 0,
+            "fit": "큰 사건이 없어도 좋다는 말은 이야기의 규모를 말할 뿐, 인과의 명료함이나 해석의 여백 선호를 직접 가리키진 않아요. 비선형·생략·모호함에 대한 선호 근거가 아직 없어요."
+          },
+          "evidence": [],
+          "explanation": "이 영역의 선호 방향을 판단할 근거가 아직 부족해요. 큰 사건이 없어도 좋다는 말은 이야기의 규모를 말할 뿐, 인과의 명료함이나 해석의 여백 선호를 직접 가리키진 않아요. 비선형·생략·모호함에 대한 선호 근거가 아직 없어요.",
+          "status": "unknown",
+          "direction": "근거가 부족해 기본값으로 지정합니다."
+        }
+      ],
+      "sections": {
+        "sensory": "강한 음악 대신 적막과 여백이 남는 소리, 느긋한 호흡을 좋아해요. 과감한 감각 자극보다 차분한 리듬을 선호하네요.",
+        "emotional": "대화와 침묵을 오가며 서서히 스며드는 감정선을 편안하게 받아들이는 편이에요. 크게 흔들기보다 오래 머무는 감정이 좋아요.",
+        "character": "특정 인물에 자신을 겹치기보다 관찰할 때가 많지만, 어떤 태도엔 슬쩍 마음이 움직여 따라 해 보고 싶어지기도 하네요.",
+        "relationship": "모두를 완벽히 이해하지 못해도 함께 머무르는 상태를 다정하게 느끼는 편이에요. 과한 간섭보다는 조용한 동행을 좋아해요.",
+        "narrative": "큰 사건 유무보다는 순간의 호흡을 보았다는 단서가 많아 서사 선호는 아직 단정하기 어려워요.",
+        "values": "사소한 것들을 놓치지 않으려는 태도와, 말과 침묵이 공존하는 시간을 존중하는 마음이 보여요.",
+        "avoidance": "과장된 사건 전개나 과도한 배경음악은 덜 끌리는 편이에요.",
+        "recommendation": "말과 침묵의 리듬이 살아 있고, 사운드가 절제된 일상 관찰형 작품을 더 탐색해 보세요. 완벽한 합의보다 함께 머무는 온기를 비추는 영화도 잘 맞겠어요."
+      },
+      "mood": "blue",
+      "palette": [
+        {
+          "mood": "blue",
+          "weight": 40
+        },
+        {
+          "mood": "red",
+          "weight": 33
+        },
+        {
+          "mood": "green",
+          "weight": 27
+        }
+      ],
+      "colorReason": "세 편의 영화가 가진 장르와 전체적인 분위기, 남겨주신 감상을 함께 살펴 블루를 메인 컬러로 골랐어요. 그중 인물의 내면이나 넓은 세계를 바라보는 차분한 거리감과 감상에 남은 조용한 생각과 쓸쓸함을 이 색에 담았고요. 함께 느껴지는 분위기는 레드(벅찬 쾌감과 긴장), 연두(일상의 회복과 생동감)로 더해, 세 편의 서로 다른 결도 남겨두었어요.",
+      "uncertainty": "몰입과 서사 축은 단서가 부족해 방향을 보류했어요. 다음 감상에서 관련 표현이 더해지면 조정할게요.",
+      "questions": [],
+      "analysisVersion": "gamdo-evidence-v2.0",
+      "reviewPalette": [
+        {
+          "mood": "blue",
+          "weight": 70,
+          "reason": "적막, 거리감, 고요한 일상과 관찰의 분위기가 주를 이룬다.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "음악이 지나간 자리에 남는 적막이 마음에 들었다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "사소한 관찰을 챙기는 인물의 태도를 나도 따라 해 보고 싶었다."
+            }
+          ]
+        },
+        {
+          "mood": "green",
+          "weight": 30,
+          "reason": "쉬어감, 다정함, 일상 속 회복의 감정이 일부 드러난다.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "느린 대화 속에서 조금 쉬어 가는 기분이었다."
+            },
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "다 이해하지 못해도 같은 공간에 머무를 수 있다는 게 다정하게 느껴졌다."
+            }
+          ]
+        }
+      ],
+      "colorMethod": {
+        "version": "genre65-review35-v2",
+        "genreShare": 0.43333333333333335,
+        "reviewShare": 0.5666666666666667,
+        "sources": [
+          {
+            "index": 0,
+            "genres": [
+              {
+                "id": 80,
+                "name": "범죄",
+                "color": "red"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "genres": [
+              {
+                "id": 99,
+                "name": "다큐멘터리",
+                "color": "green"
+              },
+              {
+                "id": 10752,
+                "name": "전쟁",
+                "color": "red"
+              }
+            ]
+          }
+        ]
+      },
+      "validation": {
+        "order": [
+          "evidence-fit",
+          "direction",
+          "strength",
+          "explanation-score"
+        ],
+        "semanticReview": true,
+        "scoring": "50±15×strength",
+        "version": "gamdo-evidence-v2.0",
+        "finalCriterionReview": true
+      }
+    },
+    "paletteSelection": "genre65-review35",
+    "reassessedAt": "2026-11-08T14:30:29.186Z"
+  },
+  {
+    "id": "fictional-garden-4",
+    "kind": "provided",
+    "displayName": "편안한 관람은 다음 기회에",
+    "reviewAuthor": null,
+    "reviewSource": "synthetic",
+    "movies": [
+      {
+        "id": "tmdb:1368337",
+        "title": "오디세이",
+        "year": "2026",
+        "poster": "https://image.tmdb.org/t/p/w342/8ze9OcVuFiy94s6FFPvsn4oC2e1.jpg",
+        "source": "https://www.themoviedb.org/movie/1368337",
+        "canonicalTitle": "오디세이",
+        "review": "넓은 바다를 앞에 둔 작은 사람의 모습을 상상하며 보는 가상 감상이다. 거대한 풍경과 거친 소리가 생존의 불안을 키우는 경험에 끌린다. 영웅의 승리보다 집에 도착했을 때 남아 있을 마음이 궁금하다.",
+        "originalProvidedYear": "2026",
+        "metadataStatus": "matched",
+        "genres": [
+          {
+            "id": 12,
+            "name": "모험"
+          },
+          {
+            "id": 28,
+            "name": "액션"
+          },
+          {
+            "id": 14,
+            "name": "판타지"
+          }
+        ]
+      },
+      {
+        "id": "tmdb:670",
+        "title": "올드보이",
+        "year": "2003",
+        "poster": "https://image.tmdb.org/t/p/w342/xpa9ybm6tYGna5LseqSXvKpSSJn.jpg",
+        "source": "https://www.themoviedb.org/movie/670",
+        "canonicalTitle": "올드보이",
+        "review": "한 번 선택한 행동이 돌아오는 방식 때문에 편하게 숨을 쉴 수 없었다. 강한 색과 좁은 공간이 답답함을 더했다. 인물에게 공감하기보다는 상황이 어떻게 닫혀 가는지 지켜보는 쪽에 가까웠다.",
+        "originalProvidedYear": "",
+        "metadataStatus": "matched",
+        "genres": [
+          {
+            "id": 53,
+            "name": "스릴러"
+          },
+          {
+            "id": 9648,
+            "name": "미스터리"
+          }
+        ]
+      },
+      {
+        "id": "tmdb:872585",
+        "title": "오펜하이머",
+        "year": "2023",
+        "poster": "https://image.tmdb.org/t/p/w342/jpD6z9fgNe7OqsHoDeAWQWoULde.jpg",
+        "source": "https://www.themoviedb.org/movie/872585",
+        "canonicalTitle": "오펜하이머",
+        "review": "말이 빠르게 오가는 장면에서도 소리가 긴장을 붙잡아 줬다. 거대한 일을 끝내고도 편안해질 수 없는 표정을 보는 게 가장 힘들었다. 쾌감과 불안이 함께 밀려오는 강한 관람 경험이었다.",
+        "originalProvidedYear": "2023",
+        "metadataStatus": "matched",
+        "genres": [
+          {
+            "id": 18,
+            "name": "드라마"
+          },
+          {
+            "id": 36,
+            "name": "역사"
+          },
+          {
+            "id": 10752,
+            "name": "전쟁"
+          }
+        ]
+      }
+    ],
+    "model": "gpt-5-2025-08-07",
+    "seed": 1248,
+    "generator": {
+      "version": "gamdo-lab-43-mix-six",
+      "settings": {
+        "repeat": 6
+      }
+    },
+    "createdAt": "2026-11-02T10:13:06.349Z",
+    "sourceNote": "정원 시연을 위해 새로 작성한 가상 감상입니다. 실제 관람객의 후기나 작성자의 경험을 인용한 기록이 아닙니다.",
+    "profile": {
+      "title": "편안한 관람은 다음 기회에",
+      "description": "거친 소리와 강한 색이 만드는 압력 속에서 쾌감과 불안의 진폭을 선명히 받아들이네요. 인물과는 거리를 두고 인과가 닫혀 가는 흐름과 이후에 남는 마음을 오래 지켜봐요.",
+      "tags": [
+        "강한 소리와 색",
+        "불안의 긴장감",
+        "인물 관찰 시선"
+      ],
+      "axes": [
+        {
+          "name": "감각",
+          "value": 80,
+          "level": "충분",
+          "assessment": {
+            "direction": "high",
+            "strength": 2,
+            "fit": "거대한 풍경·거친 소리와 강한 색·좁은 공간, 빠른 대화 속에서도 긴장을 붙드는 사운드 등 강한 시청각 밀도에 끌린다고 직접 언급돼요. 여러 편에서 반복돼 방향이 분명해요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "거대한 풍경과 거친 소리가 생존의 불안을 키우는 경험에 끌린다."
+            },
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "강한 색과 좁은 공간이 답답함을 더했다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "말이 빠르게 오가는 장면에서도 소리가 긴장을 붙잡아 줬다."
+            }
+          ],
+          "explanation": "강렬 방향의 뚜렷한 선호가 드러나요. 거대한 풍경·거친 소리와 강한 색·좁은 공간, 빠른 대화 속에서도 긴장을 붙드는 사운드 등 강한 시청각 밀도에 끌린다고 직접 언급돼요. 여러 편에서 반복돼 방향이 분명해요.",
+          "status": "supported",
+          "direction": "강렬에 가까움"
+        },
+        {
+          "name": "정서",
+          "value": 80,
+          "level": "충분",
+          "assessment": {
+            "direction": "high",
+            "strength": 2,
+            "fit": "불안을 키우는 경험에 ‘끌린다’는 표현과 ‘쾌감과 불안이 함께 밀려오는 강한 관람 경험’이라는 진술이 감정 진폭이 큰 흐름을 선호함을 뒷받침해요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "거대한 풍경과 거친 소리가 생존의 불안을 키우는 경험에 끌린다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "쾌감과 불안이 함께 밀려오는 강한 관람 경험이었다."
+            }
+          ],
+          "explanation": "격렬 방향의 뚜렷한 선호가 드러나요. 불안을 키우는 경험에 ‘끌린다’는 표현과 ‘쾌감과 불안이 함께 밀려오는 강한 관람 경험’이라는 진술이 감정 진폭이 큰 흐름을 선호함을 뒷받침해요.",
+          "status": "supported",
+          "direction": "격렬에 가까움"
+        },
+        {
+          "name": "인물",
+          "value": 20,
+          "level": "부분적",
+          "assessment": {
+            "direction": "low",
+            "strength": 2,
+            "fit": "‘인물에게 공감하기보다는… 지켜보는 쪽’이라는 직접적인 진술로 동일시보다 관찰에 가까운 태도가 드러나요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "인물에게 공감하기보다는 상황이 어떻게 닫혀 가는지 지켜보는 쪽에 가까웠다."
+            }
+          ],
+          "explanation": "관찰 방향의 뚜렷한 선호가 드러나요. ‘인물에게 공감하기보다는… 지켜보는 쪽’이라는 직접적인 진술로 동일시보다 관찰에 가까운 태도가 드러나요.",
+          "status": "supported",
+          "direction": "관찰에 가까움"
+        },
+        {
+          "name": "관계",
+          "value": 50,
+          "level": "부족",
+          "assessment": {
+            "direction": "unknown",
+            "strength": 0,
+            "fit": "관계의 성격(유대/독립)에 대한 직접 언급이 없어 판단하기 어려워요."
+          },
+          "evidence": [],
+          "explanation": "이 영역의 선호 방향을 판단할 근거가 아직 부족해요. 관계의 성격(유대/독립)에 대한 직접 언급이 없어 판단하기 어려워요.",
+          "status": "unknown",
+          "direction": "근거가 부족해 기본값으로 지정합니다."
+        },
+        {
+          "name": "몰입",
+          "value": 50,
+          "level": "부족",
+          "assessment": {
+            "direction": "unknown",
+            "strength": 0,
+            "fit": "영화 속에 들어간 듯 빠져들었는지, 한 걸음 떨어져 보았는지에 대한 직접적 언급이 없어요."
+          },
+          "evidence": [],
+          "explanation": "이 영역의 선호 방향을 판단할 근거가 아직 부족해요. 영화 속에 들어간 듯 빠져들었는지, 한 걸음 떨어져 보았는지에 대한 직접적 언급이 없어요.",
+          "status": "unknown",
+          "direction": "근거가 부족해 기본값으로 지정합니다."
+        },
+        {
+          "name": "서사",
+          "value": 35,
+          "level": "부분적",
+          "assessment": {
+            "direction": "low",
+            "strength": 1,
+            "fit": "‘선택한 행동이 돌아오는 방식’, ‘상황이 어떻게 닫혀 가는지’에 주목했다는 말은 인과가 분명하고 수렴하는 서사에 관심이 있음을 시사해요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "한 번 선택한 행동이 돌아오는 방식 때문에 편하게 숨을 쉴 수 없었다."
+            },
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "인물에게 공감하기보다는 상황이 어떻게 닫혀 가는지 지켜보는 쪽에 가까웠다."
+            }
+          ],
+          "explanation": "명료함 방향의 약한 선호가 드러나요. ‘선택한 행동이 돌아오는 방식’, ‘상황이 어떻게 닫혀 가는지’에 주목했다는 말은 인과가 분명하고 수렴하는 서사에 관심이 있음을 시사해요.",
+          "status": "supported",
+          "direction": "명료함에 가까움"
+        }
+      ],
+      "sections": {
+        "sensory": "거대한 풍광과 거친 소리, 강한 색의 압박을 또렷하게 받아들이는 편이에요. 좁은 공간의 밀도와 사운드의 긴장도 눈에 띄네요.",
+        "emotional": "쾌감과 불안이 함께 밀려오는 강한 감정선을 주저하지 않고 맞받아들이는 취향이네요. 여운은 승리보다 이후에 남는 마음에서 길게 이어져요.",
+        "character": "인물에 자신을 대입하기보다 선택과 결과를 관찰하는 시선이 확실해요. 큰 일을 끝낸 뒤의 표정과 남는 마음에 특히 오래 머무네요.",
+        "relationship": "관계의 온도나 의존·자율의 선호는 아직 읽히지 않아요. 지금은 개인의 내면과 상황의 압력에 더 시선이 모여 있어요.",
+        "narrative": "행동이 결과로 되돌아오며 상황이 닫혀 가는 구조에 주목하네요. 퍼즐식 해석보다는 인과의 진행을 따라가며 압박을 체감하는 편이에요.",
+        "values": "영웅적 승리보다 이후에 남는 마음과 책임의 무게를 응시하려는 태도가 보여요.",
+        "avoidance": "피하고 싶은 요소는 자료만으로는 알기 어려워요.",
+        "recommendation": "사운드 디자인이 뚜렷하고 색·공간의 압력이 선명한 작품군을 더 탐색해보세요. 인과가 응축돼 끝내 수렴하는 서사에서 긴장과 여운을 함께 느끼기 좋아요."
+      },
+      "mood": "red",
+      "palette": [
+        {
+          "mood": "red",
+          "weight": 61
+        },
+        {
+          "mood": "yellow",
+          "weight": 20
+        },
+        {
+          "mood": "purple",
+          "weight": 19
+        }
+      ],
+      "colorReason": "세 편의 영화가 가진 장르와 전체적인 분위기, 남겨주신 감상을 함께 살펴 레드를 메인 컬러로 골랐어요. 그중 속도감 있는 움직임과 팽팽한 긴장과 감상에 남은 벅찬 쾌감과 긴장을 이 색에 담았고요. 함께 느껴지는 분위기는 옐로(따뜻함과 반가운 활기), 퍼플(낯섦과 호기심)로 더해, 세 편의 서로 다른 결도 남겨두었어요.",
+      "uncertainty": "관계와 몰입 축은 근거가 부족해 보류했고, 서사 선호는 한 편의 간접 언급에 기대 부분적으로만 판단했어요.",
+      "questions": [],
+      "analysisVersion": "gamdo-evidence-v2.0",
+      "reviewPalette": [
+        {
+          "mood": "red",
+          "weight": 60,
+          "reason": "불안, 긴장, 쾌감이 반복적으로 언급되어 강렬한 분위기가 주를 이룸.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "쾌감과 불안이 함께 밀려오는 강한 관람 경험이었다."
+            },
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "한 번 선택한 행동이 돌아오는 방식 때문에 편하게 숨을 쉴 수 없었다."
+            }
+          ]
+        },
+        {
+          "mood": "blue",
+          "weight": 40,
+          "reason": "고독, 답답함, 집에 남겨질 마음 등 고요하고 내면적인 정서가 일부 드러남.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "영웅의 승리보다 집에 도착했을 때 남아 있을 마음이 궁금하다."
+            },
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "강한 색과 좁은 공간이 답답함을 더했다."
+            }
+          ]
+        }
+      ],
+      "colorMethod": {
+        "version": "genre65-review35-v2",
+        "genreShare": 0.65,
+        "reviewShare": 0.35,
+        "sources": [
+          {
+            "index": 0,
+            "genres": [
+              {
+                "id": 12,
+                "name": "모험",
+                "color": "yellow"
+              },
+              {
+                "id": 28,
+                "name": "액션",
+                "color": "red"
+              },
+              {
+                "id": 14,
+                "name": "판타지",
+                "color": "purple"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "genres": [
+              {
+                "id": 53,
+                "name": "스릴러",
+                "color": "red"
+              },
+              {
+                "id": 9648,
+                "name": "미스터리",
+                "color": "purple"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "genres": [
+              {
+                "id": 36,
+                "name": "역사",
+                "color": "yellow"
+              },
+              {
+                "id": 10752,
+                "name": "전쟁",
+                "color": "red"
+              }
+            ]
+          }
+        ]
+      },
+      "validation": {
+        "order": [
+          "evidence-fit",
+          "direction",
+          "strength",
+          "explanation-score"
+        ],
+        "semanticReview": true,
+        "scoring": "50±15×strength",
+        "version": "gamdo-evidence-v2.0",
+        "finalCriterionReview": true
+      }
+    },
+    "paletteSelection": "genre65-review35",
+    "reassessedAt": "2026-11-08T14:31:48.292Z"
+  },
+  {
+    "id": "fictional-garden-5",
+    "kind": "provided",
+    "displayName": "이 장면, 볼륨을 올려주세요",
+    "reviewAuthor": null,
+    "reviewSource": "synthetic",
+    "movies": [
+      {
+        "id": "tmdb:24",
+        "title": "킬 빌",
+        "year": "2003",
+        "poster": "https://image.tmdb.org/t/p/w342/lH82lk837fACeVZUmqHH0UiEeWL.jpg",
+        "source": "https://www.themoviedb.org/movie/24",
+        "canonicalTitle": "킬 빌: 1부",
+        "review": "싸움의 움직임과 음악이 만들어 내는 박자 자체를 즐겼다. 진지한 현실 이야기로 읽기보다 과감하게 과장된 형식을 보는 게 재미있었다. 군더더기 없이 다음 장면으로 밀어붙일 때 가장 신났다.",
+        "originalProvidedYear": "",
+        "metadataStatus": "matched",
+        "genres": [
+          {
+            "id": 28,
+            "name": "액션"
+          },
+          {
+            "id": 80,
+            "name": "범죄"
+          }
+        ]
+      },
+      {
+        "id": "tmdb:1062722",
+        "title": "프랑켄슈타인",
+        "year": "2025",
+        "poster": "https://image.tmdb.org/t/p/w342/vSMWJkBTEfa7kFxHizSz4uJNVlf.jpg",
+        "source": "https://www.themoviedb.org/movie/1062722",
+        "canonicalTitle": "프랑켄슈타인",
+        "review": "낯선 존재가 세상을 배워 가는 모습을 내 첫 경험들에 대입하며 봤다. 두려움으로 시작한 마음이 다정함으로 바뀌는 순간이 좋았다. 끝에서는 누군가를 받아들이는 선택 덕분에 긴장이 풀렸다.",
+        "originalProvidedYear": "2025",
+        "metadataStatus": "matched",
+        "genres": [
+          {
+            "id": 18,
+            "name": "드라마"
+          },
+          {
+            "id": 14,
+            "name": "판타지"
+          },
+          {
+            "id": 27,
+            "name": "공포"
+          }
+        ]
+      },
+      {
+        "id": "tmdb:1233413",
+        "title": "씨너스",
+        "year": "2025",
+        "poster": "https://image.tmdb.org/t/p/w342/qEipksU5SzHxbeZbE0cZQzEt6bD.jpg",
+        "source": "https://www.themoviedb.org/movie/1233413",
+        "canonicalTitle": "씨너스: 죄인들",
+        "review": "음악이 공간을 바꾸는 듯한 순간에 화면에서 눈을 뗄 수 없었다. 이야기를 차분히 해석하기보다는 소리와 색에 온몸을 맡기고 싶었다. 무서움과 황홀함이 한 장면 안에서 함께 오는 게 매력적이었다.",
+        "originalProvidedYear": "",
+        "metadataStatus": "matched",
+        "genres": [
+          {
+            "id": 27,
+            "name": "공포"
+          },
+          {
+            "id": 28,
+            "name": "액션"
+          },
+          {
+            "id": 53,
+            "name": "스릴러"
+          }
+        ]
+      }
+    ],
+    "model": "gpt-5-2025-08-07",
+    "seed": 1248,
+    "generator": {
+      "version": "gamdo-lab-43-mix-six",
+      "settings": {
+        "repeat": 6
+      }
+    },
+    "createdAt": "2026-11-02T10:13:06.355Z",
+    "sourceNote": "정원 시연을 위해 새로 작성한 가상 감상입니다. 실제 관람객의 후기나 작성자의 경험을 인용한 기록이 아닙니다.",
+    "profile": {
+      "title": "이 장면, 볼륨을 올려주세요",
+      "description": "움직임과 소리에 반응하며 화면에 깊이 잠기는 편이에요. 두려움과 황홀, 다정함이 교차하는 순간과 누군가를 받아들이는 결에 마음이 가네요.",
+      "tags": [
+        "리듬과박자",
+        "감각몰입",
+        "따뜻한수용"
+      ],
+      "axes": [
+        {
+          "name": "감각",
+          "value": 95,
+          "level": "충분",
+          "assessment": {
+            "direction": "high",
+            "strength": 3,
+            "fit": "싸움의 움직임과 음악이 만든 박자를 즐겼다는 말과, 음악이 공간을 바꾸는 듯한 순간에 눈을 떼지 못했다는 표현, 소리와 색에 몸을 맡기고 싶었다는 진술이 반복돼 강한 시청각 자극과 높은 감각 밀도를 선호함이 또렷해요. 반대 근거는 없어요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "싸움의 움직임과 음악이 만들어 내는 박자 자체를 즐겼다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "음악이 공간을 바꾸는 듯한 순간에 화면에서 눈을 뗄 수 없었다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "이야기를 차분히 해석하기보다는 소리와 색에 온몸을 맡기고 싶었다."
+            }
+          ],
+          "explanation": "강렬 방향의 강한 선호가 드러나요. 싸움의 움직임과 음악이 만든 박자를 즐겼다는 말과, 음악이 공간을 바꾸는 듯한 순간에 눈을 떼지 못했다는 표현, 소리와 색에 몸을 맡기고 싶었다는 진술이 반복돼 강한 시청각 자극과 높은 감각 밀도를 선호함이 또렷해요. 반대 근거는 없어요.",
+          "status": "supported",
+          "direction": "강렬에 가까움"
+        },
+        {
+          "name": "정서",
+          "value": 65,
+          "level": "충분",
+          "assessment": {
+            "direction": "high",
+            "strength": 1,
+            "fit": "두려움에서 다정함으로 바뀌는 순간을 좋게 보고, 무서움과 황홀함이 함께 오는 장면의 매력을 언급해 강도의 대비와 진폭이 큰 감정을 즐기는 단서가 두 작품에서 보였어요. 차분하고 미세한 감정만을 선호한다는 근거는 없어요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "두려움으로 시작한 마음이 다정함으로 바뀌는 순간이 좋았다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "무서움과 황홀함이 한 장면 안에서 함께 오는 게 매력적이었다."
+            }
+          ],
+          "explanation": "격렬 방향의 약한 선호가 드러나요. 두려움에서 다정함으로 바뀌는 순간을 좋게 보고, 무서움과 황홀함이 함께 오는 장면의 매력을 언급해 강도의 대비와 진폭이 큰 감정을 즐기는 단서가 두 작품에서 보였어요. 차분하고 미세한 감정만을 선호한다는 근거는 없어요.",
+          "status": "supported",
+          "direction": "격렬에 가까움"
+        },
+        {
+          "name": "인물",
+          "value": 80,
+          "level": "부분적",
+          "assessment": {
+            "direction": "high",
+            "strength": 2,
+            "fit": "낯선 존재의 배움을 자신의 첫 경험에 ‘대입하며’ 봤다는 직접 진술이 인물의 입장에 자신을 놓는 동일시 선호를 분명히 보여줘요. 다른 작품에서의 반대 근거는 없어요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "낯선 존재가 세상을 배워 가는 모습을 내 첫 경험들에 대입하며 봤다."
+            }
+          ],
+          "explanation": "동일시 방향의 뚜렷한 선호가 드러나요. 낯선 존재의 배움을 자신의 첫 경험에 ‘대입하며’ 봤다는 직접 진술이 인물의 입장에 자신을 놓는 동일시 선호를 분명히 보여줘요. 다른 작품에서의 반대 근거는 없어요.",
+          "status": "supported",
+          "direction": "동일시에 가까움"
+        },
+        {
+          "name": "관계",
+          "value": 65,
+          "level": "부분적",
+          "assessment": {
+            "direction": "high",
+            "strength": 1,
+            "fit": "누군가를 받아들이는 선택이 긴장을 풀었다는 말에서 연결과 수용의 관계가 긍정적 해소로 이어질 때 호감을 느끼는 경향을 읽을 수 있어요. 다른 방향의 근거는 없어요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "끝에서는 누군가를 받아들이는 선택 덕분에 긴장이 풀렸다."
+            }
+          ],
+          "explanation": "연결 방향의 약한 선호가 드러나요. 누군가를 받아들이는 선택이 긴장을 풀었다는 말에서 연결과 수용의 관계가 긍정적 해소로 이어질 때 호감을 느끼는 경향을 읽을 수 있어요. 다른 방향의 근거는 없어요.",
+          "status": "supported",
+          "direction": "연결에 가까움"
+        },
+        {
+          "name": "몰입",
+          "value": 80,
+          "level": "부분적",
+          "assessment": {
+            "direction": "high",
+            "strength": 2,
+            "fit": "소리와 색에 ‘온몸을 맡기고 싶었다’는 말과 화면에서 ‘눈을 뗄 수 없었다’는 표현은 영화 안으로 깊이 잠기는 높은 몰입의 뚜렷한 신호예요. 다른 작품에서 이를 꺾는 근거는 없어요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "이야기를 차분히 해석하기보다는 소리와 색에 온몸을 맡기고 싶었다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "음악이 공간을 바꾸는 듯한 순간에 화면에서 눈을 뗄 수 없었다."
+            }
+          ],
+          "explanation": "몰입 방향의 뚜렷한 선호가 드러나요. 소리와 색에 ‘온몸을 맡기고 싶었다’는 말과 화면에서 ‘눈을 뗄 수 없었다’는 표현은 영화 안으로 깊이 잠기는 높은 몰입의 뚜렷한 신호예요. 다른 작품에서 이를 꺾는 근거는 없어요.",
+          "status": "supported",
+          "direction": "몰입에 가까움"
+        },
+        {
+          "name": "서사",
+          "value": 35,
+          "level": "부분적",
+          "assessment": {
+            "direction": "low",
+            "strength": 1,
+            "fit": "‘군더더기 없이 다음 장면으로 밀어붙일 때’의 선호는 여백을 넓히는 해석형 구성보다 흐름이 또렷하고 직진하는 전달 방식을 반긴다는 쪽으로 읽혀요. 해석의 여백을 즐긴다는 반대 근거는 확인되지 않았어요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "군더더기 없이 다음 장면으로 밀어붙일 때 가장 신났다."
+            }
+          ],
+          "explanation": "명료함 방향의 약한 선호가 드러나요. ‘군더더기 없이 다음 장면으로 밀어붙일 때’의 선호는 여백을 넓히는 해석형 구성보다 흐름이 또렷하고 직진하는 전달 방식을 반긴다는 쪽으로 읽혀요. 해석의 여백을 즐긴다는 반대 근거는 확인되지 않았어요.",
+          "status": "supported",
+          "direction": "명료함에 가까움"
+        }
+      ],
+      "sections": {
+        "sensory": "움직임과 음악이 맞물린 리듬에 반응하고, 소리와 색이 공간을 바꾸는 순간을 놓치지 않네요.",
+        "emotional": "두려움과 다정함, 무서움과 황홀함이 맞닿는 지점에서 감정의 파고를 기꺼이 받아들이는 편이에요.",
+        "character": "세상을 처음 배우는 인물에 자신을 겹쳐 보며 따라가는 시선이 따뜻하게 남아요.",
+        "relationship": "누군가를 받아들이는 선택이 긴장을 풀어 주는 순간에 끌려요. 수용과 연결의 결을 좋아하네요.",
+        "narrative": "군더더기 없이 밀어붙이는 호흡을 시원하게 느껴요. 해석의 부담은 가볍고 흐름은 선명한 편이 편하네요.",
+        "values": "낯섦을 배움으로 품고, 결국에는 서로를 받아들이는 선택을 신뢰하는 마음이 보이네요.",
+        "avoidance": "설명과 해석을 길게 끄는 진지한 현실 담론 쪽으로 무게중심이 쏠리면 덜 끌릴 때가 있어요.",
+        "recommendation": "리듬과 사운드가 장면의 의미를 이끄는 작품, 낯선 존재와 세계를 다정하게 연결하는 영화를 더 탐색해 보세요. 강한 형식미 속에서도 숨 쉴 틈을 조율하는 연출을 찾으면 취향의 결이 더욱 또렷해질 거예요."
+      },
+      "mood": "red",
+      "palette": [
+        {
+          "mood": "red",
+          "weight": 62
+        },
+        {
+          "mood": "purple",
+          "weight": 29
+        },
+        {
+          "mood": "blue",
+          "weight": 9
+        }
+      ],
+      "colorReason": "세 편의 영화가 가진 장르와 전체적인 분위기, 남겨주신 감상을 함께 살펴 레드를 메인 컬러로 골랐어요. 그중 속도감 있는 움직임과 팽팽한 긴장과 감상에 남은 벅찬 쾌감과 긴장을 이 색에 담았고요. 함께 느껴지는 분위기는 퍼플(낯섦과 호기심), 블루(조용한 생각과 쓸쓸함)로 더해, 세 편의 서로 다른 결도 남겨두었어요.",
+      "uncertainty": "관계와 서사는 한두 장면의 인상에서 읽힌 부분이라 여지가 있어요. 복잡한 서사나 느린 드라마에서의 반응이 더해지면 조정될 수 있어요.",
+      "questions": [],
+      "analysisVersion": "gamdo-evidence-v2.0",
+      "reviewPalette": [
+        {
+          "mood": "red",
+          "weight": 60,
+          "reason": "박진감, 변화, 강렬한 감각과 감정의 진폭이 반복적으로 언급됨.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "군더더기 없이 다음 장면으로 밀어붙일 때 가장 신났다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "무서움과 황홀함이 한 장면 안에서 함께 오는 게 매력적이었다."
+            }
+          ]
+        },
+        {
+          "mood": "blue",
+          "weight": 25,
+          "reason": "고요함보다는 몰입과 감각적 집중, 변화의 순간에 대한 매혹이 있으나, 감정의 변화와 몰입에서 오는 일시적 고독감도 일부 드러남.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "음악이 공간을 바꾸는 듯한 순간에 화면에서 눈을 뗄 수 없었다."
+            }
+          ]
+        },
+        {
+          "mood": "yellow",
+          "weight": 15,
+          "reason": "수용과 다정함, 변화의 순간에 따뜻함을 느끼는 부분이 있다.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "두려움으로 시작한 마음이 다정함으로 바뀌는 순간이 좋았다."
+            }
+          ]
+        }
+      ],
+      "colorMethod": {
+        "version": "genre65-review35-v2",
+        "genreShare": 0.65,
+        "reviewShare": 0.35,
+        "sources": [
+          {
+            "index": 0,
+            "genres": [
+              {
+                "id": 28,
+                "name": "액션",
+                "color": "red"
+              },
+              {
+                "id": 80,
+                "name": "범죄",
+                "color": "red"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "genres": [
+              {
+                "id": 14,
+                "name": "판타지",
+                "color": "purple"
+              },
+              {
+                "id": 27,
+                "name": "공포",
+                "color": "purple"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "genres": [
+              {
+                "id": 27,
+                "name": "공포",
+                "color": "purple"
+              },
+              {
+                "id": 28,
+                "name": "액션",
+                "color": "red"
+              },
+              {
+                "id": 53,
+                "name": "스릴러",
+                "color": "red"
+              }
+            ]
+          }
+        ]
+      },
+      "validation": {
+        "order": [
+          "evidence-fit",
+          "direction",
+          "strength",
+          "explanation-score"
+        ],
+        "semanticReview": true,
+        "scoring": "50±15×strength",
+        "version": "gamdo-evidence-v2.0",
+        "finalCriterionReview": true
+      }
+    },
+    "paletteSelection": "genre65-review35",
+    "reassessedAt": "2026-11-08T14:31:41.616Z"
+  },
+  {
+    "id": "fictional-garden-6",
+    "kind": "provided",
+    "displayName": "다정한 사람의 다음 모험",
+    "reviewAuthor": null,
+    "reviewSource": "synthetic",
+    "movies": [
+      {
+        "id": "tmdb:25538",
+        "title": "하나 그리고 둘",
+        "year": "2000",
+        "poster": "https://image.tmdb.org/t/p/w342/qdx6yQJ8WLLyBnwLcdxMznIg4bB.jpg",
+        "source": "https://www.themoviedb.org/movie/25538",
+        "canonicalTitle": "하나 그리고 둘",
+        "review": "가족을 멀리서 지켜보는 듯한 화면이 오히려 편안했다. 누구의 마음이 정답인지 고르지 않고 각자의 하루를 따라갈 수 있었다. 시간이 지난 뒤에도 다시 생각할 틈을 주는 이야기를 좋아한다.",
+        "originalProvidedYear": "",
+        "metadataStatus": "matched",
+        "genres": [
+          {
+            "id": 18,
+            "name": "드라마"
+          }
+        ]
+      },
+      {
+        "id": "tmdb:14784",
+        "title": "더 폴: 오디어스와 환상의 문",
+        "year": "2008",
+        "poster": "https://image.tmdb.org/t/p/w342/i4fdAyiapSg2RCoQ1O081drER9D.jpg",
+        "source": "https://www.themoviedb.org/movie/14784",
+        "canonicalTitle": "더 폴: 오디어스와 환상의 문",
+        "review": "커다란 색면과 낯선 장소가 나올 때마다 책장을 넘기는 기분이었다. 이야기를 듣는 아이처럼 다음 장면을 기다리며 깊이 빠져들었다. 따뜻한 마음과 모험의 두근거림을 함께 느꼈다.",
+        "originalProvidedYear": "",
+        "metadataStatus": "matched",
+        "genres": [
+          {
+            "id": 12,
+            "name": "모험"
+          },
+          {
+            "id": 14,
+            "name": "판타지"
+          },
+          {
+            "id": 18,
+            "name": "드라마"
+          }
+        ]
+      },
+      {
+        "id": "tmdb:969681",
+        "title": "스파이더맨: 브랜드 뉴 데이",
+        "year": "2026",
+        "poster": "https://image.tmdb.org/t/p/w342/mt6uZzy7DAsncHlGGzMsyNgLR6v.jpg",
+        "source": "https://www.themoviedb.org/movie/969681",
+        "canonicalTitle": "스파이더맨: 브랜드 뉴 데이",
+        "review": "히어로의 능력보다 일상을 지키려 애쓰는 마음을 따라가 보고 싶은 가상 감상이다. 가벼운 농담 뒤에 책임을 선택하는 인물을 보면 나도 한 걸음 움직이고 싶어진다. 경쾌한 액션과 명확한 성장의 마무리를 기대하는 취향이다.",
+        "originalProvidedYear": "",
+        "metadataStatus": "matched",
+        "genres": [
+          {
+            "id": 878,
+            "name": "SF"
+          },
+          {
+            "id": 28,
+            "name": "액션"
+          },
+          {
+            "id": 12,
+            "name": "모험"
+          }
+        ]
+      }
+    ],
+    "model": "gpt-5-2025-08-07",
+    "seed": 1248,
+    "generator": {
+      "version": "gamdo-lab-43-mix-six",
+      "settings": {
+        "repeat": 6
+      }
+    },
+    "createdAt": "2026-11-02T10:13:06.358Z",
+    "sourceNote": "정원 시연을 위해 새로 작성한 가상 감상입니다. 실제 관람객의 후기나 작성자의 경험을 인용한 기록이 아닙니다.",
+    "profile": {
+      "title": "다정한 사람의 다음 모험",
+      "description": "멀찍이 관찰하는 고요와 색채 가득한 모험을 함께 즐기고, 농담 뒤 책임을 택하는 인물의 한걸음을 오래 떠올리네요.",
+      "tags": [
+        "관찰",
+        "두근거림",
+        "책임감"
+      ],
+      "axes": [
+        {
+          "name": "감각",
+          "value": 50,
+          "level": "충분",
+          "assessment": {
+            "direction": "mixed",
+            "strength": 0,
+            "fit": "먼 거리의 차분한 화면에 편안함을 느끼면서도, 강렬한 색과 이질적 공간이 펼쳐질 때의 감각적 자극을 즐기는 단서가 함께 드러나요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "가족을 멀리서 지켜보는 듯한 화면이 오히려 편안했다."
+            },
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "커다란 색면과 낯선 장소가 나올 때마다 책장을 넘기는 기분이었다."
+            }
+          ],
+          "explanation": "두 방향의 선호가 함께 드러나요. 먼 거리의 차분한 화면에 편안함을 느끼면서도, 강렬한 색과 이질적 공간이 펼쳐질 때의 감각적 자극을 즐기는 단서가 함께 드러나요.",
+          "status": "mixed",
+          "direction": "두 방향의 선호가 함께 드러남"
+        },
+        {
+          "name": "정서",
+          "value": 50,
+          "level": "충분",
+          "assessment": {
+            "direction": "mixed",
+            "strength": 0,
+            "fit": "차분한 편안함과 모험의 두근거림을 모두 반기는 표현이 있어 감정 진폭의 선호가 한쪽으로 기울지 않아요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "가족을 멀리서 지켜보는 듯한 화면이 오히려 편안했다."
+            },
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "따뜻한 마음과 모험의 두근거림을 함께 느꼈다."
+            }
+          ],
+          "explanation": "두 방향의 선호가 함께 드러나요. 차분한 편안함과 모험의 두근거림을 모두 반기는 표현이 있어 감정 진폭의 선호가 한쪽으로 기울지 않아요.",
+          "status": "mixed",
+          "direction": "두 방향의 선호가 함께 드러남"
+        },
+        {
+          "name": "인물",
+          "value": 80,
+          "level": "부분적",
+          "assessment": {
+            "direction": "high",
+            "strength": 2,
+            "fit": "능력보다 마음과 선택을 따라가고, 책임을 택하는 장면에 스스로도 움직이고 싶어지는 반응이 또렷해요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "히어로의 능력보다 일상을 지키려 애쓰는 마음을 따라가 보고 싶은 가상 감상이다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "가벼운 농담 뒤에 책임을 선택하는 인물을 보면 나도 한 걸음 움직이고 싶어진다."
+            }
+          ],
+          "explanation": "동일시 방향의 뚜렷한 선호가 드러나요. 능력보다 마음과 선택을 따라가고, 책임을 택하는 장면에 스스로도 움직이고 싶어지는 반응이 또렷해요.",
+          "status": "supported",
+          "direction": "동일시에 가까움"
+        },
+        {
+          "name": "관계",
+          "value": 50,
+          "level": "부족",
+          "assessment": {
+            "direction": "unknown",
+            "strength": 0,
+            "fit": "인물 간 유대나 거리감의 선호를 가늠할 명시적 단서가 부족해요."
+          },
+          "evidence": [],
+          "explanation": "이 영역의 선호 방향을 판단할 근거가 아직 부족해요. 인물 간 유대나 거리감의 선호를 가늠할 명시적 단서가 부족해요.",
+          "status": "unknown",
+          "direction": "근거가 부족해 기본값으로 지정합니다."
+        },
+        {
+          "name": "몰입",
+          "value": 80,
+          "level": "부분적",
+          "assessment": {
+            "direction": "high",
+            "strength": 2,
+            "fit": "영화 속에 깊이 빠져들어 다음 장면을 기다리는 경험을 분명히 긍정해요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "이야기를 듣는 아이처럼 다음 장면을 기다리며 깊이 빠져들었다."
+            }
+          ],
+          "explanation": "몰입 방향의 뚜렷한 선호가 드러나요. 영화 속에 깊이 빠져들어 다음 장면을 기다리는 경험을 분명히 긍정해요.",
+          "status": "supported",
+          "direction": "몰입에 가까움"
+        },
+        {
+          "name": "서사",
+          "value": 50,
+          "level": "충분",
+          "assessment": {
+            "direction": "mixed",
+            "strength": 0,
+            "fit": "여백을 남겨 되새김하는 이야기와 명확한 성장·마무리를 모두 기대하는 상반된 기호가 공존해요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "시간이 지난 뒤에도 다시 생각할 틈을 주는 이야기를 좋아한다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "경쾌한 액션과 명확한 성장의 마무리를 기대하는 취향이다."
+            }
+          ],
+          "explanation": "두 방향의 선호가 함께 드러나요. 여백을 남겨 되새김하는 이야기와 명확한 성장·마무리를 모두 기대하는 상반된 기호가 공존해요.",
+          "status": "mixed",
+          "direction": "두 방향의 선호가 함께 드러남"
+        }
+      ],
+      "sections": {
+        "sensory": "멀찍이 떨어진 시선의 고요가 편안하면서도, 색과 장소가 크게 전환될 때 페이지 넘기듯 즐기네요.",
+        "emotional": "잔잔한 포근함과 모험의 두근거림을 번갈아 받아들이는 흐름을 좋아하는 편이에요.",
+        "character": "능력보다 마음과 선택을 따라가며, 농담 뒤 책임을 택하는 순간에 유독 마음이 꽂히네요.",
+        "relationship": "각자의 하루를 지켜보는 기류는 있지만, 관계의 거리나 유대에 대한 확실한 선호는 아직 알기 어려워요.",
+        "narrative": "명확한 성장의 마무리를 반기면서도 시간이 지나 다시 떠올릴 여백을 남기는 서사에 끌리네요.",
+        "values": "일상을 지키려 애쓰는 태도, 가벼운 웃음 뒤에도 책임으로 이어지는 마음을 응원해요.",
+        "avoidance": "뚜렷이 피하는 요소는 드러나지 않았어요. 다만 관계의 밀도나 감정의 거침에 대한 취향 정보는 부족해요.",
+        "recommendation": "페이지 넘기듯 공간과 색을 바꾸는 모험극과, 일상 속 책임을 또렷하게 마감하는 이야기 모두에서 탐색을 이어가보세요. 멀찍이 관찰하는 카메라의 고요가 유지되는 작품도 곁들여 좋아요."
+      },
+      "mood": "pink",
+      "palette": [
+        {
+          "mood": "pink",
+          "weight": 54
+        },
+        {
+          "mood": "yellow",
+          "weight": 32
+        },
+        {
+          "mood": "blue",
+          "weight": 14
+        }
+      ],
+      "colorReason": "세 편의 영화가 가진 장르와 전체적인 분위기, 남겨주신 감상을 함께 살펴 핑크를 메인 컬러로 골랐어요. 그중 관계가 가까워지는 순간의 설렘과 애정과 감상에 남은 사람을 향한 애정과 다정함을 이 색에 담았고요. 함께 느껴지는 분위기는 옐로(따뜻함과 반가운 활기), 블루(조용한 생각과 쓸쓸함)로 더해, 세 편의 서로 다른 결도 남겨두었어요.",
+      "uncertainty": "관계 축의 뚜렷한 선호와 감각의 강도는 작품마다 달라 단정이 어렵네요.",
+      "questions": [],
+      "analysisVersion": "gamdo-evidence-v2.0",
+      "reviewPalette": [
+        {
+          "mood": "pink",
+          "weight": 75,
+          "reason": "애정 어린 시선과 따뜻한 관계의 온기가 일부 드러남.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "따뜻한 마음과 모험의 두근거림을 함께 느꼈다."
+            }
+          ]
+        },
+        {
+          "mood": "yellow",
+          "weight": 15,
+          "reason": "따뜻함, 두근거림, 경쾌함 등 온기와 경이의 정서가 주를 이룸.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "따뜻한 마음과 모험의 두근거림을 함께 느꼈다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "경쾌한 액션과 명확한 성장의 마무리를 기대하는 취향이다."
+            }
+          ]
+        },
+        {
+          "mood": "blue",
+          "weight": 10,
+          "reason": "편안함, 여운, 고요한 거리감이 함께 드러남.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "가족을 멀리서 지켜보는 듯한 화면이 오히려 편안했다."
+            },
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "시간이 지난 뒤에도 다시 생각할 틈을 주는 이야기를 좋아한다."
+            }
+          ]
+        }
+      ],
+      "colorMethod": {
+        "version": "genre65-review35-v2",
+        "genreShare": 0.43333333333333335,
+        "reviewShare": 0.5666666666666667,
+        "sources": [
+          {
+            "index": 1,
+            "genres": [
+              {
+                "id": 12,
+                "name": "모험",
+                "color": "yellow"
+              },
+              {
+                "id": 14,
+                "name": "판타지",
+                "color": "purple"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "genres": [
+              {
+                "id": 878,
+                "name": "SF",
+                "color": "blue"
+              },
+              {
+                "id": 28,
+                "name": "액션",
+                "color": "red"
+              },
+              {
+                "id": 12,
+                "name": "모험",
+                "color": "yellow"
+              }
+            ]
+          }
+        ]
+      },
+      "validation": {
+        "order": [
+          "evidence-fit",
+          "direction",
+          "strength",
+          "explanation-score"
+        ],
+        "semanticReview": true,
+        "scoring": "50±15×strength",
+        "version": "gamdo-evidence-v2.0",
+        "finalCriterionReview": true
+      }
+    },
+    "paletteSelection": "genre65-review35",
+    "reassessedAt": "2026-11-08T14:33:05.581Z"
+  },
+  {
+    "id": "fictional-garden-7",
+    "kind": "provided",
+    "displayName": "예쁜 화면에 쓸쓸함 한 스푼",
+    "reviewAuthor": null,
+    "reviewSource": "synthetic",
+    "movies": [
+      {
+        "id": "tmdb:14069",
+        "title": "시간을 달리는 소녀",
+        "year": "2006",
+        "poster": "https://image.tmdb.org/t/p/w342/zhvpSzYKUMdAfId2VSU1qLFeW5x.jpg",
+        "source": "https://www.themoviedb.org/movie/14069",
+        "canonicalTitle": "시간을 달리는 소녀",
+        "review": "돌아가고 싶은 순간이 있다는 마음을 내 기억에 겹쳐 봤다. 밝은 풍경 속에서 조금씩 아쉬움이 커지는 흐름이 좋았다. 끝난 뒤에는 서운하면서도 앞으로 걸어가고 싶은 기분이 들었다.",
+        "originalProvidedYear": "",
+        "metadataStatus": "matched",
+        "genres": [
+          {
+            "id": 14,
+            "name": "판타지"
+          },
+          {
+            "id": 16,
+            "name": "애니메이션"
+          },
+          {
+            "id": 18,
+            "name": "드라마"
+          },
+          {
+            "id": 878,
+            "name": "SF"
+          }
+        ]
+      },
+      {
+        "title": "메이",
+        "year": "2002",
+        "review": "일상적인 물건이 불편한 대상으로 보이기 시작하는 과정이 재미있었다. 인물에게 나를 대입하지는 않았고 화면과 소리가 만드는 어긋남을 관찰했다. 낯설고 불안한 분위기가 끝까지 유지되는 쪽을 좋아한다.",
+        "id": null,
+        "poster": null,
+        "source": null,
+        "metadataStatus": "not_found",
+        "genres": []
+      },
+      {
+        "id": "tmdb:34653",
+        "title": "싱글 맨",
+        "year": "2009",
+        "poster": "https://image.tmdb.org/t/p/w342/jYZ8xevSkNbPmlap15zW5tAU8eD.jpg",
+        "source": "https://www.themoviedb.org/movie/34653",
+        "canonicalTitle": "싱글맨",
+        "review": "정돈된 화면의 작은 색 변화와 옷의 질감을 오래 보고 싶었다. 감정이 터지는 장면보다 애써 평온하게 움직이는 태도에 마음이 갔다. 음악이 빈 공간을 채울 때 쓸쓸함이 더 선명해졌다.",
+        "originalProvidedYear": "2009",
+        "metadataStatus": "matched",
+        "genres": [
+          {
+            "id": 18,
+            "name": "드라마"
+          },
+          {
+            "id": 10749,
+            "name": "로맨스"
+          }
+        ]
+      }
+    ],
+    "model": "gpt-5-2025-08-07",
+    "seed": 1248,
+    "generator": {
+      "version": "gamdo-lab-43-mix-six",
+      "settings": {
+        "repeat": 6
+      }
+    },
+    "createdAt": "2026-11-02T10:13:06.362Z",
+    "sourceNote": "정원 시연을 위해 새로 작성한 가상 감상입니다. 실제 관람객의 후기나 작성자의 경험을 인용한 기록이 아닙니다.",
+    "profile": {
+      "title": "예쁜 화면에 쓸쓸함 한 스푼",
+      "description": "작은 색과 질감을 오래 바라보고, 감정은 잔잔하게 번지되 불안의 기류가 끝까지 이어지는 영화를 좋아하는 취향이네요.",
+      "tags": [
+        "형식관찰",
+        "절제된정서",
+        "잔향있는여운"
+      ],
+      "axes": [
+        {
+          "name": "감각",
+          "value": 20,
+          "level": "부분적",
+          "assessment": {
+            "direction": "low",
+            "strength": 2,
+            "fit": "‘정돈된 화면의 작은 색 변화와 옷의 질감’을 오래 바라본다는 말이 절제된 시청각을 선호한다는 뚜렷한 근거예요. 강한 색·소리나 빠른 편집을 선호한다는 반대 근거는 보이지 않네요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "정돈된 화면의 작은 색 변화와 옷의 질감을 오래 보고 싶었다."
+            }
+          ],
+          "explanation": "절제 방향의 뚜렷한 선호가 드러나요. ‘정돈된 화면의 작은 색 변화와 옷의 질감’을 오래 바라본다는 말이 절제된 시청각을 선호한다는 뚜렷한 근거예요. 강한 색·소리나 빠른 편집을 선호한다는 반대 근거는 보이지 않네요.",
+          "status": "supported",
+          "direction": "절제에 가까움"
+        },
+        {
+          "name": "정서",
+          "value": 5,
+          "level": "충분",
+          "assessment": {
+            "direction": "low",
+            "strength": 3,
+            "fit": "‘감정이 터지는 장면보다 애써 평온하게’라는 직접 비교와 ‘조금씩 아쉬움이 커지는 흐름’, ‘불안한 분위기가 끝까지 유지되는 쪽을 좋아한다’는 표현이 반복돼, 잔잔하고 지속되는 정서를 선호한다는 점이 분명해요. 큰 감정의 폭발을 즐긴다는 반대 근거는 없어요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "감정이 터지는 장면보다 애써 평온하게 움직이는 태도에 마음이 갔다."
+            },
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "밝은 풍경 속에서 조금씩 아쉬움이 커지는 흐름이 좋았다."
+            },
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "낯설고 불안한 분위기가 끝까지 유지되는 쪽을 좋아한다."
+            }
+          ],
+          "explanation": "잔잔 방향의 강한 선호가 드러나요. ‘감정이 터지는 장면보다 애써 평온하게’라는 직접 비교와 ‘조금씩 아쉬움이 커지는 흐름’, ‘불안한 분위기가 끝까지 유지되는 쪽을 좋아한다’는 표현이 반복돼, 잔잔하고 지속되는 정서를 선호한다는 점이 분명해요. 큰 감정의 폭발을 즐긴다는 반대 근거는 없어요.",
+          "status": "supported",
+          "direction": "잔잔에 가까움"
+        },
+        {
+          "name": "인물",
+          "value": 20,
+          "level": "부분적",
+          "assessment": {
+            "direction": "low",
+            "strength": 2,
+            "fit": "‘인물에게 나를 대입하지는 않았고’라는 말이 동일시를 분명히 부정해요. 개인적 기억을 겹쳐 본다는 표현은 주제와의 공명에 가깝고 특정 인물에의 대입은 아니라서 반대 근거로 보기 어렵네요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "인물에게 나를 대입하지는 않았고 화면과 소리가 만드는 어긋남을 관찰했다."
+            }
+          ],
+          "explanation": "관찰 방향의 뚜렷한 선호가 드러나요. ‘인물에게 나를 대입하지는 않았고’라는 말이 동일시를 분명히 부정해요. 개인적 기억을 겹쳐 본다는 표현은 주제와의 공명에 가깝고 특정 인물에의 대입은 아니라서 반대 근거로 보기 어렵네요.",
+          "status": "supported",
+          "direction": "관찰에 가까움"
+        },
+        {
+          "name": "관계",
+          "value": 50,
+          "level": "부족",
+          "assessment": {
+            "direction": "unknown",
+            "strength": 0,
+            "fit": "인물들 사이의 유대나 독립성에 대한 선호를 가늠할 표현이 없어요."
+          },
+          "evidence": [],
+          "explanation": "이 영역의 선호 방향을 판단할 근거가 아직 부족해요. 인물들 사이의 유대나 독립성에 대한 선호를 가늠할 표현이 없어요.",
+          "status": "unknown",
+          "direction": "근거가 부족해 기본값으로 지정합니다."
+        },
+        {
+          "name": "몰입",
+          "value": 20,
+          "level": "부분적",
+          "assessment": {
+            "direction": "low",
+            "strength": 2,
+            "fit": "‘화면과 소리가 만드는 어긋남을 관찰했다’는 형식을 의식하며 한 걸음 떨어져 본 태도예요. 영화 속으로 깊이 빠져들었다는 반대 표현은 보이지 않네요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "인물에게 나를 대입하지는 않았고 화면과 소리가 만드는 어긋남을 관찰했다."
+            }
+          ],
+          "explanation": "거리 방향의 뚜렷한 선호가 드러나요. ‘화면과 소리가 만드는 어긋남을 관찰했다’는 형식을 의식하며 한 걸음 떨어져 본 태도예요. 영화 속으로 깊이 빠져들었다는 반대 표현은 보이지 않네요.",
+          "status": "supported",
+          "direction": "거리에 가까움"
+        },
+        {
+          "name": "서사",
+          "value": 50,
+          "level": "부족",
+          "assessment": {
+            "direction": "unknown",
+            "strength": 0,
+            "fit": "이야기의 명료함/모호함, 인과나 해석 여백에 대한 구체적 언급이 없어요."
+          },
+          "evidence": [],
+          "explanation": "이 영역의 선호 방향을 판단할 근거가 아직 부족해요. 이야기의 명료함/모호함, 인과나 해석 여백에 대한 구체적 언급이 없어요.",
+          "status": "unknown",
+          "direction": "근거가 부족해 기본값으로 지정합니다."
+        }
+      ],
+      "sections": {
+        "sensory": "선명한 자극보다 작고 정돈된 색과 질감을 오래 살피는 편이에요. 소리와 화면의 미묘한 어긋남처럼 과장되지 않은 형식이 잘 맞네요.",
+        "emotional": "감정이 한꺼번에 치솟기보다 평온을 애써 유지하는 결에 끌려요. 밝은 풍경 속에서 서서히 아쉬움이 커지거나 낯선 불안이 끝까지 흐르는 정서를 좋아해요.",
+        "character": "인물에게 자신을 대입하기보다 약간 거리를 두고 움직임과 태도를 관찰하는 쪽이에요.",
+        "relationship": "등장인물 사이의 유대나 독립을 어떤 방향으로 더 좋아하는지는 아직 알 수 없어요.",
+        "narrative": "이야기를 명확하게 풀어내는 방식과 해석의 여백을 두는 방식 중 어느 쪽을 선호하는지는 근거가 부족하네요.",
+        "values": "쓸쓸함을 또렷이 받아들이면서도 끝나고 나면 걸음을 내딛게 하는 여운이 마음에 남는 편이에요.",
+        "avoidance": "감정이 갑자기 폭발하거나 톤이 급변하는 연출은 덜 끌리는 편이에요.",
+        "recommendation": "작은 색의 변주와 질감, 절제된 연기, 미세한 사운드 디자인을 오래 바라보게 하는 작품들을 더 탐색해보세요. 시작부터 끝까지 일정한 불안의 기류를 유지하는 영화들도 잘 맞겠어요."
+      },
+      "mood": "blue",
+      "palette": [
+        {
+          "mood": "blue",
+          "weight": 49
+        },
+        {
+          "mood": "pink",
+          "weight": 26
+        },
+        {
+          "mood": "purple",
+          "weight": 25
+        }
+      ],
+      "colorReason": "세 편의 영화가 가진 장르와 전체적인 분위기, 남겨주신 감상을 함께 살펴 블루를 메인 컬러로 골랐어요. 그중 인물의 내면이나 넓은 세계를 바라보는 차분한 거리감과 감상에 남은 조용한 생각과 쓸쓸함을 이 색에 담았고요. 함께 느껴지는 분위기는 핑크(사람을 향한 애정과 다정함), 퍼플(낯섦과 호기심)로 더해, 세 편의 서로 다른 결도 남겨두었어요.",
+      "uncertainty": "관계와 서사 축은 표현이 부족해 아직 방향을 단정하기 어려워요. 몰입과 감각은 한 편의 강한 단서에 기대고 있어 향후 표현에 따라 조정될 수 있어요.",
+      "questions": [],
+      "analysisVersion": "gamdo-evidence-v2.0",
+      "reviewPalette": [
+        {
+          "mood": "blue",
+          "weight": 60,
+          "reason": "쓸쓸함, 아쉬움, 평온함 등 고요하고 내면적인 분위기가 반복적으로 언급됨.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "음악이 빈 공간을 채울 때 쓸쓸함이 더 선명해졌다."
+            },
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "밝은 풍경 속에서 조금씩 아쉬움이 커지는 흐름이 좋았다."
+            }
+          ]
+        },
+        {
+          "mood": "purple",
+          "weight": 25,
+          "reason": "낯섦, 불안, 어긋남 등 몽환적이고 신비로운 분위기가 일부 드러남.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "낯설고 불안한 분위기가 끝까지 유지되는 쪽을 좋아한다."
+            }
+          ]
+        },
+        {
+          "mood": "green",
+          "weight": 15,
+          "reason": "밝은 풍경, 일상적 사물의 변화 등 자연과 회복의 이미지가 일부 언급됨.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "밝은 풍경 속에서 조금씩 아쉬움이 커지는 흐름이 좋았다."
+            }
+          ]
+        }
+      ],
+      "colorMethod": {
+        "version": "genre65-review35-v2",
+        "genreShare": 0.43333333333333335,
+        "reviewShare": 0.5666666666666667,
+        "sources": [
+          {
+            "index": 0,
+            "genres": [
+              {
+                "id": 14,
+                "name": "판타지",
+                "color": "purple"
+              },
+              {
+                "id": 16,
+                "name": "애니메이션",
+                "color": "green"
+              },
+              {
+                "id": 878,
+                "name": "SF",
+                "color": "blue"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "genres": [
+              {
+                "id": 10749,
+                "name": "로맨스",
+                "color": "pink"
+              }
+            ]
+          }
+        ]
+      },
+      "validation": {
+        "order": [
+          "evidence-fit",
+          "direction",
+          "strength",
+          "explanation-score"
+        ],
+        "semanticReview": true,
+        "scoring": "50±15×strength",
+        "version": "gamdo-evidence-v2.0",
+        "finalCriterionReview": true
+      }
+    },
+    "paletteSelection": "genre65-review35",
+    "reassessedAt": "2026-11-08T14:33:16.687Z"
+  },
+  {
+    "id": "fictional-garden-8",
+    "kind": "provided",
+    "displayName": "숲도 축제도 그냥 못 지나쳐",
+    "reviewAuthor": null,
+    "reviewSource": "synthetic",
+    "movies": [
+      {
+        "id": "tmdb:1586876",
+        "title": "극장판 치이카와: 인어 섬의 비밀",
+        "year": "2026",
+        "poster": "https://image.tmdb.org/t/p/w342/5TMyytCI5Pfc9c1eNsljiCdiB05.jpg",
+        "source": "https://www.themoviedb.org/movie/1586876",
+        "canonicalTitle": "극장판 치이카와: 인어 섬의 비밀",
+        "review": "작은 캐릭터들의 모험이 뜻대로 풀리지 않을 때 어떤 선택을 할지 상상해 본 가상 감상이다. 귀여운 모습과 해결되지 않는 문제가 함께 있으면 쉽게 답을 내리지 못해 더 생각하게 된다. 다정함을 잃지 않으면서도 불편한 질문을 남기는 이야기를 좋아한다.",
+        "originalProvidedYear": "",
+        "metadataStatus": "matched",
+        "genres": [
+          {
+            "id": 16,
+            "name": "애니메이션"
+          },
+          {
+            "id": 10751,
+            "name": "가족"
+          },
+          {
+            "id": 12,
+            "name": "모험"
+          },
+          {
+            "id": 14,
+            "name": "판타지"
+          }
+        ]
+      },
+      {
+        "id": "tmdb:12259",
+        "title": "화염",
+        "year": "1975",
+        "poster": "https://image.tmdb.org/t/p/w342/ya9bwgqA4eNl5bQ9QqS0jcmRoBS.jpg",
+        "source": "https://www.themoviedb.org/movie/12259",
+        "canonicalTitle": "화염",
+        "review": "긴 이야기라는 생각을 잊을 만큼 사건과 노래의 리듬에 빠졌다. 각기 다른 성격의 인물들이 함께 움직이는 장면에서 유난히 기분이 좋아졌다. 화려한 축제의 에너지와 동료애가 남았다.",
+        "originalProvidedYear": "1975",
+        "metadataStatus": "matched",
+        "genres": [
+          {
+            "id": 28,
+            "name": "액션"
+          }
+        ]
+      },
+      {
+        "id": "tmdb:441130",
+        "title": "울프워커스",
+        "year": "2020",
+        "poster": "https://image.tmdb.org/t/p/w342/fmnHVG8P6LCwUCVOsHP2DjrSr2j.jpg",
+        "source": "https://www.themoviedb.org/movie/441130",
+        "canonicalTitle": "'울프워커스' - Wolfwalkers",
+        "review": "나무와 털과 바람이 모두 다른 선으로 움직이는 것이 즐거웠다. 서로 다른 생활을 하던 아이들이 가까워지는 모습에 마음을 보탰다. 마지막에는 숲의 공기를 함께 마신 듯 가볍고 밝아졌다.",
+        "originalProvidedYear": "2020",
+        "metadataStatus": "matched",
+        "genres": [
+          {
+            "id": 16,
+            "name": "애니메이션"
+          },
+          {
+            "id": 10751,
+            "name": "가족"
+          },
+          {
+            "id": 12,
+            "name": "모험"
+          },
+          {
+            "id": 14,
+            "name": "판타지"
+          }
+        ]
+      }
+    ],
+    "model": "gpt-5-2025-08-07",
+    "seed": 1248,
+    "generator": {
+      "version": "gamdo-lab-43-mix-six",
+      "settings": {
+        "repeat": 6
+      }
+    },
+    "createdAt": "2026-11-02T10:13:06.366Z",
+    "sourceNote": "정원 시연을 위해 새로 작성한 가상 감상입니다. 실제 관람객의 후기나 작성자의 경험을 인용한 기록이 아닙니다.",
+    "profile": {
+      "title": "숲도 축제도 그냥 못 지나쳐",
+      "description": "선과 질감이 살아 있는 화면과 리듬에 자연스레 빠져들어요. 다정함을 품은 질문을 남기고, 함께 움직이며 가까워지는 온기를 오래 붙들어 보네요.",
+      "tags": [
+        "여백 있는 서사",
+        "동료애",
+        "촉감적 화면"
+      ],
+      "axes": [
+        {
+          "name": "감각",
+          "value": 80,
+          "level": "충분",
+          "assessment": {
+            "direction": "high",
+            "strength": 2,
+            "fit": "시각·청각의 리듬과 질감에 반복해서 끌렸고, ‘화려한 축제의 에너지’와 ‘다른 선으로 움직이는’ 같은 구체적 표현이 있어요. 감정 진폭과는 별개로 화면·소리의 밀도를 반기는 선호로 읽혀 높음으로 봤어요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "긴 이야기라는 생각을 잊을 만큼 사건과 노래의 리듬에 빠졌다."
+            },
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "화려한 축제의 에너지와 동료애가 남았다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "나무와 털과 바람이 모두 다른 선으로 움직이는 것이 즐거웠다."
+            }
+          ],
+          "explanation": "강렬 방향의 뚜렷한 선호가 드러나요. 시각·청각의 리듬과 질감에 반복해서 끌렸고, ‘화려한 축제의 에너지’와 ‘다른 선으로 움직이는’ 같은 구체적 표현이 있어요. 감정 진폭과는 별개로 화면·소리의 밀도를 반기는 선호로 읽혀 높음으로 봤어요.",
+          "status": "supported",
+          "direction": "강렬에 가까움"
+        },
+        {
+          "name": "정서",
+          "value": 50,
+          "level": "부족",
+          "assessment": {
+            "direction": "unknown",
+            "strength": 0,
+            "fit": "밝고 따뜻한 여운은 드러나지만, 감정이 크게 요동치길 선호한다는 직접적인 근거는 없어요."
+          },
+          "evidence": [],
+          "explanation": "이 영역의 선호 방향을 판단할 근거가 아직 부족해요. 밝고 따뜻한 여운은 드러나지만, 감정이 크게 요동치길 선호한다는 직접적인 근거는 없어요.",
+          "status": "unknown",
+          "direction": "근거가 부족해 기본값으로 지정합니다."
+        },
+        {
+          "name": "인물",
+          "value": 50,
+          "level": "부족",
+          "assessment": {
+            "direction": "unknown",
+            "strength": 0,
+            "fit": "가까워지는 과정을 응원했지만 특정 인물의 감정에 자신을 대입했다는 표지는 부족해요."
+          },
+          "evidence": [],
+          "explanation": "이 영역의 선호 방향을 판단할 근거가 아직 부족해요. 가까워지는 과정을 응원했지만 특정 인물의 감정에 자신을 대입했다는 표지는 부족해요.",
+          "status": "unknown",
+          "direction": "근거가 부족해 기본값으로 지정합니다."
+        },
+        {
+          "name": "관계",
+          "value": 80,
+          "level": "충분",
+          "assessment": {
+            "direction": "high",
+            "strength": 2,
+            "fit": "함께 움직이는 장면, 동료애, 가까워짐을 특별히 좋게 받아 적었어요. 유대와 함께함을 선호한다는 명확한 단서예요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "각기 다른 성격의 인물들이 함께 움직이는 장면에서 유난히 기분이 좋아졌다."
+            },
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "화려한 축제의 에너지와 동료애가 남았다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "서로 다른 생활을 하던 아이들이 가까워지는 모습에 마음을 보탰다."
+            }
+          ],
+          "explanation": "연결 방향의 뚜렷한 선호가 드러나요. 함께 움직이는 장면, 동료애, 가까워짐을 특별히 좋게 받아 적었어요. 유대와 함께함을 선호한다는 명확한 단서예요.",
+          "status": "supported",
+          "direction": "연결에 가까움"
+        },
+        {
+          "name": "몰입",
+          "value": 80,
+          "level": "충분",
+          "assessment": {
+            "direction": "high",
+            "strength": 2,
+            "fit": "‘긴 이야기라는 생각을 잊을 만큼’과 ‘숲의 공기를 함께 마신 듯’은 영화 세계에 깊이 들어간 경험을 또렷이 보여줘요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "긴 이야기라는 생각을 잊을 만큼 사건과 노래의 리듬에 빠졌다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "마지막에는 숲의 공기를 함께 마신 듯 가볍고 밝아졌다."
+            }
+          ],
+          "explanation": "몰입 방향의 뚜렷한 선호가 드러나요. ‘긴 이야기라는 생각을 잊을 만큼’과 ‘숲의 공기를 함께 마신 듯’은 영화 세계에 깊이 들어간 경험을 또렷이 보여줘요.",
+          "status": "supported",
+          "direction": "몰입에 가까움"
+        },
+        {
+          "name": "서사",
+          "value": 80,
+          "level": "부분적",
+          "assessment": {
+            "direction": "high",
+            "strength": 2,
+            "fit": "해결되지 않는 문제를 선호하고, 다정함을 잃지 않으면서도 불편한 질문을 남기는 이야기를 좋아한다고 밝혔어요. 해석의 여백을 반기는 선호예요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "귀여운 모습과 해결되지 않는 문제가 함께 있으면 쉽게 답을 내리지 못해 더 생각하게 된다."
+            },
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "다정함을 잃지 않으면서도 불편한 질문을 남기는 이야기를 좋아한다."
+            }
+          ],
+          "explanation": "해석 여백 방향의 뚜렷한 선호가 드러나요. 해결되지 않는 문제를 선호하고, 다정함을 잃지 않으면서도 불편한 질문을 남기는 이야기를 좋아한다고 밝혔어요. 해석의 여백을 반기는 선호예요.",
+          "status": "supported",
+          "direction": "해석 여백에 가까움"
+        }
+      ],
+      "sections": {
+        "sensory": "선의 결과 촉감이 느껴지는 움직임, 축제 장면의 색과 소리 같은 감각적 리듬을 반가워해요. 화면과 음악이 함께 밀고 당기는 순간에 집중이 또렷해지네요.",
+        "emotional": "밝고 가벼워지는 여운은 남지만 감정의 파고가 크게 출렁이길 바라는지는 아직 모호해요. 차분한 따뜻함을 편안히 붙드는 쪽에 가까워 보여요.",
+        "character": "특정 인물의 내면에 깊이 들어가기보다는, 인물들이 어우러질 때의 움직임과 흐름을 기분 좋게 지켜보는 편이에요.",
+        "relationship": "함께 움직이고 서로를 보태는 순간의 온기를 좋아하네요. 동료애와 가까워짐이 서사의 힘으로 작동할 때 유난히 잘 받아들이는 취향이에요.",
+        "narrative": "다정함을 잃지 않으면서도 질문을 남기는 이야기, 쉽게 봉합하지 않는 결을 찾고 있어요. 생각이 이어지도록 여백을 두는 서사가 잘 맞네요.",
+        "values": "상냥함과 질문을 함께 놓치지 않으려는 태도가 보여요. 여럿이 힘을 맞추며 연결을 만들어 가는 과정도 소중하게 바라보네요.",
+        "avoidance": "단번에 정답을 내리고 곧장 정리하는 결말만을 좇는 이야기는 덜 끌릴 수 있어요.",
+        "recommendation": "감각적 리듬이 또렷한 장면과 군무처럼 맞물리는 앙상블, 여백을 남기는 결을 더 찾아보면 좋아요. 자연의 결과 숨결을 살린 애니메이션도 잘 맞겠네요."
+      },
+      "mood": "green",
+      "palette": [
+        {
+          "mood": "green",
+          "weight": 56
+        },
+        {
+          "mood": "red",
+          "weight": 26
+        },
+        {
+          "mood": "yellow",
+          "weight": 18
+        }
+      ],
+      "colorReason": "세 편의 영화가 가진 장르와 전체적인 분위기, 남겨주신 감상을 함께 살펴 연두를 메인 컬러로 골랐어요. 그중 성장과 돌봄, 새로운 세계를 만나는 생기과 감상에 남은 일상의 회복과 생동감을 이 색에 담았고요. 함께 느껴지는 분위기는 레드(벅찬 쾌감과 긴장), 옐로(따뜻함과 반가운 활기)로 더해, 세 편의 서로 다른 결도 남겨두었어요.",
+      "uncertainty": "감정의 진폭과 인물 동일시 정도는 아직 단서가 적어 잠정적이에요.",
+      "questions": [],
+      "analysisVersion": "gamdo-evidence-v2.0",
+      "reviewPalette": [
+        {
+          "mood": "green",
+          "weight": 75,
+          "reason": "자연의 움직임과 숲, 바람 등 회복과 자연의 감각이 강조된다.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "나무와 털과 바람이 모두 다른 선으로 움직이는 것이 즐거웠다."
+            }
+          ]
+        },
+        {
+          "mood": "yellow",
+          "weight": 15,
+          "reason": "밝고 가벼운 기운, 동료애와 함께하는 에너지, 숲의 공기 등 온기와 경이의 감정이 반복적으로 드러난다.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "마지막에는 숲의 공기를 함께 마신 듯 가볍고 밝아졌다."
+            },
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "화려한 축제의 에너지와 동료애가 남았다."
+            }
+          ]
+        },
+        {
+          "mood": "pink",
+          "weight": 10,
+          "reason": "귀여운 캐릭터, 다정함, 관계의 따뜻함이 언급된다.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "귀여운 모습과 해결되지 않는 문제가 함께 있으면 쉽게 답을 내리지 못해 더 생각하게 된다."
+            }
+          ]
+        }
+      ],
+      "colorMethod": {
+        "version": "genre65-review35-v2",
+        "genreShare": 0.65,
+        "reviewShare": 0.35,
+        "sources": [
+          {
+            "index": 0,
+            "genres": [
+              {
+                "id": 16,
+                "name": "애니메이션",
+                "color": "green"
+              },
+              {
+                "id": 10751,
+                "name": "가족",
+                "color": "green"
+              },
+              {
+                "id": 12,
+                "name": "모험",
+                "color": "yellow"
+              },
+              {
+                "id": 14,
+                "name": "판타지",
+                "color": "purple"
+              }
+            ]
+          },
+          {
+            "index": 1,
+            "genres": [
+              {
+                "id": 28,
+                "name": "액션",
+                "color": "red"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "genres": [
+              {
+                "id": 16,
+                "name": "애니메이션",
+                "color": "green"
+              },
+              {
+                "id": 10751,
+                "name": "가족",
+                "color": "green"
+              },
+              {
+                "id": 12,
+                "name": "모험",
+                "color": "yellow"
+              },
+              {
+                "id": 14,
+                "name": "판타지",
+                "color": "purple"
+              }
+            ]
+          }
+        ]
+      },
+      "validation": {
+        "order": [
+          "evidence-fit",
+          "direction",
+          "strength",
+          "explanation-score"
+        ],
+        "semanticReview": true,
+        "scoring": "50±15×strength",
+        "version": "gamdo-evidence-v2.0",
+        "finalCriterionReview": true
+      }
+    },
+    "paletteSelection": "genre65-review35",
+    "reassessedAt": "2026-11-08T14:34:27.447Z"
+  },
+  {
+    "id": "fictional-garden-9",
+    "kind": "provided",
+    "displayName": "위로는 없어도 눈은 못 떼죠",
+    "reviewAuthor": null,
+    "reviewSource": "synthetic",
+    "movies": [
+      {
+        "id": "tmdb:160588",
+        "title": "블루 재스민",
+        "year": "2013",
+        "poster": "https://image.tmdb.org/t/p/w342/3dMFYZ7mMnW5rVcbxyNvxgN0BOP.jpg",
+        "source": "https://www.themoviedb.org/movie/160588",
+        "canonicalTitle": "블루 재스민",
+        "review": "인물이 자기 이야기를 고쳐 말할 때마다 무엇을 감추려는지 관찰했다. 쉽게 위로해 주는 결말이 아니라서 오히려 생각할 거리가 남았다. 감정에 휩쓸리기보다 불편한 말 사이의 빈틈을 읽는 재미가 있었다.",
+        "originalProvidedYear": "",
+        "metadataStatus": "matched",
+        "genres": [
+          {
+            "id": 18,
+            "name": "드라마"
+          }
+        ]
+      },
+      {
+        "id": "tmdb:281957",
+        "title": "레버넌트: 죽음에서 돌아온 자",
+        "year": "2015",
+        "poster": "https://image.tmdb.org/t/p/w342/8LqhLTQHb3fJn4ddZtQva03cKC.jpg",
+        "source": "https://www.themoviedb.org/movie/281957",
+        "canonicalTitle": "레버넌트: 죽음에서 돌아온 자",
+        "review": "추위와 지형이 몸으로 전해져 긴장을 풀기 어려웠다. 인물의 집념에 완전히 동의하지는 않았지만 다음 숨을 내쉴 수 있을지 계속 따라가게 됐다. 아름다운 풍경과 고통스러운 장면이 함께 있는 대비가 강하게 남았다.",
+        "originalProvidedYear": "",
+        "metadataStatus": "matched",
+        "genres": [
+          {
+            "id": 37,
+            "name": "서부"
+          },
+          {
+            "id": 18,
+            "name": "드라마"
+          },
+          {
+            "id": 12,
+            "name": "모험"
+          }
+        ]
+      },
+      {
+        "id": "tmdb:57361",
+        "title": "황해",
+        "year": "2010",
+        "poster": "https://image.tmdb.org/t/p/w342/nuZvoEcYkIIQLMIMbQ72dmlyDJD.jpg",
+        "source": "https://www.themoviedb.org/movie/57361",
+        "canonicalTitle": "황해",
+        "review": "사람이 많은 공간에서도 누구도 믿을 수 없다는 분위기가 무서웠다. 빠르게 이어지는 행동을 보면서도 인물과는 거리를 두고 상황을 살폈다. 관계가 끊어지는 과정을 끝까지 불편하게 보여 주는 이야기를 곱씹게 된다.",
+        "originalProvidedYear": "",
+        "metadataStatus": "matched",
+        "genres": [
+          {
+            "id": 18,
+            "name": "드라마"
+          },
+          {
+            "id": 53,
+            "name": "스릴러"
+          },
+          {
+            "id": 80,
+            "name": "범죄"
+          }
+        ]
+      }
+    ],
+    "model": "gpt-5-2025-08-07",
+    "seed": 1248,
+    "generator": {
+      "version": "gamdo-lab-43-mix-six",
+      "settings": {
+        "repeat": 6
+      }
+    },
+    "createdAt": "2026-11-02T10:13:06.370Z",
+    "sourceNote": "정원 시연을 위해 새로 작성한 가상 감상입니다. 실제 관람객의 후기나 작성자의 경험을 인용한 기록이 아닙니다.",
+    "profile": {
+      "title": "위로는 없어도 눈은 못 떼죠",
+      "description": "차가운 공기와 대비를 몸으로 느끼면서도 인물과는 거리를 두고 살펴봐요, 쉬운 위로 대신 생각이 머무는 여백을 오래 곱씹는 편이에요.",
+      "tags": [
+        "관찰적 시선",
+        "해석의 여백",
+        "차가운 긴장"
+      ],
+      "axes": [
+        {
+          "name": "감각",
+          "value": 65,
+          "level": "부분적",
+          "assessment": {
+            "direction": "high",
+            "strength": 1,
+            "fit": "추위와 지형이 몸으로 전해질 만큼 물리 감각이 강했고, 아름다움과 고통의 대비가 또렷이 남았다는 표현이 강한 감각 밀도를 시사해요. 다른 감상에서는 감각 강도에 대한 직접 단서가 적어 부분적으로만 확신할 수 있어요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "추위와 지형이 몸으로 전해져 긴장을 풀기 어려웠다."
+            },
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "아름다운 풍경과 고통스러운 장면이 함께 있는 대비가 강하게 남았다."
+            }
+          ],
+          "explanation": "강렬 방향의 약한 선호가 드러나요. 추위와 지형이 몸으로 전해질 만큼 물리 감각이 강했고, 아름다움과 고통의 대비가 또렷이 남았다는 표현이 강한 감각 밀도를 시사해요. 다른 감상에서는 감각 강도에 대한 직접 단서가 적어 부분적으로만 확신할 수 있어요.",
+          "status": "supported",
+          "direction": "강렬에 가까움"
+        },
+        {
+          "name": "정서",
+          "value": 20,
+          "level": "부분적",
+          "assessment": {
+            "direction": "low",
+            "strength": 2,
+            "fit": "감정에 휩쓸리기보다 말 사이의 빈틈을 읽는다는 직접적 진술이 정서의 진폭을 낮게 선호함을 분명히 보여줘요. 다른 감상에서 공포와 긴장이 언급되지만(“무서웠다”), 이는 경험 서술이지 큰 감정 폭발을 선호한다는 근거는 아니에요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "감정에 휩쓸리기보다 불편한 말 사이의 빈틈을 읽는 재미가 있었다."
+            }
+          ],
+          "explanation": "잔잔 방향의 뚜렷한 선호가 드러나요. 감정에 휩쓸리기보다 말 사이의 빈틈을 읽는다는 직접적 진술이 정서의 진폭을 낮게 선호함을 분명히 보여줘요. 다른 감상에서 공포와 긴장이 언급되지만(“무서웠다”), 이는 경험 서술이지 큰 감정 폭발을 선호한다는 근거는 아니에요.",
+          "status": "supported",
+          "direction": "잔잔에 가까움"
+        },
+        {
+          "name": "인물",
+          "value": 20,
+          "level": "충분",
+          "assessment": {
+            "direction": "low",
+            "strength": 2,
+            "fit": "‘관찰했다’, ‘거리를 두고 살폈다’는 표현이 반복되며 동일시에 비해 관찰에 힘이 실려요. 인물의 집념에 ‘완전히 동의하지는 않았다’는 말도 거리를 유지하는 태도에 보탬이 돼요. 반대 방향을 시사하는 단서는 보이지 않았어요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "인물이 자기 이야기를 고쳐 말할 때마다 무엇을 감추려는지 관찰했다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "빠르게 이어지는 행동을 보면서도 인물과는 거리를 두고 상황을 살폈다."
+            },
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "인물의 집념에 완전히 동의하지는 않았지만 다음 숨을 내쉴 수 있을지 계속 따라가게 됐다."
+            }
+          ],
+          "explanation": "관찰 방향의 뚜렷한 선호가 드러나요. ‘관찰했다’, ‘거리를 두고 살폈다’는 표현이 반복되며 동일시에 비해 관찰에 힘이 실려요. 인물의 집념에 ‘완전히 동의하지는 않았다’는 말도 거리를 유지하는 태도에 보탬이 돼요. 반대 방향을 시사하는 단서는 보이지 않았어요.",
+          "status": "supported",
+          "direction": "관찰에 가까움"
+        },
+        {
+          "name": "관계",
+          "value": 35,
+          "level": "부분적",
+          "assessment": {
+            "direction": "low",
+            "strength": 1,
+            "fit": "관계가 끊어지는 과정을 끝까지 불편하게 보여 주는 이야기를 곱씹는다는 말에서 유대의 회복보다 경계와 단절을 응시하는 쪽에 관심이 있음을 읽을 수 있어요. 다만 이는 한 작품의 인상에 국한돼 강도는 낮게 잡았어요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "관계가 끊어지는 과정을 끝까지 불편하게 보여 주는 이야기를 곱씹게 된다."
+            },
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "사람이 많은 공간에서도 누구도 믿을 수 없다는 분위기가 무서웠다."
+            }
+          ],
+          "explanation": "분리 방향의 약한 선호가 드러나요. 관계가 끊어지는 과정을 끝까지 불편하게 보여 주는 이야기를 곱씹는다는 말에서 유대의 회복보다 경계와 단절을 응시하는 쪽에 관심이 있음을 읽을 수 있어요. 다만 이는 한 작품의 인상에 국한돼 강도는 낮게 잡았어요.",
+          "status": "supported",
+          "direction": "분리에 가까움"
+        },
+        {
+          "name": "몰입",
+          "value": 50,
+          "level": "부족",
+          "assessment": {
+            "direction": "unknown",
+            "strength": 0,
+            "fit": "영화 속에 깊이 빠져들어 시간 감각을 잊었다거나 한 걸음 떨어져 형식을 의식했다는 직접 단서가 없어요."
+          },
+          "evidence": [],
+          "explanation": "이 영역의 선호 방향을 판단할 근거가 아직 부족해요. 영화 속에 깊이 빠져들어 시간 감각을 잊었다거나 한 걸음 떨어져 형식을 의식했다는 직접 단서가 없어요.",
+          "status": "unknown",
+          "direction": "근거가 부족해 기본값으로 지정합니다."
+        },
+        {
+          "name": "서사",
+          "value": 80,
+          "level": "부분적",
+          "assessment": {
+            "direction": "high",
+            "strength": 2,
+            "fit": "쉽게 위로하지 않는 결말이라 생각할 거리가 남았다는 명확한 선호가 해석 여백이 있는 서사를 지지해요. 다른 감상들에서도 ‘곱씹는다’는 태도가 호응하지만, 직접 근거는 주로 한 작품에서 나와요."
+          },
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "쉽게 위로해 주는 결말이 아니라서 오히려 생각할 거리가 남았다."
+            }
+          ],
+          "explanation": "해석 여백 방향의 뚜렷한 선호가 드러나요. 쉽게 위로하지 않는 결말이라 생각할 거리가 남았다는 명확한 선호가 해석 여백이 있는 서사를 지지해요. 다른 감상들에서도 ‘곱씹는다’는 태도가 호응하지만, 직접 근거는 주로 한 작품에서 나와요.",
+          "status": "supported",
+          "direction": "해석 여백에 가까움"
+        }
+      ],
+      "sections": {
+        "sensory": "추위와 지형 같은 물리 감각이 선명할 때 집중이 잘돼요. 아름다움과 고통의 대비가 오래 남네요.",
+        "emotional": "큰 감정 폭발보다 말과 표정 사이의 미세한 틈을 읽는 재미에 마음이 가요. 요동치기보다 잔잔한 긴장이 오래가네요.",
+        "character": "인물이 스스로를 고쳐 말하는 순간들을 유심히 관찰해 무엇을 숨기는지 살펴보는 편이에요. 빠른 전개에서도 동일시는 자제돼요.",
+        "relationship": "신뢰가 무너지고 관계가 끊기는 국면을 끝까지 보여 줄 때 시선이 머물러요. 유대를 미화하기보다 경계가 드러나는 순간에 관심이 가요.",
+        "narrative": "쉬운 위로로 덮지 않고 생각할 거리를 남기는 구성이 좋아요. 불편함의 여백을 따라가며 끝나고도 한동안 곱씹게 되네요.",
+        "values": "불편함을 피하지 않고 사실을 드러내려는 태도에 마음이 가는 편이에요. 말의 빈틈을 통해 진실에 다가가려는 시선을 좋아해요.",
+        "avoidance": "손쉬운 위로나 감정 과잉으로 결을 덮는 연출에는 덜 끌려요. 그 밖의 회피 요소는 아직 단서가 부족해요.",
+        "recommendation": "차갑고 물리적인 감각을 선명히 전하되 인물과의 거리는 유지하고, 쉬운 위로 없이 여백을 남기는 작품들을 더 찾아보면 좋아요. 신뢰의 붕괴나 경계가 드러나는 관계를 꾸준히 관찰하게 하는 서사를 따라가 보세요."
+      },
+      "mood": "red",
+      "palette": [
+        {
+          "mood": "red",
+          "weight": 40
+        },
+        {
+          "mood": "blue",
+          "weight": 37
+        },
+        {
+          "mood": "yellow",
+          "weight": 23
+        }
+      ],
+      "colorReason": "세 편의 영화가 가진 장르와 전체적인 분위기, 남겨주신 감상을 함께 살펴 레드를 메인 컬러로 골랐어요. 그중 속도감 있는 움직임과 팽팽한 긴장과 감상에 남은 벅찬 쾌감과 긴장을 이 색에 담았고요. 함께 느껴지는 분위기는 블루(조용한 생각과 쓸쓸함), 옐로(따뜻함과 반가운 활기)로 더해, 세 편의 서로 다른 결도 남겨두었어요.",
+      "uncertainty": "몰입 축은 직접 단서가 부족해 유보했어요. 관계 축 역시 한 작품의 근거에 의존해 강도를 낮췄어요.",
+      "questions": [],
+      "analysisVersion": "gamdo-evidence-v2.0",
+      "reviewPalette": [
+        {
+          "mood": "blue",
+          "weight": 60,
+          "reason": "고독, 불신, 불편함, 해소되지 않는 여운이 반복적으로 언급됨.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 2,
+              "quote": "사람이 많은 공간에서도 누구도 믿을 수 없다는 분위기가 무서웠다."
+            },
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "쉽게 위로해 주는 결말이 아니라서 오히려 생각할 거리가 남았다."
+            }
+          ]
+        },
+        {
+          "mood": "red",
+          "weight": 25,
+          "reason": "강렬한 감각적 자극과 긴장감이 두드러짐.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 1,
+              "quote": "추위와 지형이 몸으로 전해져 긴장을 풀기 어려웠다."
+            }
+          ]
+        },
+        {
+          "mood": "purple",
+          "weight": 15,
+          "reason": "불편한 말의 빈틈, 감춰진 의도, 대비되는 장면에서 신비롭고 몽환적인 해석의 여지가 있음.",
+          "evidence": [
+            {
+              "source": "movie",
+              "index": 0,
+              "quote": "감정에 휩쓸리기보다 불편한 말 사이의 빈틈을 읽는 재미가 있었다."
+            }
+          ]
+        }
+      ],
+      "colorMethod": {
+        "version": "genre65-review35-v2",
+        "genreShare": 0.43333333333333335,
+        "reviewShare": 0.5666666666666667,
+        "sources": [
+          {
+            "index": 1,
+            "genres": [
+              {
+                "id": 37,
+                "name": "서부",
+                "color": "yellow"
+              },
+              {
+                "id": 12,
+                "name": "모험",
+                "color": "yellow"
+              }
+            ]
+          },
+          {
+            "index": 2,
+            "genres": [
+              {
+                "id": 53,
+                "name": "스릴러",
+                "color": "red"
+              },
+              {
+                "id": 80,
+                "name": "범죄",
+                "color": "red"
+              }
+            ]
+          }
+        ]
+      },
+      "validation": {
+        "order": [
+          "evidence-fit",
+          "direction",
+          "strength",
+          "explanation-score"
+        ],
+        "semanticReview": true,
+        "scoring": "50±15×strength",
+        "version": "gamdo-evidence-v2.0",
+        "finalCriterionReview": true
+      }
+    },
+    "paletteSelection": "genre65-review35",
+    "reassessedAt": "2026-11-08T14:35:01.689Z"
+  }
+]

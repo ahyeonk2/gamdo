@@ -1,0 +1,23 @@
+// A few flowers share a vine. Geometry follows the garden; growth runs only once.
+const NS='http://www.w3.org/2000/svg';
+const element=(tag,attrs={})=>{const el=document.createElementNS(NS,tag);for(const [k,v]of Object.entries(attrs))el.setAttribute(k,v);return el};
+function seeded(seed){let n=2166136261;for(const c of String(seed))n=Math.imul(n^c.charCodeAt(0),16777619);return()=>{n=(Math.imul(n,1664525)+1013904223)>>>0;return n/4294967296}}
+function tint(hex,white=.56){const m=/^#([\da-f]{6})$/i.exec(hex);if(!m)return '#d9c7dc';return '#'+[0,2,4].map(k=>Math.round(parseInt(m[1].slice(k,k+2),16)*(1-white)+255*white).toString(16).padStart(2,'0')).join('')}
+let serial=0;
+export function createVineGarden(world,tones={}){
+ const svg=element('svg',{'class':'garden-vine-network','aria-hidden':'true'}),defs=element('defs');svg.append(defs);world.prepend(svg);
+ const revealed=new Map(),edges=new Map();let points=[],records=[],signature='',edgePairs=[];
+ function reveal(id,animate=true){const repeat=revealed.has(id);revealed.set(id,animate);if(repeat&&animate){for(const [key,e]of edges){if(key.split('|').includes(id)){e.source=id;e.group.classList.remove('vines-settled');e.stem.animate([{strokeDashoffset:'1'},{strokeDashoffset:'0'}],{duration:2400,easing:'cubic-bezier(.25,.55,.35,1)',fill:'both'})}}}render()}
+ function layout(nextPoints,nextRecords,width,height){points=nextPoints;records=nextRecords;svg.setAttribute('width',width);svg.setAttribute('height',height);const next=records.map((r,i)=>r.id+':'+points[i].cluster).join('|');if(next!==signature){signature=next;edgePairs=[];const groups=new Map();points.forEach((p,i)=>{const key=p.cluster??Math.floor(i/4);if(!groups.has(key))groups.set(key,[]);groups.get(key).push(i)});for(const group of groups.values()){const order=group.sort((a,b)=>points[a].x-points[b].x);for(let k=1;k<order.length;k++)edgePairs.push([order[k-1],order[k]])}const wanted=new Set(edgePairs.map(([a,b])=>[records[a].id,records[b].id].sort().join('|')));for(const [key,e]of edges){if(!wanted.has(key)){e.group.remove();e.gradient.remove();edges.delete(key)}}}render()}
+ function render(){
+  for(const pair of edgePairs){let [a,b]=pair;const ra=records[a],rb=records[b];if(!revealed.has(ra.id)&&!revealed.has(rb.id))continue;const key=[ra.id,rb.id].sort().join('|');let e=edges.get(key);
+   if(!e){if(!revealed.has(ra.id)){[a,b]=[b,a]}const rand=seeded(key),id='garden-stem-'+serial++,gradient=element('linearGradient',{id,gradientUnits:'userSpaceOnUse'});gradient.append(element('stop',{'stop-color':tint(tones[records[a].profile?.mood]?.hex||'#c2aec8'),'stop-opacity':'.66'}),element('stop',{offset:'1','stop-color':tint(tones[records[b].profile?.mood]?.hex||'#d4c6d8'),'stop-opacity':'.3'}));defs.append(gradient);const group=element('g',{'class':'vine-connection'}),stem=element('path',{'class':'network-stem',fill:'none',stroke:`url(#${id})`,'stroke-width':1.4+rand()*.65,'stroke-linecap':'round',pathLength:'1'});group.append(stem);const branch=rand()>.3?element('path',{'class':'network-tendril',fill:'none',stroke:`url(#${id})`,'stroke-width':.65+rand()*.65,'stroke-linecap':'round',pathLength:'1'}):null;if(branch)group.append(branch);e={group,gradient,stem,branch,source:records[a].id,bend:(rand()>.5?1:-1)*(.22+rand()*.26),curl:rand(),dust:[]};for(let k=0;k<3+Math.floor(rand()*5);k++){const dot=element('circle',{r:.7+rand()*1.8,fill:'#d7c9dc','class':'network-dust'});group.append(dot);e.dust.push({el:dot,t:.15+rand()*.7,dx:(rand()-.5)*26,dy:(rand()-.5)*30})}if(revealed.get(e.source)===false)group.classList.add('vines-settled');svg.append(group);edges.set(key,e)}
+   if(records[a].id!==e.source)[a,b]=[b,a];const p=points[a],q=points[b],dx=q.x-p.x,dy=q.y-p.y,d=Math.hypot(dx,dy)||1,nx=-dy/d,ny=dx/d,bend=Math.min(100,d*e.bend),c1=[p.x+dx*.34+nx*bend,p.y+dy*.34+ny*bend],c2=[p.x+dx*.7-nx*bend*.55,p.y+dy*.7-ny*bend*.55];
+   e.stem.setAttribute('d',`M${p.x} ${p.y}C${c1} ${c2} ${q.x} ${q.y}`);e.gradient.setAttribute('x1',p.x);e.gradient.setAttribute('y1',p.y);e.gradient.setAttribute('x2',q.x);e.gradient.setAttribute('y2',q.y);
+   const at=t=>{const u=1-t;return [u*u*u*p.x+3*u*u*t*c1[0]+3*u*t*t*c2[0]+t*t*t*q.x,u*u*u*p.y+3*u*u*t*c1[1]+3*u*t*t*c2[1]+t*t*t*q.y]};
+   if(e.branch){const root=at(.4+e.curl*.25),s=(e.curl>.5?1:-1),r=24+e.curl*17,tip=[root[0]+nx*r*s+dx/d*30,root[1]+ny*r*s+dy/d*30];e.branch.setAttribute('d',`M${root}Q${root[0]+nx*r*s*2} ${root[1]+ny*r*s*2} ${tip}c${-r*.8} ${-r*.9} ${r*.8} ${-r*.9} ${r*.6} 0s${-r*.9} ${r*.8} ${-r*.8} 0`)}
+   e.dust.forEach(dot=>{const p=at(dot.t);dot.el.setAttribute('cx',p[0]+dot.dx);dot.el.setAttribute('cy',p[1]+dot.dy)})
+  }
+ }
+ return {reveal,layout,update(nextPoints){points=nextPoints;render()}};
+}
