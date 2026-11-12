@@ -701,3 +701,9 @@ dialog .close>svg,#entry .movie-search button>svg{display:block;flex:none;margin
 @media screen{
  .creator-mode #entry.choosing-movies{inset:50% auto auto 50%;transform:translate(-50%,-50%);margin:0;height:fit-content;min-height:0;max-height:90dvh}
 }
+
+/* Projection background: keep the wall dark around the flowers. */
+@media screen{
+ body.projection-mode,body.projection-mode #garden{background:#000}
+ .projection-mode #garden-lights,.projection-mode #garden-glitter{display:none}
+}
