@@ -707,3 +707,6 @@ dialog .close>svg,#entry .movie-search button>svg{display:block;flex:none;margin
  body.projection-mode,body.projection-mode #garden{background:#000}
  .projection-mode #garden-lights,.projection-mode #garden-glitter{display:none}
 }
+
+/* Hide the pointer on the exhibition projection only. */
+@media screen{body.projection-mode,body.projection-mode *{cursor:none!important}}
