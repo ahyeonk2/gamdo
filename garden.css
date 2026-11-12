@@ -721,3 +721,8 @@ dialog .close>svg,#entry .movie-search button>svg{display:block;flex:none;margin
  .projection-mode .orbit:hover{border:0}
  .projection-mode .orbit span{font-size:9px;padding:4px}
 }
+
+/* WAAPI supplies only the entrance; normal layout and end positions are unchanged. */
+.bloom.open .orbit{transition:none}
+.reduced .orbit{transition:none}
+@media(prefers-reduced-motion:reduce){.orbit{transition:none}}
