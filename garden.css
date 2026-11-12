@@ -710,3 +710,14 @@ dialog .close>svg,#entry .movie-search button>svg{display:block;flex:none;margin
 
 /* Hide the pointer on the exhibition projection only. */
 @media screen{body.projection-mode,body.projection-mode *{cursor:none!important}}
+
+/* Smaller movie circles with feathered edges for the projection. */
+@media screen{
+ .projection-mode .orbit{
+  width:46px;height:46px;border:0;background:transparent;box-shadow:none;
+  -webkit-mask-image:radial-gradient(circle, #000 0 78%, transparent 100%);
+  mask-image:radial-gradient(circle, #000 0 78%, transparent 100%);
+ }
+ .projection-mode .orbit:hover{border:0}
+ .projection-mode .orbit span{font-size:9px;padding:4px}
+}
