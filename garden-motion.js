@@ -32,7 +32,7 @@ export function separateFlowers(points,{fixed=-1,iterations=6,bounce=false}={}){
 function wrap(point,width,height){const margin=point.size*.7+32,spanX=width+2*margin,spanY=height+2*margin;if(point.x< -margin||point.x>width+margin)point.x=((point.x+margin)%spanX+spanX)%spanX-margin;if(point.y< -margin||point.y>height+margin)point.y=((point.y+margin)%spanY+spanY)%spanY-margin;}
 export function stepGarden(points,width,height,dt,fixed=-1,minimumVisible=0){
  if(!points.length||!Number.isFinite(dt)||dt<=0)return;let remaining=Math.min(dt,.05);
- while(remaining>1e-8){const slice=Math.min(1/120,remaining);advanceGarden(points,width,height,slice,fixed);if(minimumVisible)ensureVisibleFlowers(points,width,height,minimumVisible,fixed);remaining-=slice;}
+ while(remaining>1e-8){const slice=Math.min(1/120,remaining);if(minimumVisible)ensureVisibleFlowers(points,width,height,minimumVisible,fixed);advanceGarden(points,width,height,slice,fixed);remaining-=slice;}
 }
 // Route a rotating minority through different points in the middle, then release them.
 function maintainCoverage(points,width,height,fixed){
@@ -65,32 +65,19 @@ function advanceGarden(points,width,height,dt,fixed){
  points.forEach((p,i)=>{if(i===fixed)return;const speed=Math.hypot(p.vx,p.vy);if(speed>20){p.vx*=20/speed;p.vy*=20/speed;}wrap(p,width,height);});
 }
 
-// Keep a guaranteed visible population; only off-screen flowers are recycled.
+// Reserve enough inward routes before flowers reach an edge. Never relocate a live flower.
 export function ensureVisibleFlowers(points,width,height,minimum=15,fixed=-1){
- const inset=p=>Math.min(p.size*.22,Math.min(width,height)*.12);
- const visible=p=>{const m=inset(p);return p.x>=m&&p.x<=width-m&&p.y>=m&&p.y<=height-m;};
- let count=points.filter(visible).length;
- const needed=Math.min(minimum,points.length);
- if(count>=needed)return;
- const reserves=points.map((p,i)=>({p,i,d:Math.hypot(Math.max(0,-p.x,p.x-width),Math.max(0,-p.y,p.y-height))})).filter(({p,i})=>i!==fixed&&!visible(p)).sort((a,b)=>a.d-b.d);
- for(const {p,i} of reserves){
-  if(count>=needed)break;
-  const m=inset(p),x=Math.max(m,Math.min(width-m,p.x)),y=Math.max(m,Math.min(height-m,p.y));
-  let best={x,y,score:-Infinity};
-  // Enter through an available edge rather than stacking incoming flowers.
-  for(let k=0;k<48;k++){
-   const t=(k%12+.5)/12,edge=Math.floor(k/12);
-   const cx=edge<2?(edge===0?m:width-m):m+t*(width-2*m);
-   const cy=edge>=2?(edge===2?m:height-m):m+t*(height-2*m);
-   let gap=Infinity;
-   for(const q of points)if(q!==p&&visible(q))gap=Math.min(gap,Math.hypot(cx-q.x,cy-q.y)-reach(p,q));
-   const score=Math.min(gap,20)-Math.hypot(cx-x,cy-y)*.025;
-   if(score>best.score)best={x:cx,y:cy,score};
+ const safe=p=>{const m=Math.min(p.size*.22,Math.min(width,height)*.12)+70;return p.x>m&&p.x<width-m&&p.y>m&&p.y<height-m;};
+ const desired=Math.min(points.length,minimum+5);
+ const ranked=points.map((p,i)=>({p,i,d:Math.hypot((p.x-width/2)/width,(p.y-height/2)/height)})).sort((a,b)=>a.d-b.d);
+ let reserved=0;
+ for(const {p,i}of ranked){
+  if(i===fixed){reserved++;continue;}
+  if(reserved>=desired)break;
+  reserved++;
+  if(!safe(p)){
+   p.centerRoute={x:width*(.32+(i*.61803398875%1)*.36),y:height*(.27+(i*.38196601125%1)*.46)};
+   // Existing velocity blends toward the route in advanceGarden, with no position snap.
   }
-  p.x=best.x;p.y=best.y;
-  p.centerRoute={x:width*(.35+(i*.61803398875%1)*.30),y:height*(.30+(i*.38196601125%1)*.40)};
-  const angle=Math.atan2(p.centerRoute.y-p.y,p.centerRoute.x-p.x),speed=Math.max(5,Math.hypot(p.vx||0,p.vy||0));
-  p.vx=Math.cos(angle)*speed;p.vy=Math.sin(angle)*speed;p.driftHeading=angle;p.routePauseUntil=0;
-  count++;
  }
 }

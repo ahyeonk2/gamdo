@@ -5,7 +5,7 @@ import {transferReceipt} from './receipt-transfer.js?v=1';
 import {createTicketImage} from './ticket-image.js?v=166';
 import {ticketContents,ticketDate} from './ticket.js?v=6';
 import {reviewState,reviewsReady as validReviews} from './review-validation.js?v=1';
-import {stepGarden,ensureVisibleFlowers,separateFlowers,AUTO_PANEL_MS,PANEL_HOLD_MS} from './garden-motion.js?v=20261113-population15';
+import {stepGarden,ensureVisibleFlowers,separateFlowers,AUTO_PANEL_MS,PANEL_HOLD_MS} from './garden-motion.js?v=20261113-smoothentry';
 const creatorMode=window.GAMDO_CREATOR===true;document.body.classList.add(creatorMode?'creator-mode':'projection-mode');
 import {bloom,BLOOM_DURATION_MS} from './bloom.js?v=20261113-soft';
 import {flowerAsset} from './flower-assets.js?v=44-approved-color-1';
