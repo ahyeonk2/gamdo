@@ -4,7 +4,7 @@ import {transferReceipt} from './receipt-transfer.js?v=1';
 import {createTicketImage} from './ticket-image.js?v=166';
 import {ticketContents,ticketDate} from './ticket.js?v=6';
 import {reviewState,reviewsReady as validReviews} from './review-validation.js?v=1';
-import {stepGarden,AUTO_PANEL_MS,PANEL_HOLD_MS} from './garden-motion.js?v=96';
+import {stepGarden,AUTO_PANEL_MS,PANEL_HOLD_MS} from './garden-motion.js?v=97';
 const creatorMode=window.GAMDO_CREATOR===true;document.body.classList.add(creatorMode?'creator-mode':'projection-mode');
 import {bloom} from './bloom.js?v=6';
 import {flowerAsset} from './flower-assets.js?v=44-approved-color-1';
@@ -25,13 +25,14 @@ function layout(){
  const scattered=scatterGarden(records,innerWidth,innerHeight,layoutSeed);
  worldWidth=creatorMode?scattered.worldWidth:innerWidth;locations=scattered.locations;
  if(!creatorMode){
-  const cols=Math.max(1,Math.ceil(Math.sqrt(records.length*innerWidth/innerHeight)));
-  const rows=Math.max(1,Math.ceil(records.length/cols)),fieldWidth=innerWidth*1.5,fieldHeight=innerHeight*1.35;
+  const cols=6,rows=Math.max(4,Math.ceil(records.length/cols));
+  const cellWidth=innerWidth/4.2,cellHeight=innerHeight/2.8;
   locations.forEach((p,i)=>{
    p.size*=1.4;
-   const col=i%cols,row=Math.floor(i/cols);
-   p.x=-innerWidth*.25+(col+.5+Math.sin(i*2.4)*.12)*fieldWidth/cols;
-   p.y=-innerHeight*.175+(row+.5+Math.cos(i*1.7)*.12)*fieldHeight/rows;
+   p.x=(i%cols-.5)*cellWidth;
+   p.y=(Math.floor(i/cols)-.5)*cellHeight;
+   p.fieldLeft=-cellWidth;p.fieldTop=-cellHeight;
+   p.fieldWidth=cols*cellWidth;p.fieldHeight=rows*cellHeight;
   });
  }
  birthPlacements.forEach((p,id)=>{const i=records.findIndex(r=>r.id===id);if(i>=0)Object.assign(locations[i],p)});
@@ -133,7 +134,7 @@ async function openBloomDetail(i,film){
 
 $('#detail').addEventListener('close',()=>{clearTimeout(panelCloseTimer);selectedIndex=-1;$('#detailLink').hidden=true;document.querySelectorAll('.panel-orbs').forEach(el=>el.remove());document.querySelectorAll('.selection-outline').forEach(el=>el.remove());document.querySelectorAll('.bloom.selected').forEach(el=>el.classList.remove('selected'));++bloomIntent;$('#selected').replaceChildren();document.querySelectorAll('.opening-source').forEach(el=>el.classList.remove('opening-source'));$('#detail').classList.remove('bloom-dialog');openingFlower=false});
 
-function draw(){if(lastDrawPosition===position&&nodes.size)return;lastDrawPosition=position;const margin=150;for(let i=0;i<records.length;i++){const p=locations[i],on=p.x-position>-margin&&p.x-position<innerWidth+margin;if(on&&!nodes.has(i))makeNode(i);else if(!on&&nodes.has(i)&&i!==selectedIndex){nodes.get(i).remove();nodes.delete(i);if(active===i)active=null}}trimAssets();$('#world').style.transform=`translate3d(${-position.toFixed(2)}px,0,0)`;nodes.forEach((el,i)=>{const p=locations[i];el.querySelector('.flower').tabIndex=p.x-position>0&&p.x-position<innerWidth?0:-1});if(!creatorMode&&!initialGalleryLoad&&nodes.size){initialGalleryLoad=Promise.allSettled([...nodes.keys()].map(i=>asset(records[i]).preview)).then(()=>{initialGalleryReady=true;nodes.forEach(el=>{if(el.dataset.readyArt){el.querySelector('.idle-art').src=el.dataset.readyArt;delete el.dataset.readyArt}})})}}
+function draw(){if(lastDrawPosition===position&&nodes.size)return;lastDrawPosition=position;const margin=150;const projectionSlots=creatorMode?null:new Set(locations.map((p,i)=>({i,p,d:Math.hypot((p.x-innerWidth/2)/innerWidth,(p.y-innerHeight/2)/innerHeight)})).filter(({p})=>p.x+p.size*.34>0&&p.x-p.size*.34<innerWidth&&p.y+p.size*.34>0&&p.y-p.size*.34<innerHeight).sort((a,b)=>(a.i===selectedIndex?-1:b.i===selectedIndex?1:a.d-b.d)).slice(0,15).map(({i})=>i));for(let i=0;i<records.length;i++){const p=locations[i],on=creatorMode?p.x-position>-margin&&p.x-position<innerWidth+margin:projectionSlots.has(i);if(on&&!nodes.has(i))makeNode(i);else if(!on&&nodes.has(i)&&i!==selectedIndex){nodes.get(i).remove();nodes.delete(i);if(active===i)active=null}}trimAssets();$('#world').style.transform=`translate3d(${-position.toFixed(2)}px,0,0)`;nodes.forEach((el,i)=>{const p=locations[i];el.querySelector('.flower').tabIndex=p.x-position>0&&p.x-position<innerWidth?0:-1});if(!creatorMode&&!initialGalleryLoad&&nodes.size){initialGalleryLoad=Promise.allSettled([...nodes.keys()].map(i=>asset(records[i]).preview)).then(()=>{initialGalleryReady=true;nodes.forEach(el=>{if(el.dataset.readyArt){el.querySelector('.idle-art').src=el.dataset.readyArt;delete el.dataset.readyArt}})})}}
 function expand(i){if(posterPreviewIndex!==null&&posterPreviewIndex!==i)return;clearTimeout(hideTimer);if(drag||performance.now()<suppressUntil)return;if(active!==null&&active!==i)collapse(active);const el=nodes.get(i);if(!el)return;if(active===i)return;active=i;el.classList.add('open');el.querySelector('.flower').setAttribute('aria-expanded','true');const rect=el.getBoundingClientRect(),radius=locations[i].size*.6;el.querySelectorAll('.orbit img[data-src]').forEach(img=>{img.src=img.dataset.src;delete img.dataset.src});el.querySelectorAll('.orbit').forEach((b,j)=>{const angle=-Math.PI/2+j*2*Math.PI/3;const x=clamp(rect.left+rect.width/2+Math.cos(angle)*radius,65,innerWidth-65)-(rect.left+rect.width/2),y=clamp(rect.top+rect.height/2+Math.sin(angle)*radius,90,innerHeight-95)-(rect.top+rect.height/2);b.style.setProperty('--ox',x+'px');b.style.setProperty('--oy',y+'px');b.tabIndex=0;b.setAttribute('aria-hidden','false')});}
 function collapse(i){if(posterPreviewIndex===i)return;const el=nodes.get(i);if(!el)return;el.classList.remove('open');el.querySelector('.flower').setAttribute('aria-expanded','false');el.querySelectorAll('.orbit').forEach(b=>{b.tabIndex=-1;b.setAttribute('aria-hidden','true')});if(active===i)active=null}
 let frameRaf=0;function wake(){if(!frameRaf&&!document.hidden)frameRaf=requestAnimationFrame(frame)}
