@@ -1,3 +1,5 @@
+export const BLOOM_DURATION_MS=4230;
+const BLOOM_TIME_SCALE=BLOOM_DURATION_MS/2350;
 const reduced=matchMedia('(prefers-reduced-motion: reduce)');
 let serial=0;
 const smooth=t=>t*t*(3-2*t);
@@ -49,7 +51,7 @@ export async function bloom(host,{delay=850}={}){
  let lastPaint=-Infinity;
  function draw(time){
  if(time-lastPaint<32){raf=requestAnimationFrame(draw);return}lastPaint=time;
- start??=time;const elapsed=Math.max(0,time-start-delay);
+ start??=time;const elapsed=Math.max(0,(time-start-delay)/BLOOM_TIME_SCALE);
  records.forEach((r,i)=>{const stagger=(r.k%3)*65+(2-r.layer)*140;const t=Math.max(0,Math.min(1,(elapsed-stagger)/1800));const frame=Math.round(t*120);if(r.frame!==frame){r.el.setAttribute('d',frames[i][frame]);r.frame=frame;}});
  const reveal=smooth(Math.max(0,Math.min(1,(elapsed-950)/1200)));
  details.forEach((el,i)=>el.setAttribute('opacity',reveal*(originalOpacity[i]===null?1:+originalOpacity[i])));

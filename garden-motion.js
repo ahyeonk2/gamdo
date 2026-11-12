@@ -9,7 +9,7 @@ export function stepGarden(points,width,height,dt,fixed=-1){
   p.flowTime=(p.flowTime||0)+dt;
   const time=p.flowTime,period=p.flowPeriod||48;
   const heading=phase+Math.sin(time*2*Math.PI/period+phase)*.48+Math.sin(time*.027+phase*1.3)*.22;
-  const speed=(Math.max(5,Math.min(13,p.speed||9))+2)*(.93+.07*Math.sin(time*.08+phase));
+  const speed=(Math.max(5,Math.min(13,p.speed||9))+2)*.82*(.93+.07*Math.sin(time*.08+phase));
   p.x+=Math.cos(heading)*speed*dt;p.y+=Math.sin(heading)*speed*dt;
   // Re-enter only after the entire flower and its glow have left the screen.
   const margin=p.size*.7+32,spanX=width+2*margin,spanY=height+2*margin;

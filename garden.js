@@ -1,13 +1,13 @@
-import {createRebloomScheduler} from './garden-rebloom.js?v=20261113-loop';
+import {createRebloomScheduler} from './garden-rebloom.js?v=20261113-soft';
 import {gardenSummaryEdits} from './garden-summaries.js?v=1';
 
 import {transferReceipt} from './receipt-transfer.js?v=1';
 import {createTicketImage} from './ticket-image.js?v=166';
 import {ticketContents,ticketDate} from './ticket.js?v=6';
 import {reviewState,reviewsReady as validReviews} from './review-validation.js?v=1';
-import {stepGarden,AUTO_PANEL_MS,PANEL_HOLD_MS} from './garden-motion.js?v=20261113-loop';
+import {stepGarden,AUTO_PANEL_MS,PANEL_HOLD_MS} from './garden-motion.js?v=20261113-soft';
 const creatorMode=window.GAMDO_CREATOR===true;document.body.classList.add(creatorMode?'creator-mode':'projection-mode');
-import {bloom} from './bloom.js?v=6';
+import {bloom,BLOOM_DURATION_MS} from './bloom.js?v=20261113-soft';
 import {flowerAsset} from './flower-assets.js?v=44-approved-color-1';
 import {scatterGarden} from './garden-layout.js?v=20261112-large';
 import {generateRecord,MOODS,GENERATOR_VERSION} from './generator-adapter.js?v=44-approved-color-1';
@@ -36,7 +36,7 @@ function asset(r){if(cache.has(r.id)){const a=cache.get(r.id);cache.delete(r.id)
 function trimAssets(){if(cache.size<=40)return;const visible=new Set([...nodes.keys()].map(i=>records[i]?.id));for(const id of cache.keys()){if(cache.size<=40)break;if(!visible.has(id))releaseAsset(id)}}
 
 function previewPoster(m){return m.poster?`<img data-src="${esc(m.poster)}" alt="${esc(m.title)}" draggable="false" decoding="async">`:`<span>${esc(m.title)}</span>`}
-function makeNode(i){const r=records[i],p=locations[i],a=asset(r),el=document.createElement('div');el.className='bloom'+(pendingBirth===i?' awaiting-birth':'');el.dataset.index=i;el.style.cssText=`--flower-x:${p.x}px;--flower-y:${p.y}px;width:${p.size}px;height:${p.size}px`;el.innerHTML=`<div class="floating"><button class="flower" aria-label="${esc(r.displayName&&r.kind!=='provided'?r.displayName+' · '+recordName(r):recordName(r))}${r.reviewSource==='tmdb'?' · '+esc(r.reviewAuthor)+'의 공개 리뷰':r.kind==='example'?' · 시연 예시':''}" aria-expanded="false"><img class="idle-art" alt="" draggable="false"></button>${r.movies.map((m,j)=>`<button class="orbit" data-film="${j}" tabindex="-1" aria-hidden="true" aria-label="${esc(m.title)} 감상 보기">${previewPoster(m)}</button>`).join('')}</div>`;el.addEventListener('pointerenter',e=>{if(creatorMode&&e.pointerType==='mouse'&&!drag)expand(i)});el.addEventListener('pointerleave',()=>{hideTimer=setTimeout(()=>{if(!el.contains(document.activeElement))collapse(i)},260)});el.addEventListener('focusin',()=>{if(creatorMode)expand(i)});el.addEventListener('focusout',()=>{hideTimer=setTimeout(()=>{if(!el.contains(document.activeElement)&&!el.matches(':hover'))collapse(i)},260)});el.querySelector('.flower').onclick=e=>{if(performance.now()<suppressUntil)return;if(creatorMode&&e.pointerType==='touch'&&active!==i){expand(i);return}openBloomDetail(i)};el.querySelectorAll('.orbit').forEach((b,j)=>{b.onclick=()=>{if(performance.now()<suppressUntil)return;openBloomDetail(i,j)}});el.querySelectorAll('img').forEach(img=>img.onerror=()=>{if(img.closest('.orbit'))img.replaceWith(Object.assign(document.createElement('span'),{textContent:img.alt}))});const floating=el.querySelector('.floating');floating.style.cssText=`--dx:${p.dx}px;--dy:${p.dy}px;--rot:${p.rotation*p.sign}deg;animation-duration:${p.period*(creatorMode?1:2)}s;animation-delay:${-p.phase*p.period*(creatorMode?1:2)}s`;a.preview.then(url=>{if(el.isConnected&&url){if(!creatorMode&&!initialGalleryReady)el.dataset.readyArt=url;else el.querySelector('.idle-art').src=url}}).catch(()=>{if(el.isConnected){el.querySelector('.idle-art').src=a.url;}});$('#world').append(el);nodes.set(i,el);return el}
+function makeNode(i){const r=records[i],p=locations[i],a=asset(r),el=document.createElement('div');el.className='bloom'+(pendingBirth===i?' awaiting-birth':'');el.dataset.index=i;el.style.cssText=`--flower-x:${p.x}px;--flower-y:${p.y}px;width:${p.size}px;height:${p.size}px`;el.innerHTML=`<div class="floating"><button class="flower" aria-label="${esc(r.displayName&&r.kind!=='provided'?r.displayName+' · '+recordName(r):recordName(r))}${r.reviewSource==='tmdb'?' · '+esc(r.reviewAuthor)+'의 공개 리뷰':r.kind==='example'?' · 시연 예시':''}" aria-expanded="false"><img class="idle-art" alt="" draggable="false"></button>${r.movies.map((m,j)=>`<button class="orbit" data-film="${j}" tabindex="-1" aria-hidden="true" aria-label="${esc(m.title)} 감상 보기">${previewPoster(m)}</button>`).join('')}</div>`;el.addEventListener('pointerenter',e=>{if(creatorMode&&e.pointerType==='mouse'&&!drag)expand(i)});el.addEventListener('pointerleave',()=>{hideTimer=setTimeout(()=>{if(!el.contains(document.activeElement))collapse(i)},260)});el.addEventListener('focusin',()=>{if(creatorMode)expand(i)});el.addEventListener('focusout',()=>{hideTimer=setTimeout(()=>{if(!el.contains(document.activeElement)&&!el.matches(':hover'))collapse(i)},260)});el.querySelector('.flower').onclick=e=>{if(performance.now()<suppressUntil)return;if(creatorMode&&e.pointerType==='touch'&&active!==i){expand(i);return}openBloomDetail(i)};el.querySelectorAll('.orbit').forEach((b,j)=>{b.onclick=()=>{if(performance.now()<suppressUntil)return;openBloomDetail(i,j)}});el.querySelectorAll('img').forEach(img=>img.onerror=()=>{if(img.closest('.orbit'))img.replaceWith(Object.assign(document.createElement('span'),{textContent:img.alt}))});const floating=el.querySelector('.floating');floating.style.cssText=`--dx:${p.dx}px;--dy:${p.dy}px;--rot:${p.rotation*p.sign}deg;animation-duration:${p.period*(creatorMode?1:2.4)}s;animation-delay:${-p.phase*p.period*(creatorMode?1:2.4)}s`;a.preview.then(url=>{if(el.isConnected&&url){if(!creatorMode&&!initialGalleryReady)el.dataset.readyArt=url;else el.querySelector('.idle-art').src=url}}).catch(()=>{if(el.isConnected){el.querySelector('.idle-art').src=a.url;}});$('#world').append(el);nodes.set(i,el);return el}
 function placeNewFlower(index){const p=locations[index],radius=p.size*.34,candidates=[];for(let n=0;n<150;n++){const x=radius+50+Math.random()*Math.max(1,worldWidth-2*radius-100),y=radius+65+Math.random()*Math.max(1,innerHeight-2*radius-160);let cost=0;locations.forEach((other,j)=>{if(j===index)return;const reach=(other.size+p.size)*.32,d=Math.hypot(x-other.x,y-other.y);cost+=Math.pow(Math.max(0,1-d/reach),2)});candidates.push({x,y,cost})}candidates.sort((a,b)=>a.cost-b.cost);const chosen=candidates[Math.floor(Math.random()*Math.min(8,candidates.length))];p.x=chosen.x;p.y=chosen.y;birthPlacements.set(records[index].id,{x:p.x,y:p.y});nodes.get(index)?.remove();nodes.delete(index);
  // A relocated flower needs a fresh node even when the wall cannot scroll.
  lastDrawPosition=null;
@@ -97,7 +97,7 @@ async function showProjectionPreview(i,animate=true){
  const node=nodes.get(i);if(!node||projectionPreviews.has(i))return;
  if(projectionPreviews.size>=3)closeProjectionPreview(projectionPreviews.keys().next().value);
  expand(i);node.classList.add('selected');
- projectionPreviews.set(i,{node,timer:setTimeout(()=>closeProjectionPreview(i),14000)});
+ projectionPreviews.set(i,{node,timer:setTimeout(()=>closeProjectionPreview(i),18000)});
  if(animate&&!reduced&&reblooming.size<2){reblooming.add(i);try{await bloomNewFlower(i);}finally{reblooming.delete(i);}}
 }
 
@@ -131,16 +131,16 @@ function draw(){if(lastDrawPosition===position&&nodes.size)return;lastDrawPositi
 function fanOrbit(button,x,y,order){
  button._fanAnimation?.cancel();button._fanAnimation=null;
  if(reduced||typeof button.animate!=='function')return;
- const turn=-Math.PI*.32;
- const mx=(x*Math.cos(turn)-y*Math.sin(turn))*.68;
- const my=(x*Math.sin(turn)+y*Math.cos(turn))*.68;
+ const turn=-Math.PI*.14;
+ const mx=(x*Math.cos(turn)-y*Math.sin(turn))*.55;
+ const my=(x*Math.sin(turn)+y*Math.cos(turn))*.55;
  const at=(px,py,rotation,scale)=>`translate(calc(-50% + ${px}px),calc(-50% + ${py}px)) rotate(${rotation}deg) scale(${scale})`;
  button._fanAnimation=button.animate([
-  {offset:0,transform:at(0,0,-18,.18),opacity:0},
-  {offset:.46,transform:at(mx,my,-7,.82),opacity:1},
-  {offset:.82,transform:at(x*1.035,y*1.035,2,1.025),opacity:1},
-  {offset:1,transform:at(x,y,0,1),opacity:1}
- ],{duration:650,delay:order*115,easing:'cubic-bezier(.18,.76,.22,1)',fill:'backwards'});
+  {offset:0,transform:at(0,0,-8,.06),opacity:0,filter:'blur(10px)'},
+  {offset:.22,transform:at(x*.06,y*.06,-6,.20),opacity:.22,filter:'blur(5px)'},
+  {offset:.58,transform:at(mx,my,-3,.68),opacity:.70,filter:'blur(1.8px)'},
+  {offset:1,transform:at(x,y,0,1),opacity:1,filter:'blur(0px)'}
+ ],{duration:Math.round(BLOOM_DURATION_MS*.60),delay:Math.round(BLOOM_DURATION_MS*(.18+order*.11)),easing:'cubic-bezier(.22,.55,.26,1)',fill:'backwards'});
 }
 function expand(i){if(creatorMode&&posterPreviewIndex!==null&&posterPreviewIndex!==i)return;clearTimeout(hideTimer);if(drag||performance.now()<suppressUntil)return;if(creatorMode&&active!==null&&active!==i)collapse(active);const el=nodes.get(i);if(!el)return;if(el.classList.contains('open'))return;if(creatorMode)active=i;el.classList.add('open');el.querySelector('.flower').setAttribute('aria-expanded','true');const rect=el.getBoundingClientRect(),radius=locations[i].size*.6;el.querySelectorAll('.orbit img[data-src]').forEach(img=>{img.src=img.dataset.src;delete img.dataset.src});el.querySelectorAll('.orbit').forEach((b,j)=>{const angle=-Math.PI/2+j*2*Math.PI/3;const x=clamp(rect.left+rect.width/2+Math.cos(angle)*radius,65,innerWidth-65)-(rect.left+rect.width/2),y=clamp(rect.top+rect.height/2+Math.sin(angle)*radius,90,innerHeight-95)-(rect.top+rect.height/2);b.style.setProperty('--ox',x+'px');b.style.setProperty('--oy',y+'px');fanOrbit(b,x,y,j);b.tabIndex=0;b.setAttribute('aria-hidden','false')});}
 function collapse(i){if((creatorMode&&posterPreviewIndex===i)||(!creatorMode&&projectionPreviews.has(i)))return;const el=nodes.get(i);if(!el)return;el.classList.remove('open');el.querySelector('.flower').setAttribute('aria-expanded','false');el.querySelectorAll('.orbit').forEach(b=>{b._fanAnimation?.cancel();b._fanAnimation=null;b.tabIndex=-1;b.setAttribute('aria-hidden','true')});if(active===i)active=null}
@@ -260,7 +260,7 @@ async function showSelectionOutline(i,color){
 }
 
 let projectionSyncBusy=false,birthFinished=null;
-async function syncProjection(){if(creatorMode||document.hidden||projectionSyncBusy)return;projectionSyncBusy=true;try{const res=await fetch('/api/taste/projection',{cache:'no-store'});if(!res.ok)return;const data=await res.json(),known=new Set(records.map(r=>r.id)),incoming=data.records.filter(r=>!known.has(r.id));if(!incoming.length)return;++bloomIntent;await closeDetailSmooth();const old=position;for(const record of incoming){records.push(record);layout();position=clamp(old,0,max());const index=records.length-1;placeNewFlower(index);pendingBirth=index;target=clamp(locations[index].x-innerWidth/2,0,max());await new Promise(resolve=>{birthFinished=resolve;wake()})}openDetail(records.length-1,undefined,true);rebloomScheduler.reset(Date.now()+14000);}catch{}finally{projectionSyncBusy=false}}
+async function syncProjection(){if(creatorMode||document.hidden||projectionSyncBusy)return;projectionSyncBusy=true;try{const res=await fetch('/api/taste/projection',{cache:'no-store'});if(!res.ok)return;const data=await res.json(),known=new Set(records.map(r=>r.id)),incoming=data.records.filter(r=>!known.has(r.id));if(!incoming.length)return;++bloomIntent;await closeDetailSmooth();const old=position;for(const record of incoming){records.push(record);layout();position=clamp(old,0,max());const index=records.length-1;placeNewFlower(index);pendingBirth=index;target=clamp(locations[index].x-innerWidth/2,0,max());await new Promise(resolve=>{birthFinished=resolve;wake()})}openDetail(records.length-1,undefined,true);rebloomScheduler.reset(Date.now()+18000);}catch{}finally{projectionSyncBusy=false}}
 if(!creatorMode){setInterval(syncProjection,4000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)syncProjection()})}else{document.querySelector('.privacy').textContent+=' 정원에 심기를 누르면 꽃 그래픽이 벽의 공용 정원에 표시됩니다. 작성한 감상과 개인정보는 공개하지 않습니다.';document.querySelector('#entry .close').hidden=true;$('#create').click();$('#projectionAgain').onclick=()=>{$('#projectionDone').close();earlyQuestions.fill(null);document.querySelectorAll('.early-question').forEach(el=>el.remove());selectedMovies.fill(null);document.querySelectorAll('#inputs textarea,#inputs input').forEach(el=>el.value='');sessionId=null;confirmUnknown=false;questionList=[];document.querySelectorAll('.extra-question').forEach(el=>el.remove());$('#followups').hidden=true;$('#skip').hidden=true;sessionStorage.removeItem('gamdo-review-draft');$('#create').click()};}
 
 function floatPanelOrbs(i,color){
