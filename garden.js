@@ -4,7 +4,7 @@ import {transferReceipt} from './receipt-transfer.js?v=1';
 import {createTicketImage} from './ticket-image.js?v=166';
 import {ticketContents,ticketDate} from './ticket.js?v=6';
 import {reviewState,reviewsReady as validReviews} from './review-validation.js?v=1';
-import {stepGarden,AUTO_PANEL_MS,PANEL_HOLD_MS} from './garden-motion.js?v=20261112-free';
+import {stepGarden,AUTO_PANEL_MS,PANEL_HOLD_MS} from './garden-motion.js?v=20261113-horizontal';
 const creatorMode=window.GAMDO_CREATOR===true;document.body.classList.add(creatorMode?'creator-mode':'projection-mode');
 import {bloom} from './bloom.js?v=6';
 import {flowerAsset} from './flower-assets.js?v=44-approved-color-1';
@@ -123,7 +123,7 @@ async function openBloomDetail(i,film){
 
 $('#detail').addEventListener('close',()=>{clearTimeout(panelCloseTimer);selectedIndex=-1;$('#detailLink').hidden=true;document.querySelectorAll('.panel-orbs').forEach(el=>el.remove());document.querySelectorAll('.selection-outline').forEach(el=>el.remove());document.querySelectorAll('.bloom.selected').forEach(el=>el.classList.remove('selected'));++bloomIntent;$('#selected').replaceChildren();document.querySelectorAll('.opening-source').forEach(el=>el.classList.remove('opening-source'));$('#detail').classList.remove('bloom-dialog');openingFlower=false});
 
-function draw(){if(lastDrawPosition===position&&nodes.size)return;lastDrawPosition=position;const margin=150;for(let i=0;i<records.length;i++){const p=locations[i],on=p.x-position>-margin&&p.x-position<innerWidth+margin;if(on&&!nodes.has(i))makeNode(i);else if(!on&&nodes.has(i)&&i!==selectedIndex){nodes.get(i).remove();nodes.delete(i);if(active===i)active=null}}trimAssets();$('#world').style.transform=`translate3d(${-position.toFixed(2)}px,0,0)`;nodes.forEach((el,i)=>{const p=locations[i];el.querySelector('.flower').tabIndex=p.x-position>0&&p.x-position<innerWidth?0:-1});if(!creatorMode&&!initialGalleryLoad&&nodes.size){initialGalleryLoad=Promise.allSettled([...nodes.keys()].map(i=>asset(records[i]).preview)).then(()=>{initialGalleryReady=true;nodes.forEach(el=>{if(el.dataset.readyArt){el.querySelector('.idle-art').src=el.dataset.readyArt;delete el.dataset.readyArt}})})}}
+function draw(){if(lastDrawPosition===position&&nodes.size)return;lastDrawPosition=position;const margin=150;for(let i=0;i<records.length;i++){const p=locations[i],edge=Math.max(margin,p.size*.65),on=p.x-position>-edge&&p.x-position<innerWidth+edge;if(on&&!nodes.has(i))makeNode(i);else if(!on&&nodes.has(i)&&i!==selectedIndex){nodes.get(i).remove();nodes.delete(i);if(active===i)active=null}}trimAssets();$('#world').style.transform=`translate3d(${-position.toFixed(2)}px,0,0)`;nodes.forEach((el,i)=>{const p=locations[i];el.querySelector('.flower').tabIndex=p.x-position>0&&p.x-position<innerWidth?0:-1});if(!creatorMode&&!initialGalleryLoad&&nodes.size){initialGalleryLoad=Promise.allSettled([...nodes.keys()].map(i=>asset(records[i]).preview)).then(()=>{initialGalleryReady=true;nodes.forEach(el=>{if(el.dataset.readyArt){el.querySelector('.idle-art').src=el.dataset.readyArt;delete el.dataset.readyArt}})})}}
 // Reveal poster circles in a short clockwise fan, keeping their final positions.
 function fanOrbit(button,x,y,order){
  button._fanAnimation?.cancel();button._fanAnimation=null;
