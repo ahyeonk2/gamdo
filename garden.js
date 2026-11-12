@@ -4,11 +4,11 @@ import {transferReceipt} from './receipt-transfer.js?v=1';
 import {createTicketImage} from './ticket-image.js?v=166';
 import {ticketContents,ticketDate} from './ticket.js?v=6';
 import {reviewState,reviewsReady as validReviews} from './review-validation.js?v=1';
-import {stepGarden,AUTO_PANEL_MS,PANEL_HOLD_MS} from './garden-motion.js?v=96';
+import {stepGarden,AUTO_PANEL_MS,PANEL_HOLD_MS} from './garden-motion.js?v=20261112-free';
 const creatorMode=window.GAMDO_CREATOR===true;document.body.classList.add(creatorMode?'creator-mode':'projection-mode');
 import {bloom} from './bloom.js?v=6';
 import {flowerAsset} from './flower-assets.js?v=44-approved-color-1';
-import {scatterGarden} from './garden-layout.js?v=65';
+import {scatterGarden} from './garden-layout.js?v=20261112-free';
 import {generateRecord,MOODS,GENERATOR_VERSION} from './generator-adapter.js?v=44-approved-color-1';
 import {explainPalette} from './genre-palette.js?v=67';
 import {samples} from './sample-records.js?v=35';
@@ -22,18 +22,8 @@ function toast(s){$('#notice').textContent=s;clearTimeout(toast.timer);toast.tim
 function rng(seed){return ()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296}}
 const layoutSeed=1248;
 function layout(){
- const scattered=scatterGarden(records,innerWidth,innerHeight,layoutSeed);
- worldWidth=creatorMode?scattered.worldWidth:innerWidth;locations=scattered.locations;
- if(!creatorMode){
-  const cols=Math.max(1,Math.ceil(Math.sqrt(records.length*innerWidth/innerHeight)));
-  const rows=Math.max(1,Math.ceil(records.length/cols)),fieldWidth=innerWidth*1.5,fieldHeight=innerHeight*1.35;
-  locations.forEach((p,i)=>{
-   p.size*=1.4;
-   const col=i%cols,row=Math.floor(i/cols);
-   p.x=-innerWidth*.25+(col+.5+Math.sin(i*2.4)*.12)*fieldWidth/cols;
-   p.y=-innerHeight*.175+(row+.5+Math.cos(i*1.7)*.12)*fieldHeight/rows;
-  });
- }
+ const scattered=scatterGarden(records,innerWidth,innerHeight,layoutSeed,{projection:!creatorMode});
+ worldWidth=scattered.worldWidth;locations=scattered.locations;
  birthPlacements.forEach((p,id)=>{const i=records.findIndex(r=>r.id===id);if(i>=0)Object.assign(locations[i],p)});
  position=clamp(position,0,max());nodes.forEach(n=>n.remove());nodes.clear();active=null;lastDrawPosition=null;draw();wake();
 }
@@ -289,7 +279,7 @@ function ambientGarden(time){
  ambientFrame=0;if(document.hidden||creatorMode)return;
  const dt=Math.min(.04,(time-ambientTime)/1000||0);ambientTime=time;
  if(locations.length&&!paused&&!reduced&&pendingBirth===null&&!drag){
- stepGarden(locations,worldWidth,innerHeight,dt*.4,selectedIndex);
+ stepGarden(locations,worldWidth,innerHeight,dt,selectedIndex);
  
  if(time-lastAmbientCull>200){lastDrawPosition=null;draw();lastAmbientCull=time;}nodes.forEach((el,i)=>{const p=locations[i];el.style.setProperty('--flower-x',p.x.toFixed(3)+'px');el.style.setProperty('--flower-y',p.y.toFixed(3)+'px')});
  }
