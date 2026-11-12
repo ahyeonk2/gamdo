@@ -5,7 +5,7 @@ import {transferReceipt} from './receipt-transfer.js?v=1';
 import {createTicketImage} from './ticket-image.js?v=166';
 import {ticketContents,ticketDate} from './ticket.js?v=6';
 import {reviewState,reviewsReady as validReviews} from './review-validation.js?v=1';
-import {stepGarden,separateFlowers,AUTO_PANEL_MS,PANEL_HOLD_MS} from './garden-motion.js?v=20261113-collision';
+import {stepGarden,separateFlowers,AUTO_PANEL_MS,PANEL_HOLD_MS} from './garden-motion.js?v=20261113-center';
 const creatorMode=window.GAMDO_CREATOR===true;document.body.classList.add(creatorMode?'creator-mode':'projection-mode');
 import {bloom,BLOOM_DURATION_MS} from './bloom.js?v=20261113-soft';
 import {flowerAsset} from './flower-assets.js?v=44-approved-color-1';
@@ -82,6 +82,12 @@ async function bloomNewFlower(index,arriving=false){
    await idle.decode();
  }finally{holder.remove();el.classList.remove('being-born')}
 }
+// Leave enough room for all three circles, their white halos, and the moving flower.
+function canRevealPosters(i){
+ const p=locations[i];if(!p)return false;
+ const x=p.x-position,mx=Math.max(105,p.size*.52+46),my=Math.max(115,p.size*.60+46);
+ return x>mx&&x<innerWidth-mx&&p.y>my&&p.y<innerHeight-my;
+}
 // The old panel's small white light beads, now attached to the moving flower.
 function floatPosterOrbs(node,color){
  if(reduced)return ()=>{};
@@ -118,7 +124,7 @@ function closeProjectionPreview(index=null){
  if(index===null){posterPreviewIndex=null;selectedIndex=-1;}
 }
 async function showProjectionPreview(i,animate=true){
- const node=nodes.get(i);if(!node||projectionPreviews.has(i))return;
+ const node=nodes.get(i);if(!node||projectionPreviews.has(i)||!canRevealPosters(i))return;
  if(projectionPreviews.size>=2)closeProjectionPreview(projectionPreviews.keys().next().value);
  expand(i);node.classList.add('selected');
  projectionPreviews.set(i,{node,orbs:floatPosterOrbs(node,MOODS[records[i].profile.mood]?.hex||'#d98edb'),timer:setTimeout(()=>closeProjectionPreview(i),18000)});
@@ -322,11 +328,12 @@ function ambientGarden(time){
  const dt=Math.min(.04,(time-ambientTime)/1000||0);ambientTime=time;
  if(locations.length&&!paused&&!reduced&&pendingBirth===null&&!drag){
  stepGarden(locations,worldWidth,innerHeight,dt,selectedIndex);
+ for(const i of projectionPreviews.keys())if(!canRevealPosters(i))closeProjectionPreview(i);
  
  if(time-lastAmbientCull>200){lastDrawPosition=null;draw();lastAmbientCull=time;}nodes.forEach((el,i)=>{const p=locations[i];el.style.setProperty('--flower-x',p.x.toFixed(3)+'px');el.style.setProperty('--flower-y',p.y.toFixed(3)+'px')});
  }
  if(initialGalleryReady&&!paused&&!reduced&&!$('dialog[open]')&&!drag&&performance.now()>=suppressUntil&&!projectionSyncBusy&&pendingBirth===null){
-  const candidates=[...nodes.keys()].filter(i=>{const p=locations[i],edge=Math.max(95,p.size*.32);return !projectionPreviews.has(i)&&!reblooming.has(i)&&p.x-position>edge&&p.x-position<innerWidth-edge&&p.y>edge&&p.y<innerHeight-edge;}).map(i=>({index:i,...locations[i]}));
+  const candidates=[...nodes.keys()].filter(i=>{return !projectionPreviews.has(i)&&!reblooming.has(i)&&canRevealPosters(i);}).map(i=>({index:i,...locations[i]}));
   const index=rebloomScheduler.next(Date.now(),candidates,{blooming:reblooming.size,displayed:projectionPreviews.size});
   if(index!==null)showProjectionPreview(index).catch(()=>{});
  }
