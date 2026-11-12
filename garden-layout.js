@@ -37,5 +37,8 @@ export function scatterGarden(records,width,height,seed,{projection=false}={}){
   placed.push(best);
   locations[i]={x:best.x,y:best.y,size,phase:random()*Math.PI*2,period:17+random()*17,dx:4+random()*11,dy:4+random()*12,rotation:.7+random()*1.8,sign:random()<.5?-1:1,flowPhase:random()*Math.PI*2,flowPeriod:32+random()*47,speed:5+random()*8};
  }
+
+ // Enlarge only the upper size range after scattering; keep every display slot.
+ if(projection)locations.forEach((p,i)=>{const lift=Math.max(0,(ranks[i]-.76)/.24);p.size=Math.min(p.size*(1+.28*lift),510,width*.42,height*.64);});
  return {worldWidth,locations};
 }

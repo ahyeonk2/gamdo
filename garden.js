@@ -8,7 +8,7 @@ import {stepGarden,AUTO_PANEL_MS,PANEL_HOLD_MS} from './garden-motion.js?v=20261
 const creatorMode=window.GAMDO_CREATOR===true;document.body.classList.add(creatorMode?'creator-mode':'projection-mode');
 import {bloom} from './bloom.js?v=6';
 import {flowerAsset} from './flower-assets.js?v=44-approved-color-1';
-import {scatterGarden} from './garden-layout.js?v=20261112-free';
+import {scatterGarden} from './garden-layout.js?v=20261112-large';
 import {generateRecord,MOODS,GENERATOR_VERSION} from './generator-adapter.js?v=44-approved-color-1';
 import {explainPalette} from './genre-palette.js?v=67';
 import {samples} from './sample-records.js?v=35';
