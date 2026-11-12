@@ -1,4 +1,4 @@
-import {createRebloomScheduler} from './garden-rebloom.js?v=20261113-soft';
+import {createRebloomScheduler} from './garden-rebloom.js?v=20261113-orbs';
 import {gardenSummaryEdits} from './garden-summaries.js?v=1';
 
 import {transferReceipt} from './receipt-transfer.js?v=1';
@@ -81,13 +81,36 @@ async function bloomNewFlower(index,arriving=false){
    await idle.decode();
  }finally{holder.remove();el.classList.remove('being-born')}
 }
+// The old panel's small white light beads, now attached to the moving flower.
+function floatPosterOrbs(node,color){
+ if(reduced)return ()=>{};
+ const parent=node.querySelector('.floating');if(!parent)return ()=>{};
+ const circles=[...node.querySelectorAll('.orbit')];
+ const group=document.createElement('div');group.className='poster-orbs';group.setAttribute('aria-hidden','true');group.style.setProperty('--orb-color',color);
+ const animations=[];let end=0,removed=false,timer;
+ [[-16,-20,3.5],[20,-30,5],[-10,18,6],[24,10,4.5]].forEach(([ox,oy,size],n)=>{
+  const target=circles[n%3];if(!target)return;
+  const dx=parseFloat(target.style.getPropertyValue('--ox'))||0,dy=parseFloat(target.style.getPropertyValue('--oy'))||0;
+  const dot=document.createElement('i');dot.style.cssText=`width:${size}px;height:${size}px`;group.append(dot);
+  const frames=Array.from({length:121},(_,k)=>{const t=k/120,u=t*t*(3-2*t),spread=Math.sin(Math.PI*t),phase=n*1.7;
+   const x=dx*u+ox*spread+Math.sin(t*Math.PI*2+phase)*10*spread;
+   const y=dy*u+oy*spread+Math.sin(t*Math.PI*4+phase)*12*spread;
+   return {offset:t,transform:`translate(calc(-50% + ${x}px),calc(-50% + ${y}px)) scale(${.55+.45*Math.min(1,t*5)})`,opacity:Math.min(1,t/.18)*Math.min(1,(1-t)/.34)};
+  });
+  const duration=Math.round(BLOOM_DURATION_MS*.65),delay=Math.round(BLOOM_DURATION_MS*(.18+(n%3)*.11))+n*30;
+  animations.push(dot.animate(frames,{duration,delay,easing:'linear',fill:'both'}));end=Math.max(end,duration+delay);
+ });
+ parent.append(group);
+ const cleanup=()=>{if(removed)return;removed=true;clearTimeout(timer);animations.forEach(a=>a.cancel());group.remove();};
+ timer=setTimeout(cleanup,end+120);return cleanup;
+}
 let posterPreviewIndex=null;
 const projectionPreviews=new Map(),reblooming=new Set();
 const rebloomScheduler=createRebloomScheduler({now:Date.now()});
 function closeProjectionPreview(index=null){
  const indices=index===null?[...projectionPreviews.keys()]:[index];
  for(const i of indices){
-  clearTimeout(projectionPreviews.get(i)?.timer);projectionPreviews.delete(i);
+  const preview=projectionPreviews.get(i);clearTimeout(preview?.timer);preview?.orbs?.();projectionPreviews.delete(i);
   const node=nodes.get(i);node?.querySelectorAll('.birth-art').forEach(host=>host._birthCancel?.());
   node?.classList.remove('selected');collapse(i);
  }
@@ -95,9 +118,9 @@ function closeProjectionPreview(index=null){
 }
 async function showProjectionPreview(i,animate=true){
  const node=nodes.get(i);if(!node||projectionPreviews.has(i))return;
- if(projectionPreviews.size>=3)closeProjectionPreview(projectionPreviews.keys().next().value);
+ if(projectionPreviews.size>=2)closeProjectionPreview(projectionPreviews.keys().next().value);
  expand(i);node.classList.add('selected');
- projectionPreviews.set(i,{node,timer:setTimeout(()=>closeProjectionPreview(i),18000)});
+ projectionPreviews.set(i,{node,orbs:floatPosterOrbs(node,MOODS[records[i].profile.mood]?.hex||'#d98edb'),timer:setTimeout(()=>closeProjectionPreview(i),18000)});
  if(animate&&!reduced&&reblooming.size<2){reblooming.add(i);try{await bloomNewFlower(i);}finally{reblooming.delete(i);}}
 }
 

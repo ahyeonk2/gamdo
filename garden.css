@@ -736,3 +736,8 @@ dialog .close>svg,#entry .movie-search button>svg{display:block;flex:none;margin
  .projection-mode .orbit::before{inset:-3px;border:1.5px solid #ffffffc9;filter:blur(2.8px);box-shadow:0 0 10px #ffffff40;opacity:.7;z-index:1}
  .projection-mode .orbit::after{inset:0;border:1px solid #ffffffb8;filter:blur(.6px);box-shadow:inset 0 0 3px #ffffff55;z-index:2}
 }
+
+/* A few flat white light beads; the moving flower carries them with it. */
+.poster-orbs{position:absolute;left:50%;top:50%;width:0;height:0;z-index:24;pointer-events:none}
+.poster-orbs i{position:absolute;display:block;border-radius:50%;background:#fff;box-shadow:0 0 6px 1px var(--orb-color),0 0 13px 3px color-mix(in srgb,var(--orb-color) 42%,transparent);pointer-events:none}
+@media(prefers-reduced-motion:reduce){.poster-orbs{display:none}}
