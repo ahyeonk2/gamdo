@@ -1,10 +1,11 @@
+import {createRebloomScheduler} from './garden-rebloom.js?v=20261113-loop';
 import {gardenSummaryEdits} from './garden-summaries.js?v=1';
 
 import {transferReceipt} from './receipt-transfer.js?v=1';
 import {createTicketImage} from './ticket-image.js?v=166';
 import {ticketContents,ticketDate} from './ticket.js?v=6';
 import {reviewState,reviewsReady as validReviews} from './review-validation.js?v=1';
-import {stepGarden,AUTO_PANEL_MS,PANEL_HOLD_MS} from './garden-motion.js?v=20261113-horizontal';
+import {stepGarden,AUTO_PANEL_MS,PANEL_HOLD_MS} from './garden-motion.js?v=20261113-loop';
 const creatorMode=window.GAMDO_CREATOR===true;document.body.classList.add(creatorMode?'creator-mode':'projection-mode');
 import {bloom} from './bloom.js?v=6';
 import {flowerAsset} from './flower-assets.js?v=44-approved-color-1';
@@ -22,6 +23,7 @@ function toast(s){$('#notice').textContent=s;clearTimeout(toast.timer);toast.tim
 function rng(seed){return ()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296}}
 const layoutSeed=1248;
 function layout(){
+ if(!creatorMode){closeProjectionPreview();rebloomScheduler.reset(Date.now());}
  const scattered=scatterGarden(records,innerWidth,innerHeight,layoutSeed,{projection:!creatorMode});
  worldWidth=scattered.worldWidth;locations=scattered.locations;
  birthPlacements.forEach((p,id)=>{const i=records.findIndex(r=>r.id===id);if(i>=0)Object.assign(locations[i],p)});
@@ -66,6 +68,7 @@ async function bloomNewFlower(index,arriving=false){
  const el=nodes.get(index);if(!el)return;
  const flower=asset(records[index]),button=el.querySelector('.flower');
  if(arriving&&!reduced&&!paused)await arriveAtFlower(el,MOODS[records[index].profile.mood]?.hex||'#e6caff');
+ if(nodes.get(index)!==el||!el.isConnected)return;
  if(arriving&&!creatorMode)showProjectionPreview(index,false);
  el.classList.remove('awaiting-birth');
  if(reduced)return;
@@ -78,30 +81,30 @@ async function bloomNewFlower(index,arriving=false){
    await idle.decode();
  }finally{holder.remove();el.classList.remove('being-born')}
 }
-let posterPreviewIndex=null,projectionPreviewTimer=null;
-function closeProjectionPreview(){
- clearTimeout(projectionPreviewTimer);
- const index=posterPreviewIndex;posterPreviewIndex=null;
- if(index!==null)collapse(index);
- document.querySelectorAll('.bloom.selected').forEach(el=>el.classList.remove('selected'));
- selectedIndex=-1;
+let posterPreviewIndex=null;
+const projectionPreviews=new Map(),reblooming=new Set();
+const rebloomScheduler=createRebloomScheduler({now:Date.now()});
+function closeProjectionPreview(index=null){
+ const indices=index===null?[...projectionPreviews.keys()]:[index];
+ for(const i of indices){
+  clearTimeout(projectionPreviews.get(i)?.timer);projectionPreviews.delete(i);
+  const node=nodes.get(i);node?.querySelectorAll('.birth-art').forEach(host=>host._birthCancel?.());
+  node?.classList.remove('selected');collapse(i);
+ }
+ if(index===null){posterPreviewIndex=null;selectedIndex=-1;}
 }
 async function showProjectionPreview(i,animate=true){
- closeProjectionPreview();
- expand(i);posterPreviewIndex=i;selectedIndex=i;
- nodes.get(i)?.classList.add('selected');
- projectionPreviewTimer=setTimeout(closeProjectionPreview,PANEL_HOLD_MS);
- if(animate){openingFlower=true;try{await bloomNewFlower(i);}finally{openingFlower=false;}}
+ const node=nodes.get(i);if(!node||projectionPreviews.has(i))return;
+ if(projectionPreviews.size>=3)closeProjectionPreview(projectionPreviews.keys().next().value);
+ expand(i);node.classList.add('selected');
+ projectionPreviews.set(i,{node,timer:setTimeout(()=>closeProjectionPreview(i),14000)});
+ if(animate&&!reduced&&reblooming.size<2){reblooming.add(i);try{await bloomNewFlower(i);}finally{reblooming.delete(i);}}
 }
 
 async function openBloomDetail(i,film){
- if(openingFlower||!nodes.has(i))return;
- if(!creatorMode){
-  openingFlower=true;
-  try{await showProjectionPreview(i);}
-  finally{openingFlower=false;}
-  return;
- }
+ if(!nodes.has(i))return;
+ if(!creatorMode){await showProjectionPreview(i);return;}
+ if(openingFlower)return;
  openingFlower=true;
  const intent=++bloomIntent,source=nodes.get(i);
  posterPreviewIndex=i;
@@ -123,7 +126,7 @@ async function openBloomDetail(i,film){
 
 $('#detail').addEventListener('close',()=>{clearTimeout(panelCloseTimer);selectedIndex=-1;$('#detailLink').hidden=true;document.querySelectorAll('.panel-orbs').forEach(el=>el.remove());document.querySelectorAll('.selection-outline').forEach(el=>el.remove());document.querySelectorAll('.bloom.selected').forEach(el=>el.classList.remove('selected'));++bloomIntent;$('#selected').replaceChildren();document.querySelectorAll('.opening-source').forEach(el=>el.classList.remove('opening-source'));$('#detail').classList.remove('bloom-dialog');openingFlower=false});
 
-function draw(){if(lastDrawPosition===position&&nodes.size)return;lastDrawPosition=position;const margin=150;for(let i=0;i<records.length;i++){const p=locations[i],edge=Math.max(margin,p.size*.65),on=p.x-position>-edge&&p.x-position<innerWidth+edge;if(on&&!nodes.has(i))makeNode(i);else if(!on&&nodes.has(i)&&i!==selectedIndex){nodes.get(i).remove();nodes.delete(i);if(active===i)active=null}}trimAssets();$('#world').style.transform=`translate3d(${-position.toFixed(2)}px,0,0)`;nodes.forEach((el,i)=>{const p=locations[i];el.querySelector('.flower').tabIndex=p.x-position>0&&p.x-position<innerWidth?0:-1});if(!creatorMode&&!initialGalleryLoad&&nodes.size){initialGalleryLoad=Promise.allSettled([...nodes.keys()].map(i=>asset(records[i]).preview)).then(()=>{initialGalleryReady=true;nodes.forEach(el=>{if(el.dataset.readyArt){el.querySelector('.idle-art').src=el.dataset.readyArt;delete el.dataset.readyArt}})})}}
+function draw(){if(lastDrawPosition===position&&nodes.size)return;lastDrawPosition=position;const margin=150;for(let i=0;i<records.length;i++){const p=locations[i],edge=Math.max(margin,p.size*.65),on=p.x-position>-edge&&p.x-position<innerWidth+edge&&p.y>-edge&&p.y<innerHeight+edge;if(on&&!nodes.has(i))makeNode(i);else if(!on&&nodes.has(i)&&i!==selectedIndex){if(!creatorMode)closeProjectionPreview(i);nodes.get(i).remove();nodes.delete(i);if(active===i)active=null}}trimAssets();$('#world').style.transform=`translate3d(${-position.toFixed(2)}px,0,0)`;nodes.forEach((el,i)=>{const p=locations[i];el.querySelector('.flower').tabIndex=p.x-position>0&&p.x-position<innerWidth?0:-1});if(!creatorMode&&!initialGalleryLoad&&nodes.size){initialGalleryLoad=Promise.allSettled([...nodes.keys()].map(i=>asset(records[i]).preview)).then(()=>{initialGalleryReady=true;nodes.forEach(el=>{if(el.dataset.readyArt){el.querySelector('.idle-art').src=el.dataset.readyArt;delete el.dataset.readyArt}})})}}
 // Reveal poster circles in a short clockwise fan, keeping their final positions.
 function fanOrbit(button,x,y,order){
  button._fanAnimation?.cancel();button._fanAnimation=null;
@@ -139,8 +142,8 @@ function fanOrbit(button,x,y,order){
   {offset:1,transform:at(x,y,0,1),opacity:1}
  ],{duration:650,delay:order*115,easing:'cubic-bezier(.18,.76,.22,1)',fill:'backwards'});
 }
-function expand(i){if(posterPreviewIndex!==null&&posterPreviewIndex!==i)return;clearTimeout(hideTimer);if(drag||performance.now()<suppressUntil)return;if(active!==null&&active!==i)collapse(active);const el=nodes.get(i);if(!el)return;if(active===i)return;active=i;el.classList.add('open');el.querySelector('.flower').setAttribute('aria-expanded','true');const rect=el.getBoundingClientRect(),radius=locations[i].size*.6;el.querySelectorAll('.orbit img[data-src]').forEach(img=>{img.src=img.dataset.src;delete img.dataset.src});el.querySelectorAll('.orbit').forEach((b,j)=>{const angle=-Math.PI/2+j*2*Math.PI/3;const x=clamp(rect.left+rect.width/2+Math.cos(angle)*radius,65,innerWidth-65)-(rect.left+rect.width/2),y=clamp(rect.top+rect.height/2+Math.sin(angle)*radius,90,innerHeight-95)-(rect.top+rect.height/2);b.style.setProperty('--ox',x+'px');b.style.setProperty('--oy',y+'px');fanOrbit(b,x,y,j);b.tabIndex=0;b.setAttribute('aria-hidden','false')});}
-function collapse(i){if(posterPreviewIndex===i)return;const el=nodes.get(i);if(!el)return;el.classList.remove('open');el.querySelector('.flower').setAttribute('aria-expanded','false');el.querySelectorAll('.orbit').forEach(b=>{b._fanAnimation?.cancel();b._fanAnimation=null;b.tabIndex=-1;b.setAttribute('aria-hidden','true')});if(active===i)active=null}
+function expand(i){if(creatorMode&&posterPreviewIndex!==null&&posterPreviewIndex!==i)return;clearTimeout(hideTimer);if(drag||performance.now()<suppressUntil)return;if(creatorMode&&active!==null&&active!==i)collapse(active);const el=nodes.get(i);if(!el)return;if(el.classList.contains('open'))return;if(creatorMode)active=i;el.classList.add('open');el.querySelector('.flower').setAttribute('aria-expanded','true');const rect=el.getBoundingClientRect(),radius=locations[i].size*.6;el.querySelectorAll('.orbit img[data-src]').forEach(img=>{img.src=img.dataset.src;delete img.dataset.src});el.querySelectorAll('.orbit').forEach((b,j)=>{const angle=-Math.PI/2+j*2*Math.PI/3;const x=clamp(rect.left+rect.width/2+Math.cos(angle)*radius,65,innerWidth-65)-(rect.left+rect.width/2),y=clamp(rect.top+rect.height/2+Math.sin(angle)*radius,90,innerHeight-95)-(rect.top+rect.height/2);b.style.setProperty('--ox',x+'px');b.style.setProperty('--oy',y+'px');fanOrbit(b,x,y,j);b.tabIndex=0;b.setAttribute('aria-hidden','false')});}
+function collapse(i){if((creatorMode&&posterPreviewIndex===i)||(!creatorMode&&projectionPreviews.has(i)))return;const el=nodes.get(i);if(!el)return;el.classList.remove('open');el.querySelector('.flower').setAttribute('aria-expanded','false');el.querySelectorAll('.orbit').forEach(b=>{b._fanAnimation?.cancel();b._fanAnimation=null;b.tabIndex=-1;b.setAttribute('aria-hidden','true')});if(active===i)active=null}
 let frameRaf=0;function wake(){if(!frameRaf&&!document.hidden)frameRaf=requestAnimationFrame(frame)}
 function frame(t){frameRaf=0;const dt=Math.min(.04,(t-lastTime)/1000||0);lastTime=t;if(!document.hidden&&!$('dialog[open]')){if(!paused&&!reduced)clock+=dt;if(target!==null){position+=(target-position)*(reduced?1:Math.min(1,dt*7));if(Math.abs(target-position)<.5){position=target;target=null}}else if(!drag){position=clamp(position+velocity*dt,0,max());velocity*=Math.exp(-5*dt);if(position===0||position===max())velocity=0}draw();document.body.classList.toggle('garden-moving',!!drag?.moved||target!==null||(!drag&&Math.abs(velocity)>.5));if(pendingBirth!==null&&target===null&&nodes.has(pendingBirth)){const index=pendingBirth;pendingBirth=null;bloomNewFlower(index,!creatorMode).finally(()=>{birthFinished?.();birthFinished=null})}}if(!document.hidden&&!$('dialog[open]')&&(target!==null||(!drag&&Math.abs(velocity)>.5)||pendingBirth!==null))wake();else if(Math.abs(velocity)<=.5)velocity=0}
 $('#garden').onpointerdown=e=>{if(e.button!==0)return;drag={x:e.clientX,y:e.clientY,last:e.clientX,time:performance.now(),moved:false};velocity=0;target=null};$('#garden').onpointermove=e=>{if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(!drag.moved&&Math.abs(dx)>8&&Math.abs(dx)>Math.abs(dy)*1.2){drag.moved=true;$('#garden').setPointerCapture(e.pointerId);$('#garden').classList.add('dragging');if(active!==null)collapse(active)}if(drag.moved){const now=performance.now(),delta=e.clientX-drag.last;position=clamp(position-delta,0,max());velocity=-delta/Math.max(10,now-drag.time)*1000;drag.last=e.clientX;drag.time=now;e.preventDefault()}};
@@ -257,7 +260,7 @@ async function showSelectionOutline(i,color){
 }
 
 let projectionSyncBusy=false,birthFinished=null;
-async function syncProjection(){if(creatorMode||document.hidden||projectionSyncBusy)return;projectionSyncBusy=true;try{const res=await fetch('/api/taste/projection',{cache:'no-store'});if(!res.ok)return;const data=await res.json(),known=new Set(records.map(r=>r.id)),incoming=data.records.filter(r=>!known.has(r.id));if(!incoming.length)return;++bloomIntent;await closeDetailSmooth();const old=position;for(const record of incoming){records.push(record);layout();position=clamp(old,0,max());const index=records.length-1;placeNewFlower(index);pendingBirth=index;target=clamp(locations[index].x-innerWidth/2,0,max());await new Promise(resolve=>{birthFinished=resolve;wake()})}openDetail(records.length-1,undefined,true);nextAutoPanel=Date.now()+PANEL_HOLD_MS+AUTO_PANEL_MS;}catch{}finally{projectionSyncBusy=false}}
+async function syncProjection(){if(creatorMode||document.hidden||projectionSyncBusy)return;projectionSyncBusy=true;try{const res=await fetch('/api/taste/projection',{cache:'no-store'});if(!res.ok)return;const data=await res.json(),known=new Set(records.map(r=>r.id)),incoming=data.records.filter(r=>!known.has(r.id));if(!incoming.length)return;++bloomIntent;await closeDetailSmooth();const old=position;for(const record of incoming){records.push(record);layout();position=clamp(old,0,max());const index=records.length-1;placeNewFlower(index);pendingBirth=index;target=clamp(locations[index].x-innerWidth/2,0,max());await new Promise(resolve=>{birthFinished=resolve;wake()})}openDetail(records.length-1,undefined,true);rebloomScheduler.reset(Date.now()+14000);}catch{}finally{projectionSyncBusy=false}}
 if(!creatorMode){setInterval(syncProjection,4000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)syncProjection()})}else{document.querySelector('.privacy').textContent+=' 정원에 심기를 누르면 꽃 그래픽이 벽의 공용 정원에 표시됩니다. 작성한 감상과 개인정보는 공개하지 않습니다.';document.querySelector('#entry .close').hidden=true;$('#create').click();$('#projectionAgain').onclick=()=>{$('#projectionDone').close();earlyQuestions.fill(null);document.querySelectorAll('.early-question').forEach(el=>el.remove());selectedMovies.fill(null);document.querySelectorAll('#inputs textarea,#inputs input').forEach(el=>el.value='');sessionId=null;confirmUnknown=false;questionList=[];document.querySelectorAll('.extra-question').forEach(el=>el.remove());$('#followups').hidden=true;$('#skip').hidden=true;sessionStorage.removeItem('gamdo-review-draft');$('#create').click()};}
 
 function floatPanelOrbs(i,color){
@@ -284,7 +287,7 @@ function floatPanelOrbs(i,color){
  document.body.append(group);setTimeout(()=>group.remove(),2550);
 }
 
-let selectedIndex=-1,panelCloseTimer,closingDetail=null,ambientTime=0,ambientFrame=0,panDirection=1,nextAutoPanel=Date.now()+AUTO_PANEL_MS;
+let selectedIndex=-1,panelCloseTimer,closingDetail=null,ambientTime=0,ambientFrame=0,panDirection=1;
 async function closeDetailSmooth(){
  if(!creatorMode)closeProjectionPreview();clearTimeout(panelCloseTimer);if(closingDetail)return closingDetail;const panel=$('#detail');if(!panel.open)return;
  closingDetail=(async()=>{panel.getAnimations().forEach(a=>a.cancel());if(!reduced){const fade=panel.animate([{opacity:1,transform:'scale(1)'},{opacity:0,transform:'scale(.97)'}],{duration:650,easing:'ease-in',fill:'forwards'});await fade.finished.catch(()=>{});fade.cancel()}panel.close();closingDetail=null})();return closingDetail;
@@ -298,16 +301,14 @@ function ambientGarden(time){
  
  if(time-lastAmbientCull>200){lastDrawPosition=null;draw();lastAmbientCull=time;}nodes.forEach((el,i)=>{const p=locations[i];el.style.setProperty('--flower-x',p.x.toFixed(3)+'px');el.style.setProperty('--flower-y',p.y.toFixed(3)+'px')});
  }
- if(Date.now()>=nextAutoPanel&&posterPreviewIndex===null&&!$('dialog[open]')&&!drag&&performance.now()>=suppressUntil&&!openingFlower&&!projectionSyncBusy&&pendingBirth===null){
-   const visible=[...nodes.keys()].filter(i=>locations[i].x-position>100&&locations[i].x-position<innerWidth-100);
-   if(visible.length){
-     nextAutoPanel=Date.now()+AUTO_PANEL_MS;
-     openBloomDetail(visible[Math.floor(Math.random()*visible.length)]);
-   }
+ if(initialGalleryReady&&!paused&&!reduced&&!$('dialog[open]')&&!drag&&performance.now()>=suppressUntil&&!projectionSyncBusy&&pendingBirth===null){
+  const candidates=[...nodes.keys()].filter(i=>{const p=locations[i],edge=Math.max(95,p.size*.32);return !projectionPreviews.has(i)&&!reblooming.has(i)&&p.x-position>edge&&p.x-position<innerWidth-edge&&p.y>edge&&p.y<innerHeight-edge;}).map(i=>({index:i,...locations[i]}));
+  const index=rebloomScheduler.next(Date.now(),candidates,{blooming:reblooming.size,displayed:projectionPreviews.size});
+  if(index!==null)showProjectionPreview(index).catch(()=>{});
  }
  ambientFrame=requestAnimationFrame(ambientGarden);
 }
-if(!creatorMode){ambientFrame=requestAnimationFrame(ambientGarden);document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(ambientFrame);ambientFrame=0}else{ambientTime=performance.now();if(!ambientFrame)ambientFrame=requestAnimationFrame(ambientGarden)}})}
+if(!creatorMode){ambientFrame=requestAnimationFrame(ambientGarden);document.addEventListener('visibilitychange',()=>{if(document.hidden){closeProjectionPreview();rebloomScheduler.reset(Date.now());cancelAnimationFrame(ambientFrame);ambientFrame=0}else{ambientTime=performance.now();if(!ambientFrame)ambientFrame=requestAnimationFrame(ambientGarden)}})}
 
 function renderReviewQuestion(i,question,open=false){const parent=$('#review'+i).closest('.review-writing');
   parent.querySelector('.early-question')?.remove();
