@@ -5,7 +5,7 @@ import {transferReceipt} from './receipt-transfer.js?v=1';
 import {createTicketImage} from './ticket-image.js?v=166';
 import {ticketContents,ticketDate} from './ticket.js?v=6';
 import {reviewState,reviewsReady as validReviews} from './review-validation.js?v=1';
-import {stepGarden,separateFlowers,AUTO_PANEL_MS,PANEL_HOLD_MS} from './garden-motion.js?v=20261113-center';
+import {stepGarden,ensureVisibleFlowers,separateFlowers,AUTO_PANEL_MS,PANEL_HOLD_MS} from './garden-motion.js?v=20261113-population15';
 const creatorMode=window.GAMDO_CREATOR===true;document.body.classList.add(creatorMode?'creator-mode':'projection-mode');
 import {bloom,BLOOM_DURATION_MS} from './bloom.js?v=20261113-soft';
 import {flowerAsset} from './flower-assets.js?v=44-approved-color-1';
@@ -28,6 +28,7 @@ function layout(){
  worldWidth=scattered.worldWidth;locations=scattered.locations;
  birthPlacements.forEach((p,id)=>{const i=records.findIndex(r=>r.id===id);if(i>=0)Object.assign(locations[i],p)});
  separateFlowers(locations,{iterations:20});
+ if(!creatorMode)ensureVisibleFlowers(locations,worldWidth,innerHeight,15);
  position=clamp(position,0,max());nodes.forEach(n=>n.remove());nodes.clear();active=null;lastDrawPosition=null;draw();wake();
 }
 
@@ -327,7 +328,7 @@ function ambientGarden(time){
  ambientFrame=0;if(document.hidden||creatorMode)return;
  const dt=Math.min(.04,(time-ambientTime)/1000||0);ambientTime=time;
  if(locations.length&&!paused&&!reduced&&pendingBirth===null&&!drag){
- stepGarden(locations,worldWidth,innerHeight,dt,selectedIndex);
+ stepGarden(locations,worldWidth,innerHeight,dt,selectedIndex,creatorMode?0:15);
  for(const i of projectionPreviews.keys())if(!canRevealPosters(i))closeProjectionPreview(i);
  
  if(time-lastAmbientCull>200){lastDrawPosition=null;draw();lastAmbientCull=time;}nodes.forEach((el,i)=>{const p=locations[i];el.style.setProperty('--flower-x',p.x.toFixed(3)+'px');el.style.setProperty('--flower-y',p.y.toFixed(3)+'px')});
